@@ -21,7 +21,8 @@ func _input(event):
 			if card:
 				dragging(card)
 		else:
-			stopDragging()
+			if draggingCard:
+				stopDragging()
 			
 func dragging(card):
 	card.scale = Vector2(1, 1)
