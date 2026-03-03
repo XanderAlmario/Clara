@@ -6,9 +6,11 @@ const COLLISION_MASK_CARD_SLOT = 2
 var draggingCard
 var screenSize
 var isHovering
+var playerHandRef
 
 func _ready():
 	screenSize = get_viewport_rect().size
+	playerHandRef = $"../PlayerHand"
 
 func _process(delta):
 	if draggingCard:
@@ -36,6 +38,9 @@ func stopDragging():
 		draggingCard.position = foundSlot.position
 		draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
 		foundSlot.cardInSlot = true
+		playerHandRef.removeCard(draggingCard)
+	elif !foundSlot or foundSlot.cardInSlot:
+		playerHandRef.addCardToHand(draggingCard)
 	draggingCard = null
 
 func connectSignals(card):
