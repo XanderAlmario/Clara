@@ -35,7 +35,8 @@ func stopDragging():
 	draggingCard.scale = Vector2(1.05, 1.05)
 	var foundSlot = checkCardSlot()
 	if foundSlot and !foundSlot.cardInSlot:
-		draggingCard.position = foundSlot.position
+		var tween = get_tree().create_tween()
+		tween.tween_property(draggingCard, "position", foundSlot.position, 0.1)
 		draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
 		foundSlot.cardInSlot = true
 		playerHandRef.removeCard(draggingCard)
