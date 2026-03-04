@@ -2,7 +2,7 @@ extends Node2D
 
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
-const DRAW_SPEED = 1
+const CARD_SPEED = 1
 
 var draggingCard
 var screenSize
@@ -33,7 +33,7 @@ func stopDragging():
 		foundSlot.cardInSlot = true
 		playerHandRef.removeCard(draggingCard)
 	elif !foundSlot or foundSlot.cardInSlot:
-		playerHandRef.addCardToHand(draggingCard, DRAW_SPEED)
+		playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
 	draggingCard = null
 
 func connectSignals(card):
