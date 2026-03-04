@@ -1,47 +1,39 @@
 extends Node2D
 
-const HAND_COUNT = 5
-const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const CARD_WIDTH = 150
 const HAND_Y_POSITION = 1050
+const DEFAULT_CARD_SPEED = 0.1
 
 var playerHand = []
 var centerScreenX
 
 func _ready():
 	centerScreenX = get_viewport().size.x / 2
-	
-	var cardScene = preload(CARD_SCENE_PATH)
-	for i in range(HAND_COUNT):
-		var newCard = cardScene.instantiate()
-		$"../CardManager".add_child(newCard)
-		newCard.name = "Card"
-		addCardToHand(newCard)
 
-func addCardToHand(card):
+func addCardToHand(card, speed):
 	if card not in playerHand:
 		playerHand.insert(0, card)
-		updateHandPos()
+		updateHandPos(speed)
 	else:
-		moveCardToPos(card, card.posInHand)
+		moveCardToPos(card, card.posInHand, DEFAULT_CARD_SPEED)
 
-func updateHandPos():
+func updateHandPos(speed):
 	for i in range(playerHand.size()):
 		var newPos = Vector2(calculateCardPos(i), HAND_Y_POSITION)
 		var card = playerHand[i]
 		card.posInHand = newPos 
-		moveCardToPos(card, newPos)
+		moveCardToPos(card, newPos, speed)
 		
 func calculateCardPos(index):
 	var totalWidth = (playerHand.size() - 1) * CARD_WIDTH
 	var xOffset = centerScreenX + index * CARD_WIDTH - totalWidth / 2
 	return xOffset
 
-func moveCardToPos(card, newPos):
+func moveCardToPos(card, newPos, speed):
 	var tween = get_tree().create_tween()
-	tween.tween_property(card, "position", newPos, 0.1)
+	tween.tween_property(card, "position", newPos, speed)
 	
 func removeCard(card):
 	if card in playerHand:
 		playerHand.erase(card)
-		updateHandPos()
+		updateHandPos(DEFAULT_CARD_SPEED)
