@@ -2,6 +2,7 @@ extends Node2D
 
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
+const DRAW_SPEED = 1
 
 var draggingCard
 var screenSize
@@ -11,22 +12,13 @@ var playerHandRef
 func _ready():
 	screenSize = get_viewport_rect().size
 	playerHandRef = $"../PlayerHand"
+	$"../InputManager".connect("clickReleased", onClickReleased)
 
 func _process(delta):
 	if draggingCard:
 		var mouse_pos = get_global_mouse_position()
 		draggingCard.position = Vector2(clamp(mouse_pos.x, 0, screenSize.x), clamp(mouse_pos.y, 0, screenSize.y))
 
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			var card = checkCard()
-			if card:
-				dragging(card)
-		else:
-			if draggingCard:
-				stopDragging()
-			
 func dragging(card):
 	card.scale = Vector2(1, 1)
 	draggingCard = card
@@ -41,12 +33,16 @@ func stopDragging():
 		foundSlot.cardInSlot = true
 		playerHandRef.removeCard(draggingCard)
 	elif !foundSlot or foundSlot.cardInSlot:
-		playerHandRef.addCardToHand(draggingCard)
+		playerHandRef.addCardToHand(draggingCard, DRAW_SPEED)
 	draggingCard = null
 
 func connectSignals(card):
 	card.connect("hovering", hoveringCard)
 	card.connect("stoppedHovering", stoppedHoveringCard)
+	
+func onClickReleased():
+	if draggingCard:
+		stopDragging()
 	
 func hoveringCard(card):
 	if !isHovering:
