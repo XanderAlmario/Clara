@@ -4,6 +4,7 @@ signal hovering
 signal stoppedHovering
 
 var posInHand
+var cardType
 
 func _ready():
 	# all Cards need to be a parent of CardManager or else it will error

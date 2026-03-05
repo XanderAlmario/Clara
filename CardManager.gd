@@ -3,11 +3,14 @@ extends Node2D
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
 const CARD_SPEED = 1
+const DEFAULT_CARD_SCALE = Vector2(1, 1)
+const CARD_BIGGER_SCALE = Vector2(1.1, 1.1)
 
 var draggingCard
 var screenSize
 var isHovering
 var playerHandRef
+var playedUnit = false
 
 func _ready():
 	screenSize = get_viewport_rect().size
@@ -20,20 +23,24 @@ func _process(delta):
 		draggingCard.position = Vector2(clamp(mouse_pos.x, 0, screenSize.x), clamp(mouse_pos.y, 0, screenSize.y))
 
 func dragging(card):
-	card.scale = Vector2(1, 1)
+	card.scale = DEFAULT_CARD_SCALE
 	draggingCard = card
 
 func stopDragging():
-	draggingCard.scale = Vector2(1.05, 1.05)
+	draggingCard.scale = CARD_BIGGER_SCALE
 	var foundSlot = checkCardSlot()
 	if foundSlot and !foundSlot.cardInSlot:
-		var tween = get_tree().create_tween()
-		tween.tween_property(draggingCard, "position", foundSlot.position, 0.1)
-		draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
-		foundSlot.cardInSlot = true
-		playerHandRef.removeCard(draggingCard)
-	elif !foundSlot or foundSlot.cardInSlot:
-		playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
+		if draggingCard.cardType == "Unit" && playedUnit == false:
+			playedUnit = true
+			var tween = get_tree().create_tween()
+			tween.tween_property(draggingCard, "position", foundSlot.position, 0.1)
+			draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
+			draggingCard.z_index = -1
+			foundSlot.cardInSlot = true
+			playerHandRef.removeCard(draggingCard)
+			draggingCard = null
+			return
+	playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
 	draggingCard = null
 
 func connectSignals(card):
@@ -60,10 +67,10 @@ func stoppedHoveringCard(card):
 	
 func highlightCard(card, hovering):
 	if hovering:
-		card.scale = Vector2(1.05, 1.05)
+		card.scale = CARD_BIGGER_SCALE
 		card.z_index = 2
 	else:
-		card.scale = Vector2(1, 1)
+		card.scale = DEFAULT_CARD_SCALE
 		card.z_index = 1
 
 func checkCard():

@@ -2,18 +2,31 @@ extends Node2D
 
 const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const DRAW_SPEED = 0.5
+const STARTING_HAND_SIZE = 5
 
-var player_deck = ["Knight", "Archer", "Demon"]
+var player_deck = ["Knight", "Archer", "Demon", 
+"Knight", "Archer", "Demon", 
+"Knight", "Archer", "Demon", 
+"Knight", "Archer", "Demon"]
 var cardDBRef
+var drewCard = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_deck.shuffle()
 	$RichTextLabel.text = str(player_deck.size())
 	cardDBRef = preload("res://Scripts/CardDatabase.gd")
+	for i in range(STARTING_HAND_SIZE):
+		drawCard()
+		drewCard = false
+	drewCard = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func drawCard():
+	if drewCard:
+		return 
+		
+	drewCard = true
 	var drawnCardName = player_deck[0]
 	player_deck.erase(drawnCardName
 	)
@@ -31,6 +44,7 @@ func drawCard():
 	newCard.get_node("CardImage").texture = load(cardImgPath)
 	newCard.get_node("Attack").text = str(cardDBRef.CARDS[drawnCardName][0])
 	newCard.get_node("Health").text = str(cardDBRef.CARDS[drawnCardName][1])
+	newCard.cardType = str(cardDBRef.CARDS[drawnCardName][2])
 	$"../CardManager".add_child(newCard)
 	newCard.name = "Card"
 	$"../PlayerHand".addCardToHand(newCard, DRAW_SPEED)
