@@ -6,6 +6,8 @@ const DEFAULT_CARD_SPEED = 0.1
 
 var enemyHand = []
 var centerScreenX
+var attack
+var health
 
 func _ready():
 	centerScreenX = get_viewport().size.x / 2

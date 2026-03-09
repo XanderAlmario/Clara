@@ -5,6 +5,8 @@ signal stoppedHovering
 
 var posInHand
 var cardType
+var attack
+var health
 
 func _ready():
 	# all Cards need to be a parent of CardManager or else it will error
