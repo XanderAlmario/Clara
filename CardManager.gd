@@ -1,7 +1,7 @@
 extends Node2D
 
 const COLLISION_MASK_CARD = 1
-const COLLISION_MASK_CARD_SLOT = 2
+const COLLISION_BATTLEFIELD_SLOT = 2
 const CARD_SPEED = 1
 const DEFAULT_CARD_SCALE = Vector2(1, 1)
 const CARD_BIGGER_SCALE = Vector2(1.1, 1.1)
@@ -10,7 +10,6 @@ var draggingCard
 var screenSize
 var isHovering
 var playerHandRef
-var playedUnit = false
 
 func _ready():
 	screenSize = get_viewport_rect().size
@@ -30,16 +29,14 @@ func stopDragging():
 	draggingCard.scale = CARD_BIGGER_SCALE
 	var foundSlot = checkCardSlot()
 	if foundSlot and !foundSlot.cardInSlot:
-		if draggingCard.cardType == "Unit" && playedUnit == false:
-			playedUnit = true
-			var tween = get_tree().create_tween()
-			tween.tween_property(draggingCard, "position", foundSlot.position, 0.1)
-			draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
-			draggingCard.z_index = -1
-			foundSlot.cardInSlot = true
-			playerHandRef.removeCard(draggingCard)
-			draggingCard = null
-			return
+		var tween = get_tree().create_tween()
+		tween.tween_property(draggingCard, "position", foundSlot.position, 0.1)
+		draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
+		draggingCard.z_index = -1
+		foundSlot.cardInSlot = true
+		playerHandRef.removeCard(draggingCard)
+		draggingCard = null
+		return
 	playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
 	draggingCard = null
 
@@ -102,7 +99,7 @@ func checkCardSlot():
 	var parameters = PhysicsPointQueryParameters2D.new()
 	parameters.position = get_global_mouse_position()
 	parameters.collide_with_areas = true
-	parameters.collision_mask = COLLISION_MASK_CARD_SLOT
+	parameters.collision_mask = COLLISION_BATTLEFIELD_SLOT
 	var result = space_state.intersect_point(parameters)
 	if (result.size() > 0):
 		return result[0].collider.get_parent()
