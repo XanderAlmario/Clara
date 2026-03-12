@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://brl8nlgpfju68"]
+
+[ext_resource type="Script" uid="uid://ddj5qw37hyk1x" path="res://Scenes/settings.gd" id="1_i44u3"]
+[ext_resource type="Texture2D" uid="uid://tf8bxspvxei3" path="res://assets/SETTINGSKF.png" id="2_lhmql"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aaqfp"]
+texture = ExtResource("2_lhmql")
+
+[node name="Settings" type="Control" unique_id=1319762495]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i44u3")
+
+[node name="Panel" type="Panel" parent="." unique_id=1672740738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_aaqfp")
+
+[node name="Button" type="Button" parent="." unique_id=723117854]
+layout_mode = 0
+offset_left = 773.0
+offset_top = 464.0
+offset_right = 966.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 32
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
