@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d2f6sver8vba"]
+
+[ext_resource type="Script" uid="uid://dn58vioek3bp1" path="res://Scenes/temp_button.gd" id="1_34er5"]
+
+[node name="Match" type="Node2D" unique_id=1216393026]
+
+[node name="TempButton" type="Button" parent="." unique_id=1647548272]
+offset_left = 962.0
+offset_top = 564.0
+offset_right = 1139.0
+offset_bottom = 625.0
+text = "To Summary"
+script = ExtResource("1_34er5")
+
+[connection signal="pressed" from="TempButton" to="TempButton" method="_on_pressed"]
