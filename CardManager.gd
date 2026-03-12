@@ -10,6 +10,7 @@ var draggingCard
 var screenSize
 var isHovering
 var playerHandRef
+var selectedUnit
 
 func _ready():
 	screenSize = get_viewport_rect().size
@@ -21,6 +22,32 @@ func _process(delta):
 		var mouse_pos = get_global_mouse_position()
 		draggingCard.position = Vector2(clamp(mouse_pos.x, 0, screenSize.x), clamp(mouse_pos.y, 0, screenSize.y))
 
+func cardClicked(card):
+	if card.cardSlot:
+		if $"../BattleManager".isEnemyTurn == false:
+			if $"../BattleManager".playerIsAttacking == false:
+				if card not in $"../BattleManager".playerUnitsAttacked:
+					if $"../BattleManager".enemyUnitsOnBF.size() == 0:
+						$"../BattleManager".directAttack(card, "Player")
+						return
+					else:
+						selectCard(card)
+	else:
+		dragging(card)
+
+func selectCard(card):
+	if selectedUnit:
+		if selectedUnit == card:
+			card.position.y += 20
+			selectedUnit = null
+		else:
+			selectedUnit.position += 20
+			selectedUnit = card
+			card.position.y -= 20
+	else:
+		selectedUnit = card
+		card.position.y -= 20
+
 func dragging(card):
 	card.scale = DEFAULT_CARD_SCALE
 	draggingCard = card
@@ -31,9 +58,9 @@ func stopDragging():
 	if foundSlot and !foundSlot.cardInSlot:
 		var tween = get_tree().create_tween()
 		tween.tween_property(draggingCard, "position", foundSlot.position, 0.1)
-		draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
 		draggingCard.z_index = -1
 		foundSlot.cardInSlot = true
+		foundSlot.get_node("Area2D/CollisionShape2D").disabled = true
 		draggingCard.cardSlot = foundSlot
 		playerHandRef.removeCard(draggingCard)
 		$"../BattleManager".playerUnitsOnBF.append(draggingCard)
@@ -41,6 +68,11 @@ func stopDragging():
 		return
 	playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
 	draggingCard = null
+
+func unselect():
+	if selectedUnit:
+		selectedUnit.position.y += 20
+		selectedUnit = null
 
 func connectSignals(card):
 	card.connect("hovering", hoveringCard)
@@ -51,18 +83,20 @@ func onClickReleased():
 		stopDragging()
 	
 func hoveringCard(card):
-	if !isHovering:
-		highlightCard(card, true)
-		isHovering = true
+	if card.cardSlot:
+		if !isHovering:
+			highlightCard(card, true)
+			isHovering = true
 	
 func stoppedHoveringCard(card):
-	if !draggingCard:
-		highlightCard(card, false)
-		var newCardHovering = checkCard()
-		if newCardHovering:
-			highlightCard(newCardHovering, true)
-		else:
-			isHovering = false
+	if !card.dead:
+		if !draggingCard && !card.cardSlot:
+			highlightCard(card, false)
+			var newCardHovering = checkCard()
+			if newCardHovering:
+				highlightCard(newCardHovering, true)
+			else:
+				isHovering = false
 	
 func highlightCard(card, hovering):
 	if hovering:

@@ -8,14 +8,18 @@ var battleTimer
 var emptyEnemyUnitSlots = []
 var enemyUnitsOnBF = []
 var playerUnitsOnBF = []
+var playerUnitsAttacked = []
 var playerHP
 var enemyHP
+var isEnemyTurn = false
+var playerIsAttacking = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	battleTimer = $"../BattleTimer"
 	battleTimer.one_shot = true
 	battleTimer.wait_time = 1.0
+	isEnemyTurn = true
 	
 	emptyEnemyUnitSlots.append($"../CardSlots/CardSlot4")
 	emptyEnemyUnitSlots.append($"../CardSlots/CardSlot5")
@@ -27,6 +31,8 @@ func _ready():
 	$"../EnemyHP".text = str(enemyHP)
 
 func _on_end_turn_button_pressed():
+	$"../CardManager".unselect()
+	playerUnitsAttacked = []
 	enemyTurn()
 
 func enemyTurn():
@@ -62,7 +68,11 @@ func directAttack(attacker, playerAttacking):
 	if playerAttacking == "Enemy":
 		newPosY = 1080
 	else:
+		$"../EndTurnButton".disabled = true
+		$"../EndTurnButton".visible = false
+		playerIsAttacking = true
 		newPosY = 0
+		playerUnitsAttacked.append(attacker)
 	
 	attacker.z_index = 5
 	var newPos = Vector2(attacker.position.x, newPosY)
@@ -82,8 +92,19 @@ func directAttack(attacker, playerAttacking):
 	tween2.tween_property(attacker, "position", attacker.cardSlot.position, CARD_MOVE_SPEED)
 	attacker.z_index = 0
 	await wait(1.0)
+	if playerAttacking == "Player":
+		playerIsAttacking = false
+		$"../EndTurnButton".disabled = false
+		$"../EndTurnButton".visible = true
 	
 func unitAttack(attacker, target, playerAttacking):
+	if playerAttacking == "Player":
+		playerIsAttacking = true
+		$"../EndTurnButton".disabled = true
+		$"../EndTurnButton".visible = false
+		$"../CardManager".selectedUnit = null
+		playerUnitsAttacked.append(attacker)
+	
 	attacker.z_index = 5
 	var newPos = Vector2(target.position.x, target.position.y + ATTACK_OFFSET)
 	
@@ -107,27 +128,46 @@ func unitAttack(attacker, target, playerAttacking):
 	if (attacker.health == 0):
 		destroyCard(attacker, playerAttacking)
 	if (target.health == 0):
-		target.cardSlot.cardInSlot = false
 		if playerAttacking == "Player":
 			destroyCard(target, "Enemy")
-			enemyUnitsOnBF.erase(target)
 		else:
 			destroyCard(target, "Player")
-			playerUnitsOnBF.erase(target)
 		cardWasDestroyed = true
 	
 	if cardWasDestroyed:
 		await wait(1.0)
+		
+	if playerAttacking == "Player":
+		playerIsAttacking = false
+		$"../EndTurnButton".disabled = false
+		$"../EndTurnButton".visible = true
 
 func destroyCard(card, cardOwner):
 	var newPos
 	if cardOwner == "Player":
+		card.dead = true
+		card.get_node("Area2D/CollisionShape2D").disabled = true
 		newPos = $"../PlayerGrave".position
+		if card in playerUnitsOnBF:
+			playerUnitsOnBF.erase(card)
+		card.cardSlot.get_node("Area2D/CollisionShape2D").disabled = false
 	else:
 		newPos = $"../EnemyGrave".position
+		if card in enemyUnitsOnBF:
+			enemyUnitsOnBF.erase(card)
+		
+	card.cardSlot.cardInSlot = false
+	card.cardSlot = null
 		
 	var tween = get_tree().create_tween()
 	tween.tween_property(card, "position", newPos, CARD_MOVE_SPEED)
+
+func enemyCardSelected(target):
+	var attacker = $"../CardManager".selectedUnit
+	if attacker:
+		if target in enemyUnitsOnBF:
+			$"../CardManager".selectedUnit = null
+			unitAttack(attacker, target, "Player")
 
 func playStrongestUnit():
 	var enemyHand = $"../EnemyHand".enemyHand
@@ -160,6 +200,6 @@ func wait(waitTime):
 
 func endEnemyTurn():
 	$"../Deck".resetDraw()
-	# Reset player deck draw
+	isEnemyTurn = false
 	$"../EndTurnButton".visible = true
 	$"../EndTurnButton".disabled = false

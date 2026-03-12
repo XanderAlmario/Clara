@@ -5,6 +5,7 @@ signal clickReleased
 
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_DECK = 4
+const COLLISION_MASK_ENEMY_CARD = 8
 
 var card_manager_reference
 var deck_reference
@@ -33,8 +34,10 @@ func cursorOnCard():
 			#if the card is selected
 			var card_found = result[0].collider.get_parent()
 			if card_found: 
-				card_manager_reference.dragging(card_found)
+				card_manager_reference.cardClicked(card_found)
 		elif result_collision_mask == COLLISION_MASK_DECK:
 			#deck is selected
 			deck_reference.drawCard()
+		elif result_collision_mask == COLLISION_MASK_ENEMY_CARD:
+			$"../BattleManager".enemyCardSelected(result[0].collider.get_parent())
 	

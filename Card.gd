@@ -8,6 +8,7 @@ var cardType
 var cardSlot
 var attack
 var health
+var dead = false
 
 func _ready():
 	# all Cards need to be a parent of CardManager or else it will error
