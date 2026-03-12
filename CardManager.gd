@@ -34,7 +34,9 @@ func stopDragging():
 		draggingCard.get_node("Area2D/CollisionShape2D").disabled = true
 		draggingCard.z_index = -1
 		foundSlot.cardInSlot = true
+		draggingCard.cardSlot = foundSlot
 		playerHandRef.removeCard(draggingCard)
+		$"../BattleManager".playerUnitsOnBF.append(draggingCard)
 		draggingCard = null
 		return
 	playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
