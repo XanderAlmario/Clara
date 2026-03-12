@@ -43,8 +43,8 @@ func stopDragging():
 	draggingCard = null
 
 func connectSignals(card):
-	card.connect("hovering", hoveringCard)
-	card.connect("stoppedHovering", stoppedHoveringCard)
+	card.hovering.connect(hoveringCard)
+	card.stoppedHovering.connect(stoppedHoveringCard)
 	
 func onClickReleased():
 	if draggingCard:
