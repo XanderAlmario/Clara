@@ -11,6 +11,13 @@ var cost
 var attack
 var health
 var dead = false
+var canAttack = true
+var canDefend = true
+var firstAttack = false
+
+var lunge
+var fury
+var holyShield
 
 func _ready():
 	# all Cards need to be a parent of CardManager or else it will error

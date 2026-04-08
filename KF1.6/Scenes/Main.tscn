@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://bfgqe5r3i0kb"]
 
 [ext_resource type="Script" uid="uid://cjsnw71qxgvmm" path="res://Scripts/CardManager.gd" id="1_bj3om"]
-[ext_resource type="PackedScene" uid="uid://bfoicb5e2t2u0" path="res://Scenes/EnemyCardSlot.tscn" id="3_idwnf"]
-[ext_resource type="PackedScene" uid="uid://d0w4v6gomv0pc" path="res://Scenes/CardSlot.tscn" id="3_qlhbm"]
 [ext_resource type="Script" uid="uid://bgcu3bphibumx" path="res://Scripts/PlayerHand.gd" id="3_utgk8"]
 [ext_resource type="Script" uid="uid://sdmvfc53fvoc" path="res://Scripts/Deck.gd" id="4_i858b"]
 [ext_resource type="Script" uid="uid://cr06jwqetm7oy" path="res://Scripts/EnemyHand.gd" id="5_1q8un"]
@@ -10,9 +8,9 @@
 [ext_resource type="Script" uid="uid://bnkojpwn7o1gl" path="res://Scripts/InputManager.gd" id="6_c1lnt"]
 [ext_resource type="Script" uid="uid://d1r6gsc5ikgmd" path="res://Scripts/BattleManager.gd" id="8_hky2u"]
 [ext_resource type="Script" uid="uid://cyap0xiyvqjp7" path="res://Scripts/EnemyDeck.gd" id="9_2ey30"]
+[ext_resource type="PackedScene" uid="uid://bpiifwsmdvr8n" path="res://Scenes/Battlefield.tscn" id="9_4kpch"]
+[ext_resource type="PackedScene" uid="uid://bg228phchkpnm" path="res://Scenes/EnemyBattlefield.tscn" id="10_grg3l"]
 [ext_resource type="Texture2D" uid="uid://ceodru1kbqfgo" path="res://Assets/CardSlot.png" id="11_20pc6"]
-[ext_resource type="PackedScene" uid="uid://bpiifwsmdvr8n" path="res://Scenes/Battlefield.tscn" id="12_5vvyt"]
-[ext_resource type="PackedScene" uid="uid://bg228phchkpnm" path="res://Scenes/EnemyBattlefield.tscn" id="13_c6i3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyg8y"]
 size = Vector2(137, 188)
@@ -21,26 +19,6 @@ size = Vector2(137, 188)
 
 [node name="CardManager" type="Node2D" parent="." unique_id=2143651215]
 script = ExtResource("1_bj3om")
-
-[node name="CardSlots" type="Node2D" parent="." unique_id=1871068956]
-
-[node name="CardSlot" parent="CardSlots" unique_id=973330154 instance=ExtResource("3_qlhbm")]
-position = Vector2(1974, 1272)
-
-[node name="CardSlot3" parent="CardSlots" unique_id=1799076906 instance=ExtResource("3_qlhbm")]
-position = Vector2(2124, 1272)
-
-[node name="CardSlot2" parent="CardSlots" unique_id=1270096045 instance=ExtResource("3_qlhbm")]
-position = Vector2(1824, 1272)
-
-[node name="CardSlot4" parent="CardSlots" unique_id=509294128 instance=ExtResource("3_idwnf")]
-position = Vector2(2492, 1272)
-
-[node name="CardSlot5" parent="CardSlots" unique_id=770254364 instance=ExtResource("3_idwnf")]
-position = Vector2(2342, 1272)
-
-[node name="CardSlot6" parent="CardSlots" unique_id=1160158345 instance=ExtResource("3_idwnf")]
-position = Vector2(2642, 1272)
 
 [node name="PlayerHand" type="Node2D" parent="." unique_id=816066000]
 script = ExtResource("3_utgk8")
@@ -104,9 +82,6 @@ offset_right = 183.0
 offset_bottom = 655.0
 text = "End Turn"
 
-[node name="BattleManager" type="Node" parent="." unique_id=63903412]
-script = ExtResource("8_hky2u")
-
 [node name="BattleTimer" type="Timer" parent="." unique_id=1069219254]
 
 [node name="PlayerHP" type="RichTextLabel" parent="." unique_id=43730548]
@@ -141,6 +116,14 @@ scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="EnemyGrave" unique_id=868452719]
 texture = ExtResource("11_20pc6")
+
+[node name="PlayerBattlefield" parent="." unique_id=2037174653 instance=ExtResource("9_4kpch")]
+z_index = -5
+position = Vector2(1005, 677)
+
+[node name="EnemyBattlefield" parent="." unique_id=856170206 instance=ExtResource("10_grg3l")]
+z_index = -5
+position = Vector2(1005, 301)
 
 [node name="PlayerDiv" type="Node" parent="." unique_id=1105476529]
 
@@ -200,12 +183,7 @@ scale = Vector2(2, 2)
 text = "/"
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayerBattlefield" parent="." unique_id=2037174653 instance=ExtResource("12_5vvyt")]
-z_index = -5
-position = Vector2(1005, 677)
-
-[node name="EnemyBattlefield" parent="." unique_id=856170206 instance=ExtResource("13_c6i3y")]
-z_index = -5
-position = Vector2(1005, 301)
+[node name="BattleManager" type="Node" parent="." unique_id=63903412]
+script = ExtResource("8_hky2u")
 
 [connection signal="pressed" from="EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]

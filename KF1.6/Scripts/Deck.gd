@@ -4,10 +4,8 @@ const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const DRAW_SPEED = 0.5
 const STARTING_HAND_SIZE = 5
 
-var player_deck = ["Knight", "Archer", "Demon", 
-"Knight", "Archer", "Demon", 
-"Knight", "Archer", "Demon", 
-"Knight", "Archer", "Demon"]
+var player_deck = ["Knight", "Demon", "Priest", 
+"Priest", "Priest", "Priest"]
 var cardDBRef
 var drewCard = false
 
@@ -21,15 +19,13 @@ func _ready():
 		drewCard = false
 	drewCard = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func drawCard():
 	if drewCard:
 		return 
 		
 	drewCard = true
 	var drawnCardName = player_deck[0]
-	player_deck.erase(drawnCardName
-	)
+	player_deck.erase(drawnCardName)
 	
 	# deck is disabled once the last card is drawn
 	if player_deck.size() == 0:
@@ -45,9 +41,13 @@ func drawCard():
 	newCard.cost = cardDBRef.CARDS[drawnCardName][0]
 	newCard.attack = cardDBRef.CARDS[drawnCardName][1]
 	newCard.health = cardDBRef.CARDS[drawnCardName][2]
+	newCard.lunge = cardDBRef.CARDS[drawnCardName][5]
+	newCard.fury = cardDBRef.CARDS[drawnCardName][6]
+	newCard.holyShield = cardDBRef.CARDS[drawnCardName][7]
 	newCard.get_node("Cost").text = str(newCard.cost)
 	newCard.get_node("Attack").text = str(newCard.attack)
 	newCard.get_node("Health").text = str(newCard.health)
+	newCard.get_node("Ability").text = str(cardDBRef.CARDS[drawnCardName][4])
 	newCard.cardType = str(cardDBRef.CARDS[drawnCardName][3])
 	$"../CardManager".add_child(newCard)
 	newCard.name = "Card"

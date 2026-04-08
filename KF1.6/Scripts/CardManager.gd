@@ -29,7 +29,7 @@ func cardClicked(card):
 	if card.cardSlot:
 		if $"../BattleManager".isEnemyTurn == false:
 			if $"../BattleManager".playerIsAttacking == false:
-				if card not in $"../BattleManager".playerUnitsAttacked:
+				if card not in $"../BattleManager".playerUnitsAttacked and card.canAttack:
 					if $"../BattleManager".enemyUnitsOnBF.size() == 0:
 						$"../BattleManager".directAttack(card, "Player")
 						return
@@ -57,14 +57,14 @@ func dragging(card):
 
 func stopDragging():
 	draggingCard.scale = CARD_BIGGER_SCALE
-	#var foundSlot = checkCardSlot()
 	var foundBF = checkCardSlot()
-	#if foundSlot and !foundSlot.cardInSlot and draggingCard.cost <= BMRef.playerDev:
 	if foundBF and foundBF.unitsInPlay.size() < foundBF.BFSize and draggingCard.cost <= BMRef.playerDev:
 		var tween = get_tree().create_tween()
 		tween.tween_property(draggingCard, "position", foundBF.position, 0.1)
 		draggingCard.z_index = 1
 		foundBF.unitsInPlay.append(draggingCard)
+		if draggingCard.lunge:
+			draggingCard.canAttack = true
 		updateCardsOnBF(foundBF)
 		draggingCard.cardSlot = foundBF
 		playerHandRef.removeCard(draggingCard)

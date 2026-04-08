@@ -12,8 +12,8 @@ var enemyUnitsOnBF = []
 var playerUnitsOnBF = []
 var playerUnitsAttacked = []
 var playerHP
-var playerDev = 0
-var playerMaxDev = 0
+var playerDev = 10
+var playerMaxDev = 10
 var enemyHP
 var enemyDev = 0
 var enemyMaxDev = 0
@@ -28,11 +28,6 @@ func _ready():
 	battleTimer = $"../BattleTimer"
 	battleTimer.one_shot = true
 	battleTimer.wait_time = 1.0
-	isEnemyTurn = true
-	
-	emptyEnemyUnitSlots.append($"../CardSlots/CardSlot4")
-	emptyEnemyUnitSlots.append($"../CardSlots/CardSlot5")
-	emptyEnemyUnitSlots.append($"../CardSlots/CardSlot6")
 	
 	playerHP = STARTING_HEALTH
 	$"../PlayerHP".text = str(playerHP)
@@ -61,7 +56,7 @@ func enemyTurn():
 	# Wait 1 second
 	await wait(1)
 	
-	if $"../EnemyDeck".enemy_deck.size() != 0:
+	if $"../EnemyDeck".enemy_deck.size() > 0:
 		$"../EnemyDeck".drawCard() 
 		await wait(1)
 	
@@ -91,6 +86,8 @@ func directAttack(attacker, playerAttacking):
 		playerIsAttacking = true
 		newPosY = 0
 		playerUnitsAttacked.append(attacker)
+		if attacker.fury and !attacker.firstAttack:
+			playerUnitsAttacked.erase(attacker)
 	
 	attacker.z_index = 5
 	var newPos = Vector2(attacker.position.x, newPosY)
@@ -114,6 +111,7 @@ func directAttack(attacker, playerAttacking):
 		playerIsAttacking = false
 		$"../EndTurnButton".disabled = false
 		$"../EndTurnButton".visible = true
+	attacker.firstAttack = true
 	
 func unitAttack(attacker, target, playerAttacking):
 	if playerAttacking == "Player":
@@ -122,6 +120,8 @@ func unitAttack(attacker, target, playerAttacking):
 		$"../EndTurnButton".visible = false
 		$"../CardManager".selectedUnit = null
 		playerUnitsAttacked.append(attacker)
+		if attacker.fury and !attacker.firstAttack:
+			playerUnitsAttacked.erase(attacker)
 	
 	attacker.z_index = 5
 	var newPos = Vector2(target.position.x, target.position.y + ATTACK_OFFSET)
@@ -134,10 +134,19 @@ func unitAttack(attacker, target, playerAttacking):
 	tween2.tween_property(attacker, "position", attacker.posInBF, CARD_MOVE_SPEED)
 	await wait(0.015)
 	
-	target.health = max(0, target.health - attacker.attack)
-	target.get_node("Health").text = str(target.health)
-	attacker.health = max(0, attacker.health - target.attack)
-	attacker.get_node("Health").text = str(attacker.health)
+	if target.holyShield:
+		attacker.health = max(0, attacker.health - target.attack)
+		attacker.get_node("Health").text = str(attacker.health)
+		target.holyShield = false
+	elif attacker.holyShield:
+		target.health = max(0, target.health - attacker.attack)
+		target.get_node("Health").text = str(target.health)
+		attacker.holyShield = false
+	elif !target.holyShield and !attacker.holyShield:
+		target.health = max(0, target.health - attacker.attack)
+		target.get_node("Health").text = str(target.health)
+		attacker.health = max(0, attacker.health - target.attack)
+		attacker.get_node("Health").text = str(attacker.health)
 	
 	await wait(1.0)
 	attacker.z_index = 0
@@ -167,6 +176,7 @@ func unitAttack(attacker, target, playerAttacking):
 		playerIsAttacking = false
 		$"../EndTurnButton".disabled = false
 		$"../EndTurnButton".visible = true
+	attacker.firstAttack = true
 
 func updateCardsOnBF(BF):
 	for i in range(BF.unitsInPlay.size()):
@@ -198,8 +208,6 @@ func destroyCard(card, cardOwner):
 		newPos = $"../EnemyGrave".position
 		if card in enemyUnitsOnBF:
 			enemyUnitsOnBF.erase(card)
-		
-	#card.cardSlot.cardInSlot = false
 		
 	var tween = get_tree().create_tween()
 	tween.tween_property(card, "position", newPos, CARD_MOVE_SPEED)
@@ -250,8 +258,11 @@ func wait(waitTime):
 
 func endEnemyTurn():
 	$"../Deck".resetDraw()
-	$"../Deck".drawCard()
+	if $"../Deck".player_deck.size() > 0:
+		$"../Deck".drawCard()
 	updatePlayerDev()
+	for card in playerUnitsOnBF:
+		card.canAttack = true
 	isEnemyTurn = false
 	$"../EndTurnButton".visible = true
 	$"../EndTurnButton".disabled = false

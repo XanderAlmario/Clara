@@ -7,3 +7,8 @@ var cardSlot
 var cost
 var attack
 var health
+var firstAttack
+
+var lunge
+var fury
+var holyShield

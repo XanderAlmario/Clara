@@ -169,6 +169,7 @@ position = Vector2(150, 890)
 script = ExtResource("1_om2rl")
 
 [node name="CardImageBack" type="Sprite2D" parent="." unique_id=1407154834]
+visible = false
 position = Vector2(9.53674e-06, 0.499956)
 scale = Vector2(0.185333, 0.178095)
 texture = ExtResource("2_mdsgs")
@@ -212,6 +213,20 @@ offset_top = -88.0
 offset_right = -37.0
 offset_bottom = -38.0
 text = "0"
+
+[node name="Ability" type="RichTextLabel" parent="." unique_id=153213208]
+modulate = Color(0, 0, 0, 1)
+offset_left = -47.0
+offset_top = 37.0
+offset_right = 51.0
+offset_bottom = 64.0
+scale = Vector2(0.99679315, 1)
+theme_override_constants/line_separation = -5
+theme_override_font_sizes/normal_font_size = 8
+text = "Lorem Ipsum
+Lorem Ipsum
+Lorem Ipsum"
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

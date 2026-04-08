@@ -36,6 +36,9 @@ func drawCard():
 	newCard.cost = cardDBRef.CARDS[drawnCardName][0]
 	newCard.attack = cardDBRef.CARDS[drawnCardName][1]
 	newCard.health = cardDBRef.CARDS[drawnCardName][2]
+	newCard.lunge = cardDBRef.CARDS[drawnCardName][5]
+	newCard.fury = cardDBRef.CARDS[drawnCardName][6]
+	newCard.holyShield = cardDBRef.CARDS[drawnCardName][7]
 	newCard.get_node("Cost").text = str(newCard.cost)
 	newCard.get_node("Attack").text = str(newCard.attack)
 	newCard.get_node("Health").text = str(newCard.health)
