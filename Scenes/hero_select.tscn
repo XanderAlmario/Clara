@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bobolbsdk0eq3"]
+
+[ext_resource type="Script" uid="uid://bkgtd1ctc2wdj" path="res://Scripts/hero_select.gd" id="1_5ia4r"]
+[ext_resource type="Texture2D" uid="uid://cdij2he33l5ak" path="res://Assets/hero select.png" id="1_es61r"]
+[ext_resource type="Texture2D" uid="uid://bijjqlkdfrnok" path="res://Assets/{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png" id="2_5ia4r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bpx5y"]
+texture = ExtResource("1_es61r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vre6b"]
+texture = ExtResource("2_5ia4r")
+
+[node name="HeroSelect" type="Control" unique_id=1618062483]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ia4r")
+
+[node name="Panel" type="Panel" parent="." unique_id=18202658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bpx5y")
+
+[node name="Panel2" type="Panel" parent="Panel" unique_id=744334008]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 73.0
+offset_right = 1132.0
+offset_bottom = 630.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vre6b")
+
+[node name="MageLabel" type="RichTextLabel" parent="Panel/Panel2" unique_id=1027714898]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 60.0
+offset_right = 230.0
+offset_bottom = 147.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "JAY ASTRUM
+   --MAGE--"
+
+[node name="MonkLabel" type="RichTextLabel" parent="Panel/Panel2" unique_id=180862999]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 61.0
+offset_right = 440.0
+offset_bottom = 148.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "YUVARI KIIRA
+   --MONK--"
+
+[node name="PaladinLabel" type="RichTextLabel" parent="Panel/Panel2" unique_id=1536319011]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 62.0
+offset_right = 641.0
+offset_bottom = 149.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "  ARTHURIAN
+  --PALADIN--"
+
+[node name="UndeadLabel" type="RichTextLabel" parent="Panel/Panel2" unique_id=1833475426]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 61.0
+offset_right = 860.0
+offset_bottom = 148.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = " NECRONOMUS
+   --UNDEAD--"
+
+[node name="ArcherLabel" type="RichTextLabel" parent="Panel/Panel2" unique_id=503555150]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 62.0
+offset_right = 1078.0
+offset_bottom = 149.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "      OSKAR
+   --ARCHER--"
+
+[node name="MageSelect" type="Button" parent="Panel/Panel2" unique_id=23131141]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 463.0
+offset_right = 192.0
+offset_bottom = 530.0
+text = "SELECT"
+
+[node name="MonkSelect" type="Button" parent="Panel/Panel2" unique_id=649822481]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 462.0
+offset_right = 414.0
+offset_bottom = 529.0
+text = "SELECT"
+
+[node name="PaladinSelect" type="Button" parent="Panel/Panel2" unique_id=151752342]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 463.0
+offset_right = 619.0
+offset_bottom = 530.0
+text = "SELECT"
+
+[node name="UndeadSelect" type="Button" parent="Panel/Panel2" unique_id=1636922105]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 463.0
+offset_right = 827.0
+offset_bottom = 530.0
+text = "SELECT"
+
+[node name="ArcherSelect" type="Button" parent="Panel/Panel2" unique_id=45323739]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 463.0
+offset_right = 1038.0
+offset_bottom = 530.0
+text = "SELECT"
+
+[node name="BackButton" type="Button" parent="Panel" unique_id=1632643243]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 58.0
+offset_right = 136.0
+offset_bottom = 100.0
+text = "BACK"
+
+[connection signal="pressed" from="Panel/Panel2/MageSelect" to="." method="_on_mage_select_pressed"]
+[connection signal="pressed" from="Panel/Panel2/MonkSelect" to="." method="_on_monk_select_pressed"]
+[connection signal="pressed" from="Panel/Panel2/PaladinSelect" to="." method="_on_paladin_select_pressed"]
+[connection signal="pressed" from="Panel/Panel2/UndeadSelect" to="." method="_on_undead_select_pressed"]
+[connection signal="pressed" from="Panel/Panel2/ArcherSelect" to="." method="_on_archer_select_pressed"]
+[connection signal="pressed" from="Panel/BackButton" to="." method="_on_back_button_pressed"]

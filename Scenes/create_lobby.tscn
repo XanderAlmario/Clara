@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cln54b8nlayqb"]
+
+[ext_resource type="Script" uid="uid://b3sg4gs81igy7" path="res://Scripts/create_lobby.gd" id="1_dl63l"]
+[ext_resource type="Texture2D" uid="uid://b4gcaw5dawlyq" path="res://Assets/Group 47.png" id="2_e6i4d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stnsc"]
+texture = ExtResource("2_e6i4d")
+
+[node name="CreateLobby" type="Control" unique_id=315732774]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dl63l")
+
+[node name="Panel" type="Panel" parent="." unique_id=63286050]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_stnsc")
+
+[node name="StartButton" type="Button" parent="." unique_id=1690320131]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 394.0
+offset_right = 883.0
+offset_bottom = 497.0
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="BackButton" type="Button" parent="." unique_id=508448424]
+layout_mode = 0
+offset_left = 898.0
+offset_top = 522.0
+offset_right = 1018.0
+offset_bottom = 581.0
+theme_override_font_sizes/font_size = 32
+text = "BACK"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
