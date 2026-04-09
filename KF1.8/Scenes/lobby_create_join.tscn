@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://clboowefte077"]
+
+[ext_resource type="Script" uid="uid://bern8okpk6dyq" path="res://Scripts/lobby_create_join.gd" id="1_cde1w"]
+[ext_resource type="Texture2D" uid="uid://dnf20hxvwcv8t" path="res://Assets/Group 46.png" id="1_g12bj"]
+[ext_resource type="Script" uid="uid://b1rx5087hun6s" path="res://Scripts/player.gd" id="3_iu1se"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cde1w"]
+texture = ExtResource("1_g12bj")
+
+[node name="LobbyCreateJoin" type="Control" unique_id=988386777]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cde1w")
+
+[node name="Panel" type="Panel" parent="." unique_id=1718501160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cde1w")
+
+[node name="back" type="Button" parent="." unique_id=1420451015]
+layout_mode = 0
+offset_left = 927.0
+offset_top = 614.0
+offset_right = 1051.0
+offset_bottom = 654.0
+text = "BACK"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1378677907]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 268.0
+offset_right = 1258.0
+offset_bottom = 534.0
+
+[node name="CreateButton" type="Button" parent="VBoxContainer" unique_id=177495873]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "CREATE ROOM"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1351344240]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+placeholder_text = "Enter Room Code here..."
+
+[node name="JoinButton" type="Button" parent="VBoxContainer" unique_id=960382780]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "JOIN ROOM"
+
+[node name="Player" type="Node" parent="." unique_id=1753000619]
+script = ExtResource("3_iu1se")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
