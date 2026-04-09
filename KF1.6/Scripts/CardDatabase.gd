@@ -1,7 +1,8 @@
 const CARDS = { #Cost(0), Attack(1), Health(2), 
 				#Card Type(3), Card Ability(4),
 				#Lunge(5), Fury(6), Holy Shield(7),
-				#
+				#AbilityScript(8), 
+				
 	"Scout" : [1, 1, 1, 
 	"Unit", "Lunge", 
 	true, false, false],
@@ -24,5 +25,16 @@ const CARDS = { #Cost(0), Attack(1), Health(2),
 	
 	"Demon" : [3, 5, 7, "Unit", 
 	"Demon Ability", 
-	false, false, false]
+	false, false, false],
+	
+	"Discovery" : [2, null, null, "Spell",
+	"Draw Cards", 
+	false, false, false, "res://Scripts/Abilities/Discovery.gd"],
+	
+	"Frozen Spike" : [2, null, null, "Spell",
+	"Deal 2 Damage to a random enemy", 
+	false, false, false, "res://Scripts/Abilities/FrozenSpike.gd"],
+	
+	"Search Scroll" : [3, null, null, "Spell",
+	"Discover a card and that card cost 2 less", ]
 }

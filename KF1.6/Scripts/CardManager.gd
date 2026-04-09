@@ -57,21 +57,33 @@ func dragging(card):
 
 func stopDragging():
 	draggingCard.scale = CARD_BIGGER_SCALE
-	var foundBF = checkCardSlot()
-	if foundBF and foundBF.unitsInPlay.size() < foundBF.BFSize and draggingCard.cost <= BMRef.playerDev:
-		var tween = get_tree().create_tween()
-		tween.tween_property(draggingCard, "position", foundBF.position, 0.1)
-		draggingCard.z_index = 1
-		foundBF.unitsInPlay.append(draggingCard)
-		if draggingCard.lunge:
-			draggingCard.canAttack = true
-		updateCardsOnBF(foundBF)
-		draggingCard.cardSlot = foundBF
-		playerHandRef.removeCard(draggingCard)
-		BMRef.playerUnitsOnBF.append(draggingCard)
-		BMRef.playerPlayCard(draggingCard.cost)
-		draggingCard = null
-		return
+	#checking if card is not a unit
+	if draggingCard.cost <= BMRef.playerDev:
+		if draggingCard.cardType != "Unit":
+			var deckRef = get_tree().get_root().find_child("Deck", true, false)
+			if draggingCard.abilityScript:
+				draggingCard.abilityScript.trigger_ability(deckRef, BMRef)
+			BMRef.playerPlayCard(draggingCard.cost)
+			playerHandRef.removeCard(draggingCard)
+			draggingCard.queue_free() 
+			draggingCard = null
+			return
+	
+		var foundBF = checkCardSlot()
+		if foundBF and foundBF.unitsInPlay.size() < foundBF.BFSize:
+			var tween = get_tree().create_tween()
+			tween.tween_property(draggingCard, "position", foundBF.position, 0.1)
+			draggingCard.z_index = 1
+			foundBF.unitsInPlay.append(draggingCard)
+			if draggingCard.lunge:
+				draggingCard.canAttack = true
+			updateCardsOnBF(foundBF)
+			draggingCard.cardSlot = foundBF
+			playerHandRef.removeCard(draggingCard)
+			BMRef.playerUnitsOnBF.append(draggingCard)
+			BMRef.playerPlayCard(draggingCard.cost)
+			draggingCard = null
+			return
 	playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
 	draggingCard = null
 
