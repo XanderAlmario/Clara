@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbcxt7jskqy5n"
-path="res://.godot/imported/BF.jpg-e4125565a80f3562a22d1749e0045705.ctex"
+uid="uid://pxpqxo5fjg4s"
+path="res://.godot/imported/Frozen Spike.png-d93d81e1db3304d7968dd7806fcca1ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BF.jpg"
-dest_files=["res://.godot/imported/BF.jpg-e4125565a80f3562a22d1749e0045705.ctex"]
+source_file="res://Assets/Frozen Spike.png"
+dest_files=["res://.godot/imported/Frozen Spike.png-d93d81e1db3304d7968dd7806fcca1ba.ctex"]
 
 [params]
 
