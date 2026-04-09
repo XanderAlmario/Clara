@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmjq2nt4bvrun"
-path="res://.godot/imported/Magic_the_gathering-card_back.jpg-c7b62b703f8d1cfea72bc928a4cf5036.ctex"
+uid="uid://c8ykrb1v71bqk"
+path="res://.godot/imported/Spell.png-4749210ad4d574ff57ba9938d4c9fa39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Magic_the_gathering-card_back.jpg"
-dest_files=["res://.godot/imported/Magic_the_gathering-card_back.jpg-c7b62b703f8d1cfea72bc928a4cf5036.ctex"]
+source_file="res://Assets/Spell.png"
+dest_files=["res://.godot/imported/Spell.png-4749210ad4d574ff57ba9938d4c9fa39.ctex"]
 
 [params]
 
