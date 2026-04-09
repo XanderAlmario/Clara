@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ljjjwyh7tbk1"]
+
+[ext_resource type="Texture2D" uid="uid://dme5put32p4bh" path="res://Assets/USERNAME.png" id="1_1bdi4"]
+[ext_resource type="Script" uid="uid://cbxj280dub7fv" path="res://Scripts/username_menu.gd" id="1_1wgbq"]
+[ext_resource type="Script" uid="uid://cs8037kvveyoc" path="res://Scripts/new_player.gd" id="3_dbq37"]
+[ext_resource type="Script" uid="uid://e7u3rh6barnc" path="res://Scripts/line_edit.gd" id="4_jp66g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wgbq"]
+texture = ExtResource("1_1bdi4")
+
+[node name="UsernameMenu" type="Control" unique_id=1250983779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -12.0
+offset_right = 15.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1wgbq")
+
+[node name="Panel" type="Panel" parent="." unique_id=540531577]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 13.0
+offset_right = -13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1wgbq")
+
+[node name="NextButton" type="Button" parent="." unique_id=2046405001]
+layout_mode = 0
+offset_left = 1089.0
+offset_top = 637.0
+offset_right = 1229.0
+offset_bottom = 684.0
+text = "CONT >"
+
+[node name="Player" type="Node" parent="." unique_id=451861574]
+script = ExtResource("3_dbq37")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=803338635]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 510.0
+offset_right = 1231.0
+offset_bottom = 588.0
+placeholder_text = "Enter username here (Username will be \"Default\" if left empty)"
+max_length = 20
+script = ExtResource("4_jp66g")
+
+[connection signal="pressed" from="NextButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="text_changed" from="LineEdit" to="LineEdit" method="_on_text_changed"]
