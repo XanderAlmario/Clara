@@ -144,7 +144,7 @@ func unitAttack(attacker, target, playerAttacking):
 	var damageAttackerDone = attacker.attack
 	var damageTargetDone = target.attack
 	var targetIsPlayer = false
-	if attacker in enemyBF:
+	if attacker in enemyBF.unitsInPlay:
 		targetIsPlayer = true
 		
 	if target.holyShield:
