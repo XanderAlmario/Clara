@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://ban8huclwtn2n"]
+
+[ext_resource type="Script" uid="uid://cjsnw71qxgvmm" path="res://Scripts/CardManager.gd" id="1_abhb2"]
+[ext_resource type="Script" uid="uid://dqw58fs7q00kb" path="res://Scenes/GameSetup.gd" id="1_iyrtt"]
+[ext_resource type="Script" uid="uid://bgcu3bphibumx" path="res://Scripts/PlayerHand.gd" id="2_iyrtt"]
+[ext_resource type="Script" uid="uid://sdmvfc53fvoc" path="res://Scripts/Deck.gd" id="3_n435d"]
+[ext_resource type="Texture2D" uid="uid://hadcp8nosu6h" path="res://Assets/Back.png" id="4_y18dy"]
+[ext_resource type="Script" uid="uid://bnkojpwn7o1gl" path="res://Scripts/InputManager.gd" id="5_0hw01"]
+[ext_resource type="Texture2D" uid="uid://ceodru1kbqfgo" path="res://Assets/CardSlot.png" id="6_31q26"]
+[ext_resource type="PackedScene" uid="uid://bpiifwsmdvr8n" path="res://Scenes/Battlefield.tscn" id="7_r265d"]
+[ext_resource type="Script" uid="uid://d1r6gsc5ikgmd" path="res://Scripts/BattleManager.gd" id="8_xpgre"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sosm"]
+size = Vector2(137, 188)
+
+[node name="PlayerField" type="Node2D" unique_id=1207415006]
+script = ExtResource("1_iyrtt")
+
+[node name="CardManager" type="Node2D" parent="." unique_id=497813091]
+script = ExtResource("1_abhb2")
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=1296902900]
+script = ExtResource("2_iyrtt")
+
+[node name="Deck" type="Node2D" parent="." unique_id=1506583359]
+position = Vector2(150, 890)
+script = ExtResource("3_n435d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Deck" unique_id=805071440]
+z_index = -2
+position = Vector2(1, -0.75814)
+scale = Vector2(0.184, 0.177604)
+texture = ExtResource("4_y18dy")
+
+[node name="Area2D" type="Area2D" parent="Deck" unique_id=948975046]
+position = Vector2(-0.875, 2.625)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D" unique_id=1978438304]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_4sosm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Deck" unique_id=1025561320]
+offset_left = -17.0
+offset_top = -25.0
+offset_right = 23.0
+offset_bottom = 15.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="DeckTimer" type="Timer" parent="Deck" unique_id=292159928]
+
+[node name="InputManager" type="Node2D" parent="." unique_id=1591202141]
+script = ExtResource("5_0hw01")
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=271914442]
+offset_left = 105.0
+offset_top = 624.0
+offset_right = 183.0
+offset_bottom = 655.0
+text = "End Turn"
+
+[node name="BattleTimer" type="Timer" parent="." unique_id=865743889]
+
+[node name="PlayerHP" type="RichTextLabel" parent="." unique_id=290555109]
+offset_left = 350.0
+offset_top = 852.0
+offset_right = 410.0
+offset_bottom = 911.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="PlayerGrave" type="Node2D" parent="." unique_id=143313946]
+z_index = -5
+position = Vector2(1760, 773.00006)
+scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerGrave" unique_id=1439501593]
+texture = ExtResource("6_31q26")
+
+[node name="PlayerBattlefield" parent="." unique_id=2037174653 instance=ExtResource("7_r265d")]
+z_index = -5
+position = Vector2(1005, 677)
+
+[node name="PlayerDiv" type="Node" parent="." unique_id=1241565068]
+
+[node name="PlayerDev" type="RichTextLabel" parent="PlayerDiv" unique_id=43676387]
+offset_left = 343.0
+offset_top = 950.0
+offset_right = 403.0
+offset_bottom = 1009.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerMaxDev" type="RichTextLabel" parent="PlayerDiv" unique_id=845276402]
+offset_left = 397.0
+offset_top = 950.0
+offset_right = 457.0
+offset_bottom = 1009.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Div" type="RichTextLabel" parent="PlayerDiv" unique_id=1676007437]
+offset_left = 376.0
+offset_top = 950.0
+offset_right = 436.0
+offset_bottom = 1009.0
+scale = Vector2(2, 2)
+text = "/"
+metadata/_edit_use_anchors_ = true
+
+[node name="BattleManager" type="Node" parent="." unique_id=216317866]
+script = ExtResource("8_xpgre")
+
+[connection signal="pressed" from="EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]

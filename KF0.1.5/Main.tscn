@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://bfgqe5r3i0kb"]
+
+[ext_resource type="Script" uid="uid://cjsnw71qxgvmm" path="res://Scripts/CardManager.gd" id="1_bj3om"]
+[ext_resource type="PackedScene" uid="uid://bfoicb5e2t2u0" path="res://Scenes/EnemyCardSlot.tscn" id="3_idwnf"]
+[ext_resource type="PackedScene" uid="uid://d0w4v6gomv0pc" path="res://Scenes/CardSlot.tscn" id="3_qlhbm"]
+[ext_resource type="Script" uid="uid://bgcu3bphibumx" path="res://Scripts/PlayerHand.gd" id="3_utgk8"]
+[ext_resource type="Script" uid="uid://sdmvfc53fvoc" path="res://Scripts/Deck.gd" id="4_i858b"]
+[ext_resource type="Script" uid="uid://cr06jwqetm7oy" path="res://Scripts/EnemyHand.gd" id="5_1q8un"]
+[ext_resource type="Texture2D" uid="uid://hadcp8nosu6h" path="res://Assets/Back.png" id="5_7iofm"]
+[ext_resource type="Script" uid="uid://bnkojpwn7o1gl" path="res://Scripts/InputManager.gd" id="6_c1lnt"]
+[ext_resource type="Script" uid="uid://d1r6gsc5ikgmd" path="res://Scripts/BattleManager.gd" id="8_hky2u"]
+[ext_resource type="Script" uid="uid://cyap0xiyvqjp7" path="res://Scripts/EnemyDeck.gd" id="9_2ey30"]
+[ext_resource type="Texture2D" uid="uid://ceodru1kbqfgo" path="res://Assets/CardSlot.png" id="11_20pc6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyg8y"]
+size = Vector2(137, 188)
+
+[node name="Main" type="Node2D" unique_id=1617732049]
+
+[node name="CardManager" type="Node2D" parent="." unique_id=2143651215]
+script = ExtResource("1_bj3om")
+
+[node name="CardSlots" type="Node2D" parent="." unique_id=1871068956]
+
+[node name="CardSlot" parent="CardSlots" unique_id=973330154 instance=ExtResource("3_qlhbm")]
+position = Vector2(960, 750)
+
+[node name="CardSlot3" parent="CardSlots" unique_id=1799076906 instance=ExtResource("3_qlhbm")]
+position = Vector2(1110, 750)
+
+[node name="CardSlot2" parent="CardSlots" unique_id=1270096045 instance=ExtResource("3_qlhbm")]
+position = Vector2(810, 750)
+
+[node name="CardSlot4" parent="CardSlots" unique_id=509294128 instance=ExtResource("3_idwnf")]
+position = Vector2(960, 300)
+
+[node name="CardSlot5" parent="CardSlots" unique_id=770254364 instance=ExtResource("3_idwnf")]
+position = Vector2(810, 300)
+
+[node name="CardSlot6" parent="CardSlots" unique_id=1160158345 instance=ExtResource("3_idwnf")]
+position = Vector2(1110, 300)
+
+[node name="PlayerHand" type="Node2D" parent="." unique_id=816066000]
+script = ExtResource("3_utgk8")
+
+[node name="EnemyHand" type="Node2D" parent="." unique_id=1814092208]
+script = ExtResource("5_1q8un")
+
+[node name="Deck" type="Node2D" parent="." unique_id=1382570727]
+position = Vector2(150, 890)
+script = ExtResource("4_i858b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Deck" unique_id=193756556]
+z_index = -2
+position = Vector2(1, -0.75814)
+scale = Vector2(0.184, 0.177604)
+texture = ExtResource("5_7iofm")
+
+[node name="Area2D" type="Area2D" parent="Deck" unique_id=1828723829]
+position = Vector2(-0.875, 2.625)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D" unique_id=638047983]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_lyg8y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Deck" unique_id=1932080329]
+offset_left = -17.0
+offset_top = -25.0
+offset_right = 23.0
+offset_bottom = 15.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyDeck" type="Node2D" parent="." unique_id=1812784407]
+position = Vector2(1760, 160)
+script = ExtResource("9_2ey30")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyDeck" unique_id=441784164]
+z_index = -2
+scale = Vector2(0.184, 0.177604)
+texture = ExtResource("5_7iofm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EnemyDeck" unique_id=1535930235]
+offset_left = -10.0
+offset_top = -23.0
+offset_right = 30.0
+offset_bottom = 17.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="InputManager" type="Node2D" parent="." unique_id=1437126820]
+script = ExtResource("6_c1lnt")
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=1810450882]
+offset_left = 105.0
+offset_top = 624.0
+offset_right = 183.0
+offset_bottom = 655.0
+text = "End Turn"
+
+[node name="BattleManager" type="Node" parent="." unique_id=63903412]
+script = ExtResource("8_hky2u")
+
+[node name="BattleTimer" type="Timer" parent="." unique_id=1069219254]
+
+[node name="PlayerHP" type="RichTextLabel" parent="." unique_id=43730548]
+offset_left = 560.0
+offset_top = 667.0
+offset_right = 620.0
+offset_bottom = 726.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="EnemyHP" type="RichTextLabel" parent="." unique_id=1651959974]
+offset_left = 1360.0
+offset_top = 320.0
+offset_right = 1427.0
+offset_bottom = 378.9992
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerGrave" type="Node2D" parent="." unique_id=1418748692]
+position = Vector2(1550, 760)
+scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerGrave" unique_id=2068939607]
+texture = ExtResource("11_20pc6")
+
+[node name="EnemyGrave" type="Node2D" parent="." unique_id=1665253316]
+z_index = -5
+position = Vector2(370, 290)
+scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyGrave" unique_id=868452719]
+texture = ExtResource("11_20pc6")
+
+[connection signal="pressed" from="EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]

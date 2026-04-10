@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bfgqe5r3i0kb"]
+
+[ext_resource type="Script" uid="uid://dogdatsu51lgl" path="res://Scenes/Multiplayer.gd" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://ban8huclwtn2n" path="res://Scenes/PlayerField.tscn" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://cxisdofno8fhl" path="res://Scenes/EnemyField.tscn" id="3_rgh2o"]
+[ext_resource type="Script" uid="uid://cm0aa7ttkxri6" path="res://Scenes/player.gd" id="4_rgh2o"]
+
+[node name="Main" type="Node2D" unique_id=1617732049]
+script = ExtResource("1_r150o")
+player_field_scene = ExtResource("2_kln2b")
+enemy_field_scene = ExtResource("3_rgh2o")
+
+[node name="HostButton" type="Button" parent="." unique_id=1561028885]
+offset_left = 870.0
+offset_top = 367.0
+offset_right = 1067.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 30
+text = "HOST"
+
+[node name="JoinButton" type="Button" parent="." unique_id=1162901091]
+offset_left = 870.0
+offset_top = 466.0
+offset_right = 1067.0
+offset_bottom = 548.0
+theme_override_font_sizes/font_size = 30
+text = "JOIN"
+
+[node name="Player" type="Node" parent="." unique_id=224644622]
+script = ExtResource("4_rgh2o")
+
+[connection signal="pressed" from="HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]
