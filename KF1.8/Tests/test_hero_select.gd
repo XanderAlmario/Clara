@@ -3,6 +3,8 @@ extends "res://addons/gut/test.gd"
 var HeroMenu = load("res://Scenes/hero_select.tscn")
 var _menu = null
 
+var player = _menu.get_node("Player")
+
 func before_each():
 	_menu = HeroMenu.instantiate()
 	add_child(_menu)
@@ -88,9 +90,23 @@ func test_arch_button_activates_deck_view():
 	back_button.emit_signal("pressed")
 	assert_false(deck_view.visible, "arch deck should not be visible")
 	
-#func test_mage_select_sets_class():
-	#_menu._on_mage_select_pressed()
-	#
-	#assert_eq(_menu.selected_hero_type, "Mage", "class should be set to mage")
+func test_on_mage_select_pressed_logic():
+	_menu._on_mage_select_pressed()
+	assert_eq("Mage", player.champion, "player class should be set to mage")
 	
+func test_on_monk_select_pressed_logic():
+	_menu._on_monk_select_pressed()
+	assert_eq("Monk", player.champion, "player class should be set to mage")
+	
+func test_on_paladin_select_pressed_logic():
+	_menu._on_paladin_select_pressed()
+	assert_eq("Pal", player.champion, "player class should be set to mage")
+	
+func test_on_undead_select_pressed_logic():
+	_menu._on_undead_select_pressed()
+	assert_eq("Nec", player.champion, "player class should be set to mage")
+	
+func test_on_archer_select_pressed_logic():
+	_menu._on_archer_select_pressed()
+	assert_eq("Arch", player.champion, "player class should be set to mage")
 	
