@@ -1,0 +1,13 @@
+res://Scenes/Main.tscn
+res://addons/gut/gui/editor_globals.gd
+res://addons/gut/gui/EditorRadioButton.tres
+res://Tests/test_hero_select.gd
+res://Scenes/create_lobby.tscn
+res://Scripts/create_label.gd
+res://Scripts/player.gd
+res://Scripts/create_lobby.gd
+res://Scenes/PlayerField.tscn
+res://Scenes/lobby_create_join.tscn
+res://Scripts/Multiplayer.gd
+res://Scripts/opponent.gd
+res://Scripts/Multiplayer_edited.gd
