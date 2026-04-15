@@ -7,3 +7,5 @@ res://Tests/test_create_lobby.gd
 res://Scripts/create_lobby.gd
 res://Scripts/Battlefield.gd
 res://Scenes/join_lobby.tscn
+res://Tests/test_network.gd
+res://Tests/test_hero_select.gd

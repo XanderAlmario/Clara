@@ -2,12 +2,12 @@ extends "res://addons/gut/test.gd"
 
 var HeroMenu = load("res://Scenes/hero_select.tscn")
 var _menu = null
-
-var player = _menu.get_node("Player")
+var player = null
 
 func before_each():
 	_menu = HeroMenu.instantiate()
 	add_child(_menu)
+	player = _menu.get_node("Player")
 
 func after_each():
 	_menu.queue_free()
