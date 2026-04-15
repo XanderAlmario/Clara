@@ -9,3 +9,5 @@ res://Scripts/Battlefield.gd
 res://Scenes/join_lobby.tscn
 res://Tests/test_network.gd
 res://Tests/test_hero_select.gd
+res://Scripts/Multiplayer.gd
+res://Tests/test_match_to_summary.gd

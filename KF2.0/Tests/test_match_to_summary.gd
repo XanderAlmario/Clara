@@ -17,5 +17,5 @@ func test_match_button_exists():
 	
 func test_on_match_button_pressed_logic():
 	_menu._on_match_button_pressed()
-	pass_test("test passed") # test passes if this line is reached
+	pass_test("test passed")
 	
