@@ -21,7 +21,12 @@ func before_each():
 	
 	var battle = Node2D.new()
 	battle.name = "BattleManager"
-	battle.set("playerUnitsOnBF", []) 
+	
+	var b_script = GDScript.new()
+	b_script.source_code = "extends Node2D\nvar playerDev = 10\nvar playerUnitsOnBF = []\nvar playerIsAttacking = false\nvar enemyUnitsOnBF = []\nfunc playerPlayCard(cost): pass"
+	b_script.reload()
+	battle.set_script(b_script)
+	
 	root.add_child(battle)
 	
 	manager = CardManagerScript.new()
@@ -31,6 +36,10 @@ func before_each():
 func create_placeholder():
 	var card = Node2D.new()
 	card.set_script(load("res://Scripts/Card.gd")) 
+	card.cost = 1 
+	card.cardType = "Unit" 
+	card.name = "TestCard"
+	
 	manager.add_child(card)
 	return card
 

@@ -18,7 +18,7 @@ func _on_start_button_pressed():
 	#self.get_parent().add_child(next_scene)
 	#self.queue_free()
 	
-	var player_id = multiplayer.get_unique_id
+	var player_id = multiplayer.get_unique_id()
 	
 	var player_scene = player_field_scene.instantiate()
 	get_parent().get_parent().add_child(player_scene)
@@ -27,9 +27,11 @@ func _on_start_button_pressed():
 	get_parent().get_parent().add_child(enemy_scene)
 	
 	if host == player_id:
-		player_scene.host_setup()
+		if player_scene.has_method("host_setup"):
+			player_scene.host_setup()
 	else:
-		player_scene.client_setup()
+		if player_scene.has_method("client_setup"):
+			player_scene.client_setup()
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/lobby_create_join.tscn")

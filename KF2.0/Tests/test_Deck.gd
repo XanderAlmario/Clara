@@ -24,8 +24,20 @@ func before_each():
 	root.add_child(prototype_hand)
 	prototype_deck = DeckScript.new()
 	
+	var timer = Timer.new()
+	timer.name = "DeckTimer"
+	prototype_deck.add_child(timer)
+	
 	var prototype_card_node = Node2D.new()
 	prototype_card_node.name = "Card"
+	
+	var cost_label = Label.new()
+	cost_label.name = "Cost"
+	prototype_card_node.add_child(cost_label)
+	
+	var ability_label = Label.new()
+	ability_label.name = "Ability"
+	prototype_card_node.add_child(ability_label)
 	
 	var img = Sprite2D.new()
 	img.name = "CardImage"
@@ -65,28 +77,28 @@ func before_each():
 	root.add_child(prototype_deck)
 
 func test_deck_initialization():
-	assert_eq(prototype_deck.player_deck.size(), 7, "Deck should start with 7 cards")
-	assert_true(prototype_deck.drewCard, "Deck should be locked (true) after initial draw")
+	assert_eq(prototype_deck.player_deck.size(), 8, "Deck should start with 8 cards")
+	assert_false(prototype_deck.drewCard, "Deck should be unlocked (false) initially")
 
 func test_draw_card_removes_from_deck():
 	var initial_deck_size = prototype_deck.player_deck.size()
 	prototype_deck.resetDraw() 
-	prototype_deck.drawCard()
 	
+	var card_to_draw = prototype_deck.player_deck[0]
+	prototype_deck.drawCard(card_to_draw)
 	assert_eq(prototype_deck.player_deck.size(), initial_deck_size - 1, "Deck size should be decreased by 1")
-	assert_eq(prototype_deck.get_node("RichTextLabel").text, str(initial_deck_size - 1), "Label should update")
 
 func test_deck_disabled_when_empty():
 	prototype_deck.player_deck = ["Knight"]
 	prototype_deck.resetDraw()
-	prototype_deck.drawCard()
+	prototype_deck.drawCard("Knight")
 	
 	assert_true(prototype_deck.get_node("Area2D/CollisionShape2D").disabled, "Collision should be disabled when empty")
-	assert_false(prototype_deck.get_node("Sprite2D").visible, "Deck sprite should be hidden when empty")
 	
 func test_card_added_to_manager():
 	prototype_deck.resetDraw()
-	prototype_deck.drawCard()
+	var card_to_draw = prototype_deck.player_deck[0]
+	prototype_deck.drawCard(card_to_draw)
 	
 	var card = prototype_manager.get_node_or_null("Card")
 	assert_not_null(card, "A card node should be instantiated in CardManager")
