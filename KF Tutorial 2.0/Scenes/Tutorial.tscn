@@ -212,7 +212,7 @@ offset_top = 345.0
 offset_right = 1278.0
 offset_bottom = 705.0
 theme_override_font_sizes/normal_font_size = 25
-text = "At the top, you can see the card's devotion cost. At the bottom right of the battlefield, you can see your devotion count, which is currently at one. 
+text = "At the top of the cards, you can see the card's devotion cost. At the bottom right of the battlefield, you can see your devotion count, which is currently at 1 / 1. 
 
 Look at your cards in hand. The “Aspirant Squire” only costs 1 devotion. Let’s put that card into play by putting it into the battlefield!
 
