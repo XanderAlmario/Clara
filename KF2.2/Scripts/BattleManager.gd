@@ -24,6 +24,9 @@ var playerBF
 var enemyBF
 var is_targeting_with_spell = false
 var spell_card_waiting = null
+var fatigue_aura_turns_left = 0
+var player_is_taxed_turns = 0  
+var enemy_is_taxed_turns = 0   
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,6 +46,9 @@ func _ready():
 	#enemyBF = get_parent().get_parent().get_node("EnemyField/EnemyBattlefield")
 
 func _on_end_turn_button_pressed():
+	if player_is_taxed_turns > 0:
+		player_is_taxed_turns -= 1
+	rpc("enemy_finished_tax_turn")
 	$"../CardManager".unselect()
 	updatePlayerDev()
 	#playerUnitsAttacked = []
@@ -546,13 +552,17 @@ func enemyPlayCard(cost):
 	$"../EnemyDiv/EnemyDev".text = str(enemyDev)
 
 func resolve_spell_targeting(target):
-	if target:
+	if target and spell_card_waiting:
+		var spell_cost = spell_card_waiting.cost
+		if spell_card_waiting.cardType != "Unit" and player_is_taxed_turns > 0:
+			spell_cost += 1
+		
 		if spell_card_waiting.spellScript and spell_card_waiting.spellScript.has_method("trigger_targeted_ability"):
 			spell_card_waiting.spellScript.trigger_targeted_ability(target, self, true)
 		
 		var player_id = multiplayer.get_unique_id()
 		rpc("sync_targeted_spell", player_id, target.name)
-		playerPlayCard(spell_card_waiting.cost)
+		playerPlayCard(spell_cost)
 		spell_card_waiting.queue_free()
 		
 	is_targeting_with_spell = false
@@ -582,3 +592,15 @@ func sync_targeted_spell(caster_id, target_name):
 					
 				updateCardsOnBF(playerBF)
 				updateCardsOnBF(enemyBF)
+
+@rpc("any_peer")
+func receive_fatigue_aura():
+	player_is_taxed_turns = 2 
+	print("I am now taxed.")
+
+func get_card_purchase_cost(card):
+	var base_cost = card.cost
+	if player_is_taxed_turns > 0:
+		print("AURA ACTIVE: Taxing ", card.name, " +1 Devotion.")
+		return base_cost + 1
+	return base_cost

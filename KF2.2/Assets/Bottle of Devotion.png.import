@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pxpqxo5fjg4s"
-path="res://.godot/imported/Frozen Spike.png-d93d81e1db3304d7968dd7806fcca1ba.ctex"
+uid="uid://ypwxq8cwrltw"
+path="res://.godot/imported/Bottle of Devotion.png-cc92d7ae0df7e1dfb10b61bab8574c28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Frozen Spike.png"
-dest_files=["res://.godot/imported/Frozen Spike.png-d93d81e1db3304d7968dd7806fcca1ba.ctex"]
+source_file="res://Assets/Bottle of Devotion.png"
+dest_files=["res://.godot/imported/Bottle of Devotion.png-cc92d7ae0df7e1dfb10b61bab8574c28.ctex"]
 
 [params]
 
