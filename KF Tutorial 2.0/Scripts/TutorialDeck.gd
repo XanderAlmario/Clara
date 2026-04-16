@@ -4,7 +4,7 @@ const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const DRAW_SPEED = 0.5
 const STARTING_HAND_SIZE = 5
 
-var player_deck = ["Aspirant Squire", "Thaloran Lightguard", "Bring in the Holy Crusade", "Summon the Infantry", 
+var player_deck = ["Aspirant Squire", "Thaloran Lightguard", "Defender Aura", "Summon the Infantry", 
 "Artimose Aetheron", "Blessed Parishioner", "Defender Aura", "Holy Crusader", 
 "Blessed Crusader Hound", "Blessed Crusader Hound"]
 var cardDBRef

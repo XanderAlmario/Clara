@@ -24,12 +24,6 @@ const CARDS = { #Cost(0), Attack(1), Health(2),
 	false, false, false,
 	false, false, false],
 	
-	"Bring in the Holy Crusade" : [7, null, null, 
-	"Spell", "Holy Shield", 
-	false, false, false,
-	false, false, false, 
-	"res://Scripts/Abilities/Discovery.gd"],
-	
 	"Summon the Infantry" : [6, null, null, 
 	"Spell", "Holy Shield", 
 	false, false, false,
