@@ -212,7 +212,7 @@ offset_top = 345.0
 offset_right = 1278.0
 offset_bottom = 705.0
 theme_override_font_sizes/normal_font_size = 25
-text = "At the top, you can see the card's devotion cost. At the bottom right of the battlefield, you can see your devotion count, which is currently at zero. 
+text = "At the top, you can see the card's devotion cost. At the bottom right of the battlefield, you can see your devotion count, which is currently at one. 
 
 Look at your cards in hand. The “Aspirant Squire” only costs 1 devotion. Let’s put that card into play by putting it into the battlefield!
 
@@ -266,7 +266,7 @@ offset_top = 345.0
 offset_right = 1278.0
 offset_bottom = 544.0
 theme_override_font_sizes/normal_font_size = 25
-text = "Look at that, it summoned another unit! Let’s end our turn for now and finish off this enemy next turn.
+text = "Let’s end our turn for now and finish off this enemy next turn.
 
 <Press Space to Continue>"
 scroll_active = false
@@ -279,7 +279,7 @@ offset_top = 345.0
 offset_right = 1278.0
 offset_bottom = 547.0
 theme_override_font_sizes/normal_font_size = 25
-text = "Now, we can attack with our creatures. Let’s attack with both the “Blessed Parishioner” and “Blessed Crusader Hound”!
+text = "Now, we can attack with our units. Let’s attack with the “Blessed Parishioner” !
 
 <Press Space to Continue>"
 scroll_active = false
