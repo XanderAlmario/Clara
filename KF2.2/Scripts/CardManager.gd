@@ -59,15 +59,24 @@ func dragging(card):
 func stopDragging():
 	draggingCard.scale = CARD_BIGGER_SCALE
 	
-	if draggingCard.cost <= BMRef.playerDev:
+	var actual_cost = BMRef.get_card_purchase_cost(draggingCard)
+	
+	if actual_cost <= BMRef.playerDev:
 		if draggingCard.cardType != "Unit":
 			if draggingCard.spellScript:
+				if draggingCard.name == "Crusader's Might":
+					draggingCard.spellScript.trigger_targeted_ability(null, BMRef)
+					BMRef.playerPlayCard(actual_cost)
+					playerHandRef.removeCard(draggingCard)
+					draggingCard.queue_free()
+					draggingCard = null
+					return
 				if draggingCard.spellScript.has_method("trigger_targeted_ability"):
 					var target = checkEnemyTarget()
 					if target and target in BMRef.enemyUnitsOnBF:
 						draggingCard.spellScript.trigger_targeted_ability(target, BMRef)
-						
-						BMRef.playerPlayCard(draggingCard.cost)
+							
+						BMRef.playerPlayCard(actual_cost)
 						playerHandRef.removeCard(draggingCard)
 						draggingCard.queue_free() 
 						draggingCard = null
@@ -80,23 +89,23 @@ func stopDragging():
 				elif draggingCard.spellScript.has_method("trigger_ability"):
 					var deckRef = get_tree().get_root().find_child("Deck", true, false)
 					draggingCard.spellScript.trigger_ability(deckRef, BMRef)
-					
-					BMRef.playerPlayCard(draggingCard.cost)
+						
+					BMRef.playerPlayCard(actual_cost)
 					playerHandRef.removeCard(draggingCard)
 					draggingCard.queue_free() 
 					draggingCard = null
 					return
-	
+		
 		var foundBF = checkCardSlot()
 		if foundBF and foundBF.unitsInPlay.size() < foundBF.BFSize:
 			var player_id = multiplayer.get_unique_id()
 			play_card_here_and_for_clients_opponent(player_id, draggingCard.name, foundBF.name)
 			rpc("play_card_here_and_for_clients_opponent", player_id, draggingCard.name, foundBF.name)
-			
+				
 			BMRef.playerUnitsOnBF.append(draggingCard)
 			draggingCard = null
 			return
-			
+				
 	playerHandRef.addCardToHand(draggingCard, CARD_SPEED)
 	draggingCard = null
 
@@ -146,7 +155,8 @@ func play_card_here_and_for_clients_opponent(player_id, card_name, card_slot_nam
 		playerHandRef.removeCard(card)
 		var tween = get_tree().create_tween()
 		tween.tween_property(card, "position", cardSlot.position, 0.1)
-		BMRef.playerPlayCard(card.cost)
+		var final_price = BMRef.get_card_purchase_cost(card)
+		BMRef.playerPlayCard(final_price)
 		cardSlot.unitsInPlay.append(card)
 	else:
 		var opponentField = get_parent().get_parent().get_node("EnemyField")
