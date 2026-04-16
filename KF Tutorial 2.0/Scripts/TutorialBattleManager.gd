@@ -158,6 +158,7 @@ func directAttack(attacker, playerAttacking):
 		if enemyHP <= 0:
 			$"../TutorialInstruction".instructionShow()
 			$"../TutorialInstruction".visible = true
+			$"../EndTurnButton".disabled = true
 			await wait(2)
 			get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 		$"../EndTurnButton".visible = true

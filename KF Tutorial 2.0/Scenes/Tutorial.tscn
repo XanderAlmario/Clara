@@ -193,11 +193,13 @@ offset_bottom = 1093.0
 script = ExtResource("12_m35rq")
 
 [node name="First" type="RichTextLabel" parent="TutorialInstruction" unique_id=373824001]
+visible = false
 layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 432.0
+offset_bottom = 468.0
+theme_override_font_sizes/normal_font_size = 25
 text = "Hello, I’m here to teach you how to battle! 
 
 <Press Space to Continue>"
@@ -209,7 +211,8 @@ layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 581.0
+offset_bottom = 705.0
+theme_override_font_sizes/normal_font_size = 25
 text = "At the top, you can see the card's devotion cost. At the bottom right of the battlefield, you can see your devotion count, which is currently at zero. 
 
 Look at your cards in hand. The “Aspirant Squire” only costs 1 devotion. Let’s put that card into play by putting it into the battlefield!
@@ -223,7 +226,8 @@ layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 457.0
+offset_bottom = 521.0
+theme_override_font_sizes/normal_font_size = 25
 text = "Since you just played that card this turn, it can’t attack yet. Let’s end our turn for now. 
 
 <Press Space to Continue>"
@@ -235,7 +239,8 @@ layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 497.0
+offset_bottom = 654.0
+theme_override_font_sizes/normal_font_size = 25
 text = "When you begin your turn, you will automatically draw a card. Looks like our enemy summoned a “Training Student”. Let’s attack so it can’t attack us. You can attack by clicking your unit “Aspirant Squire” then clicking the enemy’s unit “Training Student”. 
 
 <Press Space to Continue>"
@@ -247,7 +252,8 @@ layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 454.0
+offset_bottom = 532.0
+theme_override_font_sizes/normal_font_size = 25
 text = "Good job! But oh no, now you don’t have any more units. Let’s put a “Blessed Parishioner” into play!
 
 <Press Space to Continue>"
@@ -259,7 +265,8 @@ layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 454.0
+offset_bottom = 544.0
+theme_override_font_sizes/normal_font_size = 25
 text = "Look at that, it summoned another unit! Let’s end our turn for now and finish off this enemy next turn.
 
 <Press Space to Continue>"
@@ -271,19 +278,20 @@ layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
-offset_bottom = 454.0
+offset_bottom = 547.0
+theme_override_font_sizes/normal_font_size = 25
 text = "Now, we can attack with our creatures. Let’s attack with both the “Blessed Parishioner” and “Blessed Crusader Hound”!
 
 <Press Space to Continue>"
 scroll_active = false
 
 [node name="Eighth" type="RichTextLabel" parent="TutorialInstruction" unique_id=1301732310]
-visible = false
 layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
 offset_right = 1278.0
 offset_bottom = 454.0
+theme_override_font_sizes/normal_font_size = 30
 text = "You win! May the light guide you on the journey ahead.
 "
 scroll_active = false
