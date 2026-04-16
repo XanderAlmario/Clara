@@ -193,7 +193,6 @@ offset_bottom = 1093.0
 script = ExtResource("12_m35rq")
 
 [node name="First" type="RichTextLabel" parent="TutorialInstruction" unique_id=373824001]
-visible = false
 layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0
@@ -286,6 +285,7 @@ text = "Now, we can attack with our creatures. Let’s attack with both the “B
 scroll_active = false
 
 [node name="Eighth" type="RichTextLabel" parent="TutorialInstruction" unique_id=1301732310]
+visible = false
 layout_mode = 0
 offset_left = 700.0
 offset_top = 345.0

@@ -16,11 +16,14 @@ func _ready() -> void:
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			emit_signal("onClick")
-			cursorOnCard()
+		if $"../TutorialInstruction".visible == true:
+			pass
 		else:
-			emit_signal("clickReleased")
+			if event.pressed:
+				emit_signal("onClick")
+				cursorOnCard()
+			else:
+				emit_signal("clickReleased")
 	elif event is InputEventKey and event.pressed:
 		if event.keycode == KEY_SPACE:
 			$"../TutorialInstruction".visible = false
