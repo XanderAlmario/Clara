@@ -1,7 +1,7 @@
 extends Node
 
 const CARD_MOVE_SPEED = 0.1
-const STARTING_HEALTH = 5
+const STARTING_HEALTH = 2
 const ATTACK_OFFSET = 20
 const MAX_DEVOTION = 10
 const CARD_WIDTH = 200
@@ -41,6 +41,9 @@ func _ready():
 	
 	playerBF = $"../PlayerBattlefield"
 	enemyBF = $"../EnemyBattlefield"
+	
+	if playerTurnCount == 1:
+		$"../EndTurnButton".disabled = true
 
 func _on_end_turn_button_pressed():
 	if playerTurnCount == 1 and playerBF.unitsInPlay.size() == 1:
@@ -52,7 +55,7 @@ func _on_end_turn_button_pressed():
 			firstRound = false
 		playerTurnCount += 1
 		enemyTurn()
-	elif playerTurnCount == 2:
+	elif playerTurnCount >= 2:
 		$"../CardManager".unselect()
 		playerUnitsAttacked = []
 		if !firstRound:
@@ -84,19 +87,19 @@ func enemyTurn():
 		#await playStrongestUnit()
 		await playUnit()
 	
-	if enemyUnitsOnBF.size() != 0:
-		var attackingUnits = enemyUnitsOnBF.duplicate()
-		for card in attackingUnits:
-			if playerUnitsOnBF.size() != 0:
-				var target = playerUnitsOnBF.pick_random()
-				await unitAttack(card, target, "Enemy")
-			else:
-				await directAttack(card, "Enemy")
+	#if enemyUnitsOnBF.size() != 0:
+		#var attackingUnits = enemyUnitsOnBF.duplicate()
+		#for card in attackingUnits:
+			#if playerUnitsOnBF.size() != 0:
+				#var target = playerUnitsOnBF.pick_random()
+				#await unitAttack(card, target, "Enemy")
+			#else:
+				#await directAttack(card, "Enemy")
 				 
 	endEnemyTurn()	
 	
 func playUnit():
-	var enemyHand = $"../EnemyHand".enemyHand
+	var enemyHand = $"../TutorialEnemyHand".enemyHand
 	var unitToPlay
 	for card in enemyHand:
 		if card.cost == 1:
@@ -106,7 +109,7 @@ func playUnit():
 			updateCardsOnBF(enemyBF)
 			enemyPlayCard(unitToPlay.cost)
 			# Remove card from hand
-			$"../EnemyHand".removeCard(unitToPlay)
+			$"../TutorialEnemyHand".removeCard(unitToPlay)
 			unitToPlay.cardSlot = enemyBF
 			break
 	await wait(1)
@@ -152,6 +155,11 @@ func directAttack(attacker, playerAttacking):
 	if playerAttacking == "Player":
 		playerIsAttacking = false
 		$"../EndTurnButton".disabled = false
+		if enemyHP <= 0:
+			$"../TutorialInstruction".instructionShow()
+			$"../TutorialInstruction".visible = true
+			await wait(2)
+			get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 		$"../EndTurnButton".visible = true
 	attacker.firstAttack = true
 	
@@ -164,6 +172,7 @@ func unitAttack(attacker, target, playerAttacking):
 		playerUnitsAttacked.append(attacker)
 		if attacker.fury and !attacker.firstAttack:
 			playerUnitsAttacked.erase(attacker)
+			
 	
 	attacker.z_index = 5
 	var newPos = Vector2(target.position.x, target.position.y + ATTACK_OFFSET)
@@ -224,6 +233,9 @@ func unitAttack(attacker, target, playerAttacking):
 		playerIsAttacking = false
 		$"../EndTurnButton".disabled = false
 		$"../EndTurnButton".visible = true
+		if playerTurnCount == 2:
+			$"../TutorialInstruction".instructionShow()
+			$"../TutorialInstruction".visible = true
 	attacker.firstAttack = true
 
 func updateCardsOnBF(BF):
@@ -267,38 +279,6 @@ func enemyCardSelected(target):
 			$"../CardManager".selectedUnit = null
 			unitAttack(attacker, target, "Player")
 
-func playStrongestUnit():
-	var enemyHand = $"../EnemyHand".enemyHand
-	if enemyHand.size() == 0:
-		endEnemyTurn()
-		return
-	# Get random empty slot
-	#var randomEmptySlot = emptyEnemyUnitSlots.pick_random()
-	#emptyEnemyUnitSlots.erase(randomEmptySlot)
-	# Pick card with highest attack
-	var strongestUnit
-	for card in enemyHand:
-		if card.cost <= enemyDev:
-			strongestUnit = card
-			break
-	if strongestUnit:
-		for card in enemyHand:
-			if card.attack > strongestUnit.attack and card.cost <= enemyDev:
-				strongestUnit = card
-		# Animate card to slot
-		#var tween = get_tree().create_tween()
-		#tween.tween_property(strongestUnit, "position", randomEmptySlot.position, CARD_MOVE_SPEED)
-		strongestUnit.get_node("AnimationPlayer").play("cardFlip")
-		enemyUnitsOnBF.append(strongestUnit)
-		enemyBF.unitsInPlay.append(strongestUnit)
-		updateCardsOnBF(enemyBF)
-		enemyPlayCard(strongestUnit.cost)
-		# Remove card from hand
-		$"../EnemyHand".removeCard(strongestUnit)
-		strongestUnit.cardSlot = enemyBF
-	
-	await wait(1)
-
 func wait(waitTime):
 	battleTimer.wait_time = waitTime
 	battleTimer.start()
@@ -314,6 +294,10 @@ func endEnemyTurn():
 	isEnemyTurn = false
 	$"../EndTurnButton".visible = true
 	$"../EndTurnButton".disabled = false
+	
+	if playerTurnCount == 2 or playerTurnCount == 3:
+		$"../TutorialInstruction".instructionShow()
+		$"../TutorialInstruction".visible = true
 	
 func updatePlayerDev():
 	if (playerMaxDev < MAX_DEVOTION):
@@ -334,6 +318,14 @@ func updateEnemyDev():
 func playerPlayCard(cost):
 	playerDev -= cost
 	$"../PlayerDiv/PlayerDev".text = str(playerDev)
+	if playerTurnCount == 1:
+		$"../TutorialInstruction".instructionShow()
+		$"../TutorialInstruction".visible = true
+		$"../EndTurnButton".disabled = false
+	elif playerTurnCount == 2:
+		$"../TutorialInstruction".instructionShow()
+		$"../TutorialInstruction".visible = true
+		$"../EndTurnButton".disabled = false
 	
 func enemyPlayCard(cost):
 	enemyDev -= cost

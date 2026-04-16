@@ -4,17 +4,16 @@ const CARD_SCENE_PATH = "res://Scenes/EnemyCard.tscn"
 const DRAW_SPEED = 0.5
 const STARTING_HAND_SIZE = 5
 
-var enemy_deck = ["Knight", "Archer", "Demon", 
-"Knight", "Archer", "Demon", 
-"Knight", "Archer", "Demon", 
-"Knight", "Archer", "Demon"]
+var enemy_deck = ["Training Student", "Way of Astral Master", "Kensei Monk", 
+"Way of Mercy Master", "Swiftfist Monk", "Astral Projection", 
+"Shadow Arts", "Swiftfist Monk", "Kensei Monk", "Astral Projection"]
 var cardDBRef
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#enemy_deck.shuffle()
 	$RichTextLabel.text = str(enemy_deck.size())
-	cardDBRef = preload("res://Scripts/EnemyCardDatabase.gd")
+	cardDBRef = preload("res://Scripts/CardDatabase.gd")
 	for i in range(STARTING_HAND_SIZE):
 		drawCard()
 
@@ -47,4 +46,4 @@ func drawCard():
 	newCard.cardType = cardDBRef.CARDS[drawnCardName][3]
 	$"../CardManager".add_child(newCard)
 	newCard.name = "Card"
-	$"../EnemyHand".addCardToHand(newCard, DRAW_SPEED)
+	$"../TutorialEnemyHand".addCardToHand(newCard, DRAW_SPEED)

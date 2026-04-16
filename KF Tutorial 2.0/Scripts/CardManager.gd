@@ -16,7 +16,7 @@ var selectedUnit
 
 func _ready():
 	screenSize = get_viewport_rect().size
-	playerHandRef = $"../PlayerHand"
+	playerHandRef = $"../TutorialPlayerHand"
 	BMRef = $"../BattleManager"
 	$"../InputManager".connect("clickReleased", onClickReleased)
 

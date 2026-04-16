@@ -21,6 +21,12 @@ func _input(event):
 			cursorOnCard()
 		else:
 			emit_signal("clickReleased")
+	elif event is InputEventKey and event.pressed:
+		if event.keycode == KEY_SPACE:
+			$"../TutorialInstruction".visible = false
+			if $"../TutorialInstruction".instructionNumber == 1:
+				$"../TutorialInstruction".instructionShow()
+				$"../TutorialInstruction".visible = true
 
 func cursorOnCard():
 	var space_state = get_world_2d().direct_space_state

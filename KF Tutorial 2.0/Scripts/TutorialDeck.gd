@@ -4,8 +4,9 @@ const CARD_SCENE_PATH = "res://Scenes/Card.tscn"
 const DRAW_SPEED = 0.5
 const STARTING_HAND_SIZE = 5
 
-var player_deck = ["Knight", "Demon", "Leech", 
-"Leech", "Leech", "Leech", "Discovery", "Frozen Spike"]
+var player_deck = ["Aspirant Squire", "Thaloran Lightguard", "Bring in the Holy Crusade", "Summon the Infantry", 
+"Artimose Aetheron", "Blessed Parishioner", "Defender Aura", "Holy Crusader", 
+"Blessed Crusader Hound", "Blessed Crusader Hound"]
 var cardDBRef
 var drewCard = false
 
@@ -72,7 +73,7 @@ func drawCard():
 	
 	$"../CardManager".add_child(newCard)
 	newCard.name = "Card"
-	$"../PlayerHand".addCardToHand(newCard, DRAW_SPEED)
+	$"../TutorialPlayerHand".addCardToHand(newCard, DRAW_SPEED)
 	newCard.get_node("AnimationPlayer").play("cardFlip")
 
 func resetDraw():
