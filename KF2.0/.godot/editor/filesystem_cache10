@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776257753
+::res://::1776338389
 icon.svg::CompressedTexture2D::8843588493703573292::1776251628::1776255654::1::::<><><>0<>0<>18b93e5d0873f430698330364785fa35<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1776251626
 ::res://addons/gut/::1776255654
@@ -174,7 +174,7 @@ SETTINGSKF.png::CompressedTexture2D::8783818192648840533::1776251626::1776255654
 Spell.png::CompressedTexture2D::7139255895648948510::1776251626::1776255654::1::::<><><>0<>0<>6f65a6c7f65c8a5c34c7cceb69d5b9b1<>res://.godot/imported/Spell.png-4749210ad4d574ff57ba9938d4c9fa39.ctex::
 USERNAME.png::CompressedTexture2D::8011635063570681093::1776251626::1776255654::1::::<><><>0<>0<>2a15ed75d276946bea7fde0fb7ba5d92<>res://.godot/imported/USERNAME.png-05391c998a3eeb44736f342480de77e1.ctex::
 {F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png::CompressedTexture2D::2967086451569842002::1776251626::1776255654::1::::<><><>0<>0<>fa84a7e5ec45a21e9e747ea099a2c90f<>res://.godot/imported/{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png-f24e35819fa74b2806912aeace29e263.ctex::
-::res://Scenes/::1776257611
+::res://Scenes/::1776258982
 Battlefield.tscn::PackedScene::3456264209077984139::1776251626::0::1::::<><><>0<>0<><>::uid://dbcxt7jskqy5n::::res://Assets/BF.jpg<>uid://dsmxsfx1cjsee::::res://Scripts/Battlefield.gd
 Card.tscn::PackedScene::7908932293595907992::1776251626::0::1::::<><><>0<>0<><>::uid://ccjt3oowhjogc::::res://Scripts/Card.gd<>uid://ryfks8gir3t0::::res://Assets/Knight.png<>uid://hadcp8nosu6h::::res://Assets/Back.png
 CardSlot.tscn::PackedScene::8961199385227325836::1776251626::0::1::::<><><>0<>0<><>::uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>res://Scripts/CardSlot.gd
@@ -184,17 +184,17 @@ EnemyCard.tscn::PackedScene::296676363508893334::1776251626::0::1::::<><><>0<>0<
 EnemyCardSlot.tscn::PackedScene::2766755597056125429::1776251626::0::1::::<><><>0<>0<><>::res://Scripts/CardSlot.gd<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png
 EnemyField.tscn::PackedScene::6404798800006532565::1776251626::0::1::::<><><>0<>0<><>::uid://cr06jwqetm7oy::::res://Scripts/EnemyHand.gd<>uid://cyap0xiyvqjp7::::res://Scripts/EnemyDeck.gd<>uid://hadcp8nosu6h::::res://Assets/Back.png<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>uid://bg228phchkpnm::::res://Scenes/EnemyBattlefield.tscn
 hero_select.tscn::PackedScene::3371998634491785620::1776251626::0::1::::<><><>0<>0<><>::uid://bkgtd1ctc2wdj::::res://Scripts/hero_select.gd<>uid://cdij2he33l5ak::::res://Assets/hero select.png<>uid://bijjqlkdfrnok::::res://Assets/{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png<>uid://b1rx5087hun6s::::res://scripts/player.gd
-join_lobby.tscn::PackedScene::6762821107587966282::1776251626::0::1::::<><><>0<>0<><>::uid://c0xf6eui3tdgv::::res://Scripts/join_lobby.gd<>uid://b4gcaw5dawlyq::::res://Assets/Group 47.png<>uid://b1rx5087hun6s::::res://Scripts/player.gd
+join_lobby.tscn::PackedScene::6762821107587966282::1776257833::0::1::::<><><>0<>0<><>::uid://c0xf6eui3tdgv::::res://Scripts/join_lobby.gd<>uid://b4gcaw5dawlyq::::res://Assets/Group 47.png<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd
 lobby_create_join.tscn::PackedScene::5547859226117692724::1776251626::0::1::::<><><>0<>0<><>::uid://bern8okpk6dyq::::res://Scripts/lobby_create_join.gd<>uid://dnf20hxvwcv8t::::res://Assets/Group 46.png<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd
 Magic_the_gathering-card_back.jpg::CompressedTexture2D::5634707292623469457::1776251626::1776255654::1::::<><><>0<>0<>560be0674ab88418071d96e8222d92f8<>res://.godot/imported/Magic_the_gathering-card_back.jpg-c7b62b703f8d1cfea72bc928a4cf5036.ctex::
-Main.tscn::PackedScene::80903864315104729::1776257611::0::1::::<><><>0<>0<><>::uid://dogdatsu51lgl::::res://Scripts/Multiplayer.gd<>uid://ban8huclwtn2n::::res://Scenes/PlayerField.tscn<>uid://cxisdofno8fhl::::res://Scenes/EnemyField.tscn<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd<>uid://h0o87gxh1276::::res://Scripts/opponent.gd<>uid://dss3tkqmgy2xy::::res://Scenes/main_menu.tscn<>uid://ljjjwyh7tbk1::::res://Scenes/username_menu.tscn<>uid://clboowefte077::::res://Scenes/lobby_create_join.tscn<>uid://cln54b8nlayqb::::res://Scenes/create_lobby.tscn<>uid://6wdqtjxaechm::::res://Scenes/match_summary.tscn
+Main.tscn::PackedScene::80903864315104729::1776258982::0::1::::<><><>0<>0<><>::uid://dogdatsu51lgl::::res://Scripts/Multiplayer.gd<>uid://ban8huclwtn2n::::res://Scenes/PlayerField.tscn<>uid://cxisdofno8fhl::::res://Scenes/EnemyField.tscn<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd<>uid://h0o87gxh1276::::res://Scripts/opponent.gd<>uid://dss3tkqmgy2xy::::res://Scenes/main_menu.tscn<>uid://ljjjwyh7tbk1::::res://Scenes/username_menu.tscn<>uid://clboowefte077::::res://Scenes/lobby_create_join.tscn<>uid://cln54b8nlayqb::::res://Scenes/create_lobby.tscn<>uid://6wdqtjxaechm::::res://Scenes/match_summary.tscn
 main_menu.tscn::PackedScene::8461554592523206578::1776251626::0::1::::<><><>0<>0<><>::uid://deog3vhe3fohc::::res://Assets/Group 44.png<>uid://ylenhfsg8r33::::res://Scripts/main_menu.gd
 match.tscn::PackedScene::266664652915571278::1776251626::0::1::::<><><>0<>0<><>::
 match_summary.tscn::PackedScene::2221482199941163714::1776251626::0::1::::<><><>0<>0<><>::uid://cqw2bksd3n6f0::::res://Scripts/match_summary.gd<>uid://c0r66gdrms2vh::::res://Assets/Match Summary.png
 PlayerField.tscn::PackedScene::2415274809901069231::1776251626::0::1::::<><><>0<>0<><>::uid://cjsnw71qxgvmm::::res://Scripts/CardManager.gd<>uid://dqw58fs7q00kb::::res://Scripts/GameSetup.gd<>uid://bgcu3bphibumx::::res://Scripts/PlayerHand.gd<>uid://sdmvfc53fvoc::::res://Scripts/Deck.gd<>uid://hadcp8nosu6h::::res://Assets/Back.png<>uid://bnkojpwn7o1gl::::res://Scripts/InputManager.gd<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>uid://bpiifwsmdvr8n::::res://Scenes/Battlefield.tscn<>uid://d1r6gsc5ikgmd::::res://Scripts/BattleManager.gd<>uid://bq87ux3guu5mw::::res://Scripts/match_summary_button.gd
 settings.tscn::PackedScene::3604366644630635143::1776251626::0::1::::<><><>0<>0<><>::uid://ddj5qw37hyk1x::::res://Scripts/settings.gd<>uid://dxe7g44ie7ywj::::res://Assets/SETTINGSKF.png
 username_menu.tscn::PackedScene::791220397835504618::1776251626::0::1::::<><><>0<>0<><>::uid://dme5put32p4bh::::res://Assets/USERNAME.png<>uid://cbxj280dub7fv::::res://Scripts/username_menu.gd<>uid://bqm0tb2c0jl4y::::res://Scripts/new_player.gd<>uid://dwedvcs7e0072::::res://Scripts/line_edit.gd
-::res://Scripts/::1776257611
+::res://Scripts/::1776258658
 Battlefield.gd::GDScript::8448862704068140860::1776257611::0::1::::<>Node2D<><>0<>0<><>::
 BattleManager.gd::GDScript::9021160298910416323::1776251626::0::1::::<>Node<><>0<>0<><>::
 Card.gd::GDScript::4933002837504172414::1776251626::0::1::::<>Node2D<><>0<>0<><>::
@@ -202,7 +202,7 @@ CardDatabase.gd::GDScript::8579863334330713887::1776251626::0::1::::<>RefCounted
 CardManager.gd::GDScript::5442530089743523736::1776251626::0::1::::<>Node2D<><>0<>0<><>::
 CardSlot.gd::GDScript::6944277396771358578::1776251626::0::1::::<>Node2D<><>0<>0<><>::
 create_label.gd::GDScript::4698396483596556270::1776251626::0::1::::<>Label<><>0<>0<><>::
-create_lobby.gd::GDScript::4389283539591940840::1776257579::0::1::::<>Control<><>0<>0<><>::
+create_lobby.gd::GDScript::4389283539591940840::1776258067::0::1::::<>Control<><>0<>0<><>::
 Deck.gd::GDScript::1270358691439023578::1776251626::0::1::::<>Node2D<><>0<>0<><>::
 EnemyCard.gd::GDScript::5362037412412925474::1776251626::0::1::::<>Node2D<><>0<>0<><>::
 EnemyDeck.gd::GDScript::6458330235952740370::1776251626::0::1::::<>Node2D<><>0<>0<><>::
@@ -216,7 +216,7 @@ lobby_create_join.gd::GDScript::2703119483640136004::1776251626::0::1::::<>Contr
 main_menu.gd::GDScript::1707506862113910656::1776251626::0::1::::<>Control<><>0<>0<><>::
 match_summary.gd::GDScript::5942920873996886343::1776251626::0::1::::<>Control<><>0<>0<><>::
 match_summary_button.gd::GDScript::3579546559023953990::1776251626::0::1::::<>Button<><>0<>0<><>::
-Multiplayer.gd::GDScript::8154475306214380211::1776251626::0::1::::<>Node2D<><>0<>0<><>::
+Multiplayer.gd::GDScript::8154475306214380211::1776258658::0::1::::<>Node2D<><>0<>0<><>::
 Multiplayer_edited.gd::GDScript::8263757627669444256::1776251626::0::1::::<>Node2D<><>0<>0<><>::
 new_player.gd::GDScript::3535766664211407222::1776251626::0::1::::<>Node<><>0<>0<><>::
 opponent.gd::GDScript::543842009486767595::1776251626::0::1::::<>Node<><>0<>0<><>::
@@ -227,17 +227,17 @@ username_menu.gd::GDScript::4891107340791714343::1776251626::0::1::::<>Control<>
 ::res://Scripts/Abilities/::1776251626
 Discovery.gd::GDScript::5484760367404177512::1776251626::0::1::::<>Node<><>0<>0<><>::
 FrozenSpike.gd::GDScript::9003594163965213244::1776251626::0::1::::<>Node<><>0<>0<><>::
-::res://Tests/::1776257753
+::res://Tests/::1776258959
 test_CardManager.gd::GDScript::1917746628441334825::1776256038::0::1::::<>GutTest<><>0<>0<><>::
 test_create_lobby.gd::GDScript::4862991391250933825::1776257579::0::1::::<>Node<><>0<>0<><>::
 test_deck.gd::GDScript::6111696847396665715::1776256602::0::1::::<>GutTest<><>0<>0<><>::
-test_hero_select.gd::GDScript::1481999862591221412::1776251626::0::1::::<>Node<><>0<>0<><>::
+test_hero_select.gd::GDScript::1481999862591221412::1776258384::0::1::::<>Node<><>0<>0<><>::
 test_join_lobby.gd::GDScript::743576504766292559::1776251626::0::1::::<>Node<><>0<>0<><>::
 test_lobby_createjoin.gd::GDScript::8169971607053145275::1776251626::0::1::::<>Node<><>0<>0<><>::
 test_mainmenu.gd::GDScript::1256968087588842050::1776251626::0::1::::<>Node<><>0<>0<><>::
 test_match_summary.gd::GDScript::5781070727129991800::1776251626::0::1::::<>Node<><>0<>0<><>::
-test_match_to_summary.gd::GDScript::4836688432135841882::1776251626::0::1::::<>Node<><>0<>0<><>::
-test_network.gd::GDScript::2024895763975394176::1776255684::0::1::::<>Node<><>0<>0<><>::
-test_player_hand.gd::GDScript::5386907244939215076::1776251626::0::1::::<>GutTest<><>0<>0<><>::
+test_match_to_summary.gd::GDScript::4836688432135841882::1776258959::0::1::::<>Node<><>0<>0<><>::
+test_network.gd::GDScript::2024895763975394176::1776258285::0::1::::<>Node<><>0<>0<><>::
+test_PlayerHand.gd::GDScript::5386907244939215076::1776251626::0::1::::<>GutTest<><>0<>0<><>::
 test_settings.gd::GDScript::4755581948475371808::1776251626::0::1::::<>Node<><>0<>0<><>::
 test_username_menu.gd::GDScript::6495697256626788009::1776251626::0::1::::<>Node<><>0<>0<><>::
