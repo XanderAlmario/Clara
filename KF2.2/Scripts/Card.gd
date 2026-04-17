@@ -29,7 +29,8 @@ var spellScript
 
 func _ready():
 	# all Cards need to be a parent of CardManager or else it will error
-	get_parent().connectSignals(self)
+	if get_parent().has_method("connectSignals"):
+		get_parent().connectSignals(self)
 
 func _process(delta):
 	pass

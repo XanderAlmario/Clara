@@ -27,6 +27,7 @@ var spell_card_waiting = null
 var fatigue_aura_turns_left = 0
 var player_is_taxed_turns = 0  
 var enemy_is_taxed_turns = 0   
+var defender_aura_turns_left = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,6 +47,11 @@ func _ready():
 	#enemyBF = get_parent().get_parent().get_node("EnemyField/EnemyBattlefield")
 
 func _on_end_turn_button_pressed():
+	if defender_aura_turns_left > 0:
+		spawn_token("Paladin Defender")
+		defender_aura_turns_left -= 1
+		if defender_aura_turns_left == 0:
+			print("Defender Aura has ended.")
 	if player_is_taxed_turns > 0:
 		player_is_taxed_turns -= 1
 	rpc("enemy_finished_tax_turn")
@@ -604,3 +610,108 @@ func get_card_purchase_cost(card):
 		print("AURA ACTIVE: Taxing ", card.name, " +1 Devotion.")
 		return base_cost + 1
 	return base_cost
+
+func activate_defender_aura():
+	defender_aura_turns_left = 3
+
+func spawn_token(token_name):
+	if playerBF.unitsInPlay.size() >= playerBF.BFSize:
+		print("Battlefield is full.")
+		return
+		
+	var card_scene = preload("res://Scenes/Card.tscn")
+	var new_card = card_scene.instantiate()
+	
+	var unique_name = token_name.replace(" ", "") + str(randi())
+	new_card.name = unique_name
+	
+	$"../CardManager".add_child(new_card)
+	
+	var cardDB = preload("res://Scripts/CardDatabase.gd")
+	var card_data = cardDB.CARDS[token_name]
+	
+	new_card.cost = card_data[0]
+	new_card.attack = card_data[1]
+	new_card.health = card_data[2]
+	new_card.cardType = card_data[3]
+	new_card.lunge = card_data[5]
+	new_card.fury = card_data[6]
+	new_card.holyShield = card_data[7]
+	new_card.lifeDrain = card_data[8]
+	new_card.fastHands = card_data[9]
+	new_card.momentum = card_data[10]
+	new_card.bodyguard = card_data[11]
+	new_card.holyBlessing = card_data[12]
+	new_card.reincarnate = card_data[13]
+	new_card.evasive = card_data[14]
+	new_card.spellScript = null
+	
+	if new_card.has_node("Attack"): new_card.get_node("Attack").text = str(new_card.attack)
+	if new_card.has_node("Health"): new_card.get_node("Health").text = str(new_card.health)
+	
+	var token_texture = load("res://Assets/Paladin Defender.png")
+	if new_card.has_node("CardImage"): 
+		new_card.get_node("CardImage").texture = token_texture
+	
+	if new_card.has_node("AnimationPlayer"):
+		new_card.get_node("AnimationPlayer").play("cardFlip")
+	
+	playerBF.unitsInPlay.append(new_card)
+	playerUnitsOnBF.append(new_card)
+	new_card.cardSlot = playerBF
+	updateCardsOnBF(playerBF)
+	
+	var player_id = multiplayer.get_unique_id()
+	rpc("sync_spawn_token", player_id, unique_name, token_name)
+
+@rpc("any_peer")
+func sync_spawn_token(player_id, unique_card_name, token_name):
+	if multiplayer.get_unique_id() == player_id:
+		return 
+		
+	var card_scene = preload("res://Scenes/Card.tscn")
+	var new_card = card_scene.instantiate()
+	new_card.name = unique_card_name
+	
+	var cardDB = preload("res://Scripts/CardDatabase.gd")
+	var card_data = cardDB.CARDS[token_name]
+	
+	new_card.cost = card_data[0]
+	new_card.attack = card_data[1]
+	new_card.health = card_data[2]
+	new_card.cardType = card_data[3]
+	new_card.lunge = card_data[5]
+	new_card.fury = card_data[6]
+	new_card.holyShield = card_data[7]
+	new_card.lifeDrain = card_data[8]
+	new_card.fastHands = card_data[9]
+	new_card.momentum = card_data[10]
+	new_card.bodyguard = card_data[11]
+	new_card.holyBlessing = card_data[12]
+	new_card.reincarnate = card_data[13]
+	new_card.evasive = card_data[14]
+	new_card.spellScript = null
+	
+	if new_card.has_node("Attack"): new_card.get_node("Attack").text = str(new_card.attack)
+	if new_card.has_node("Health"): new_card.get_node("Health").text = str(new_card.health)
+	
+	var token_texture = load("res://Assets/Paladin Defender.png") 
+	if new_card.has_node("Sprite2D"): 
+		new_card.get_node("Sprite2D").texture = token_texture
+	
+	if new_card.has_node("AnimationPlayer"):
+		new_card.get_node("AnimationPlayer").play("cardFlip")
+	
+	if new_card.has_node("Area2D"):
+		new_card.get_node("Area2D").collision_layer = 8
+		new_card.get_node("Area2D").collision_mask = 8
+	
+	var opponentField = get_parent().get_parent().get_node("EnemyField")
+	opponentField.get_node("CardManager").add_child(new_card)
+	
+	var cardSlot = opponentField.get_node("EnemyBattlefield")
+	cardSlot.unitsInPlay.append(new_card)
+	enemyUnitsOnBF.append(new_card)
+	
+	new_card.cardSlot = cardSlot
+	updateCardsOnBF(cardSlot)

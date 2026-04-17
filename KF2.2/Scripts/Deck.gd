@@ -6,7 +6,7 @@ const STARTING_HAND_SIZE = 5
 
 var player_deck = ["Monk", "Monk", "Monk", 
 "Knight", "Knight", "Knight", "Discovery", "Holy Strike", 
-"Bottle of Devotion", "Fatigue Aura", "Crusader's Might"]
+"Bottle of Devotion", "Fatigue Aura", "Crusader's Might", "Defender Aura"]
 var cardDBRef
 var drewCard = false
 var deck_timer
