@@ -8,6 +8,10 @@ var peer = ENetMultiplayerPeer.new()
 @export var player_field_scene : PackedScene
 @export var enemy_field_scene : PackedScene
 
+#added for the sake of the tests not crashing
+func _on_match_button_pressed():
+	print("Searching for players...")
+
 func _on_host_button_pressed() -> void:
 	disable_buttons()
 	

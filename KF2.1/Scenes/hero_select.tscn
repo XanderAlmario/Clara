@@ -1,0 +1,1427 @@
+[gd_scene format=3 uid="uid://bobolbsdk0eq3"]
+
+[ext_resource type="Script" uid="uid://bkgtd1ctc2wdj" path="res://Scripts/hero_select.gd" id="1_5ia4r"]
+[ext_resource type="Texture2D" uid="uid://cdij2he33l5ak" path="res://Assets/hero select.png" id="1_es61r"]
+[ext_resource type="Texture2D" uid="uid://bijjqlkdfrnok" path="res://Assets/{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png" id="2_5ia4r"]
+[ext_resource type="Script" uid="uid://b1rx5087hun6s" path="res://scripts/player.gd" id="4_bpx5y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bpx5y"]
+texture = ExtResource("1_es61r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vre6b"]
+texture = ExtResource("2_5ia4r")
+
+[node name="HeroSelect" type="Control" unique_id=1618062483]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ia4r")
+
+[node name="Panel" type="Panel" parent="." unique_id=18202658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bpx5y")
+
+[node name="BackButton" type="Button" parent="." unique_id=1632643243]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 152.0
+offset_right = 249.0
+offset_bottom = 194.0
+text = "BACK"
+
+[node name="Panel2" type="Panel" parent="." unique_id=744334008]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 213.0
+offset_right = 1699.9496
+offset_bottom = 965.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vre6b")
+
+[node name="MageLabel" type="RichTextLabel" parent="." unique_id=1027714898]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 348.0
+offset_right = 470.0
+offset_bottom = 421.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "JAY ASTRUM
+--MAGE--"
+horizontal_alignment = 1
+
+[node name="MonkLabel" type="RichTextLabel" parent="." unique_id=180862999]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 347.0
+offset_right = 758.0
+offset_bottom = 434.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "YUVARI KIIRA
+ --MONK--"
+horizontal_alignment = 1
+
+[node name="PaladinLabel" type="RichTextLabel" parent="." unique_id=1536319011]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 346.0
+offset_right = 1035.0
+offset_bottom = 433.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = " ARTHURIAN
+ --PALADIN--"
+horizontal_alignment = 1
+
+[node name="UndeadLabel" type="RichTextLabel" parent="." unique_id=1833475426]
+layout_mode = 0
+offset_left = 1141.0
+offset_top = 347.0
+offset_right = 1331.0
+offset_bottom = 434.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "NECRONOMUS
+--UNDEAD--"
+horizontal_alignment = 1
+
+[node name="ArcherLabel" type="RichTextLabel" parent="." unique_id=503555150]
+layout_mode = 0
+offset_left = 1419.0
+offset_top = 345.0
+offset_right = 1609.0
+offset_bottom = 432.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+text = "OSKAR
+--ARCHER--"
+horizontal_alignment = 1
+
+[node name="MageSelect" type="Button" parent="." unique_id=23131141]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 843.0
+offset_right = 443.0
+offset_bottom = 910.0
+text = "SELECT"
+
+[node name="MonkSelect" type="Button" parent="." unique_id=649822481]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 843.0
+offset_right = 733.0
+offset_bottom = 910.0
+text = "SELECT"
+
+[node name="PaladinSelect" type="Button" parent="." unique_id=151752342]
+layout_mode = 0
+offset_left = 892.0
+offset_top = 841.0
+offset_right = 1016.0
+offset_bottom = 908.0
+text = "SELECT"
+
+[node name="UndeadSelect" type="Button" parent="." unique_id=1636922105]
+layout_mode = 0
+offset_left = 1173.0
+offset_top = 843.0
+offset_right = 1297.0
+offset_bottom = 910.0
+text = "SELECT"
+
+[node name="ArcherSelect" type="Button" parent="." unique_id=45323739]
+layout_mode = 0
+offset_left = 1453.0
+offset_top = 842.0
+offset_right = 1577.0
+offset_bottom = 909.0
+text = "SELECT"
+
+[node name="MageView" type="Button" parent="." unique_id=1330093528]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 263.0
+offset_right = 400.0
+offset_bottom = 294.0
+scale = Vector2(1.72, 1.72)
+text = "VIEW"
+
+[node name="MonkView" type="Button" parent="." unique_id=77305096]
+layout_mode = 0
+offset_left = 566.0
+offset_top = 261.0
+offset_right = 688.0
+offset_bottom = 292.0
+scale = Vector2(1.72, 1.72)
+text = "VIEW"
+
+[node name="PalView" type="Button" parent="." unique_id=1475963405]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 261.0
+offset_right = 968.0
+offset_bottom = 292.0
+scale = Vector2(1.72, 1.72)
+text = "VIEW"
+
+[node name="NecView" type="Button" parent="." unique_id=1319688577]
+layout_mode = 0
+offset_left = 1126.0
+offset_top = 262.0
+offset_right = 1248.0
+offset_bottom = 293.0
+scale = Vector2(1.72, 1.72)
+text = "VIEW"
+
+[node name="ArchView" type="Button" parent="." unique_id=1310487346]
+layout_mode = 0
+offset_left = 1405.0
+offset_top = 263.0
+offset_right = 1527.0
+offset_bottom = 294.0
+scale = Vector2(1.72, 1.72)
+text = "VIEW"
+
+[node name="MageDeckPanel" type="Panel" parent="." unique_id=710038380]
+visible = false
+layout_mode = 0
+offset_left = 256.0
+offset_top = 255.00002
+offset_right = 492.60635
+offset_bottom = 891.0498
+scale = Vector2(1.0523809, 1.0523809)
+
+[node name="ColorRect" type="ColorRect" parent="MageDeckPanel" unique_id=1759976226]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 37.0
+offset_right = 231.85522
+offset_bottom = 69.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect" unique_id=749407667]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(1) Spell Learner [2]"
+
+[node name="ColorRect2" type="ColorRect" parent="MageDeckPanel" unique_id=414085084]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 70.0
+offset_right = 231.85522
+offset_bottom = 102.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect2" unique_id=955144055]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(1) Star Spirit [2]"
+
+[node name="ColorRect3" type="ColorRect" parent="MageDeckPanel" unique_id=1053123]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 103.0
+offset_right = 231.85522
+offset_bottom = 135.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect3" unique_id=521538858]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(2) Discovery [2]"
+
+[node name="ColorRect4" type="ColorRect" parent="MageDeckPanel" unique_id=1760004661]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 136.0
+offset_right = 231.85522
+offset_bottom = 168.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect4" unique_id=1478422850]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(2) Frozen Spike [2]"
+
+[node name="ColorRect5" type="ColorRect" parent="MageDeckPanel" unique_id=708681073]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 169.0
+offset_right = 231.85522
+offset_bottom = 201.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect5" unique_id=267828866]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(3) Frozen Spike [2]"
+
+[node name="ColorRect6" type="ColorRect" parent="MageDeckPanel" unique_id=1847883153]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 202.0
+offset_right = 231.85522
+offset_bottom = 234.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect6" unique_id=648955680]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(3) Astral Spirit [2]"
+
+[node name="ColorRect7" type="ColorRect" parent="MageDeckPanel" unique_id=1873695589]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 235.0
+offset_right = 231.85522
+offset_bottom = 267.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect7" unique_id=1938516578]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(3) Stellar Storm [2]"
+
+[node name="ColorRect8" type="ColorRect" parent="MageDeckPanel" unique_id=957748356]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 268.0
+offset_right = 231.85522
+offset_bottom = 300.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect8" unique_id=1153137114]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(3) Search Scroll [2]"
+
+[node name="ColorRect9" type="ColorRect" parent="MageDeckPanel" unique_id=1012048760]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 302.0
+offset_right = 231.85522
+offset_bottom = 334.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect9" unique_id=369730023]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(4) Star Chaser [2]"
+
+[node name="ColorRect10" type="ColorRect" parent="MageDeckPanel" unique_id=1758974636]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 335.0
+offset_right = 231.85522
+offset_bottom = 367.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect10" unique_id=1197565174]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(4) Elio [Legendary]"
+
+[node name="ColorRect11" type="ColorRect" parent="MageDeckPanel" unique_id=862679577]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 368.0
+offset_right = 231.85522
+offset_bottom = 400.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect11" unique_id=2086161842]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(5) Meteor Shower [2]"
+
+[node name="ColorRect12" type="ColorRect" parent="MageDeckPanel" unique_id=2007290805]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 401.0
+offset_right = 231.85522
+offset_bottom = 433.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect12" unique_id=351941282]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(5) Sunbeam [2]"
+
+[node name="ColorRect13" type="ColorRect" parent="MageDeckPanel" unique_id=2076313055]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 434.0
+offset_right = 231.85522
+offset_bottom = 466.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect13" unique_id=1052508319]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(5)Meteorite Golem[2]"
+
+[node name="ColorRect14" type="ColorRect" parent="MageDeckPanel" unique_id=691886886]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 467.0
+offset_right = 231.85522
+offset_bottom = 499.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect14" unique_id=684688635]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.85522
+offset_bottom = 32.0
+text = "(6) Astral Manifestation [2]"
+
+[node name="ColorRect15" type="ColorRect" parent="MageDeckPanel" unique_id=1790986844]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 500.0
+offset_right = 231.85522
+offset_bottom = 532.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect15" unique_id=1864609618]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(6) Sea Circle [2]"
+
+[node name="ColorRect16" type="ColorRect" parent="MageDeckPanel" unique_id=1184502894]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 533.0
+offset_right = 231.85522
+offset_bottom = 565.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect16" unique_id=1417831637]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 225.905
+offset_bottom = 32.0
+text = "(7) Starfall [Legendary]"
+
+[node name="ColorRect17" type="ColorRect" parent="MageDeckPanel" unique_id=1500179715]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 566.0
+offset_right = 231.85522
+offset_bottom = 598.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect17" unique_id=1023945716]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.80545
+offset_bottom = 32.0
+text = "(7)Stella and Lune[Legend...]"
+
+[node name="ColorRect18" type="ColorRect" parent="MageDeckPanel" unique_id=5637604]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 599.0
+offset_right = 231.85522
+offset_bottom = 631.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MageDeckPanel/ColorRect18" unique_id=527597209]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(8) Cael [Legendary]"
+
+[node name="MageBack" type="Button" parent="MageDeckPanel" unique_id=2013599473]
+layout_mode = 0
+offset_left = 182.44345
+offset_top = 2.8506572
+offset_right = 232.44345
+offset_bottom = 33.85066
+text = "HIDE"
+
+[node name="MonkDeckPanel" type="Panel" parent="." unique_id=2118751762]
+visible = false
+layout_mode = 0
+offset_left = 548.0
+offset_top = 258.0
+offset_right = 799.0
+offset_bottom = 926.0
+
+[node name="ColorRect19" type="ColorRect" parent="MonkDeckPanel" unique_id=2059538059]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 35.93811
+offset_right = 240.85522
+offset_bottom = 67.93811
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect19" unique_id=555183992]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(1) Training Student [2]"
+
+[node name="ColorRect20" type="ColorRect" parent="MonkDeckPanel" unique_id=2018062181]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 70.66669
+offset_right = 240.85522
+offset_bottom = 102.66669
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect20" unique_id=231553059]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(1) Aggressive youngin [2]"
+
+[node name="ColorRect21" type="ColorRect" parent="MonkDeckPanel" unique_id=664377801]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 105.39526
+offset_right = 240.85522
+offset_bottom = 137.39526
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect21" unique_id=1998878251]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(1) Cup of Chai [2]"
+
+[node name="ColorRect22" type="ColorRect" parent="MonkDeckPanel" unique_id=569442657]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 140.12384
+offset_right = 240.85522
+offset_bottom = 172.12384
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect22" unique_id=1892172644]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Meditative Stance [2]"
+
+[node name="ColorRect23" type="ColorRect" parent="MonkDeckPanel" unique_id=1049128821]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 174.85239
+offset_right = 240.85522
+offset_bottom = 206.85239
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect23" unique_id=1064416517]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Double Trouble [2]"
+
+[node name="ColorRect24" type="ColorRect" parent="MonkDeckPanel" unique_id=681730255]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 209.58096
+offset_right = 240.85522
+offset_bottom = 241.58096
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect24" unique_id=1329499426]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Bulwark Brother [2]"
+
+[node name="ColorRect25" type="ColorRect" parent="MonkDeckPanel" unique_id=697825413]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 244.30951
+offset_right = 240.85522
+offset_bottom = 276.3095
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect25" unique_id=80930737]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(3) Training Regime [2]"
+
+[node name="ColorRect26" type="ColorRect" parent="MonkDeckPanel" unique_id=2029772933]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 279.0381
+offset_right = 240.85522
+offset_bottom = 311.0381
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect26" unique_id=593027044]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(3) Training Mentor [2]"
+
+[node name="ColorRect27" type="ColorRect" parent="MonkDeckPanel" unique_id=888537634]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 314.81903
+offset_right = 240.85522
+offset_bottom = 346.81903
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect27" unique_id=65586149]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(3) Shadow Arts [2]"
+
+[node name="ColorRect28" type="ColorRect" parent="MonkDeckPanel" unique_id=171532153]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 349.5476
+offset_right = 240.85522
+offset_bottom = 381.5476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect28" unique_id=137212503]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(4) Way of Drink... [Legend...]"
+
+[node name="ColorRect29" type="ColorRect" parent="MonkDeckPanel" unique_id=1805158512]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 384.27618
+offset_right = 240.85522
+offset_bottom = 416.27618
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect29" unique_id=1676831869]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(5) Swiftfist Monk [2]"
+
+[node name="ColorRect30" type="ColorRect" parent="MonkDeckPanel" unique_id=259956639]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 419.00476
+offset_right = 240.85522
+offset_bottom = 451.00476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect30" unique_id=1972514193]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(5) Astral Projection [2]"
+
+[node name="ColorRect31" type="ColorRect" parent="MonkDeckPanel" unique_id=1499820927]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 453.73334
+offset_right = 240.85522
+offset_bottom = 485.73334
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect31" unique_id=304148116]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(6) Kensei Monk [2]"
+
+[node name="ColorRect32" type="ColorRect" parent="MonkDeckPanel" unique_id=644477021]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 488.4619
+offset_right = 240.85522
+offset_bottom = 520.4619
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect32" unique_id=1764400336]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.85522
+offset_bottom = 32.0
+text = "(6) Dragon's Kick [2]"
+
+[node name="ColorRect33" type="ColorRect" parent="MonkDeckPanel" unique_id=433147300]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 523.1904
+offset_right = 240.85522
+offset_bottom = 555.1904
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect33" unique_id=1822289911]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(6) Way of Mer... [Legendary]"
+
+[node name="ColorRect34" type="ColorRect" parent="MonkDeckPanel" unique_id=342575427]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 557.919
+offset_right = 240.85522
+offset_bottom = 589.919
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect34" unique_id=1745632994]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 225.905
+offset_bottom = 32.0
+text = "(8) Way of Ast... [Legendary]"
+
+[node name="ColorRect35" type="ColorRect" parent="MonkDeckPanel" unique_id=1189731796]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 592.6476
+offset_right = 240.85522
+offset_bottom = 624.6476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MonkDeckPanel/ColorRect35" unique_id=1562239767]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.80545
+offset_bottom = 32.0
+text = "(9)  Way of Op... [Legendary]"
+
+[node name="MonkBack" type="Button" parent="MonkDeckPanel" unique_id=110142698]
+layout_mode = 0
+offset_left = 200.7381
+offset_right = 250.7381
+offset_bottom = 31.000002
+text = "HIDE"
+
+[node name="PalDeckPanel" type="Panel" parent="." unique_id=1833125506]
+visible = false
+layout_mode = 0
+offset_left = 826.0
+offset_top = 258.0
+offset_right = 1077.0
+offset_bottom = 1003.0
+
+[node name="ColorRect19" type="ColorRect" parent="PalDeckPanel" unique_id=1374204191]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 35.93811
+offset_right = 240.85522
+offset_bottom = 67.93811
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect19" unique_id=1934796930]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = 0.06188965
+offset_right = 227.0
+offset_bottom = 32.06189
+text = "(1) Aspirant Squire [2]"
+
+[node name="ColorRect20" type="ColorRect" parent="PalDeckPanel" unique_id=105944242]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 70.66669
+offset_right = 240.85522
+offset_bottom = 102.66669
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect20" unique_id=728479242]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Blessed Parishioner [2]"
+
+[node name="ColorRect21" type="ColorRect" parent="PalDeckPanel" unique_id=2103342103]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 105.39526
+offset_right = 240.85522
+offset_bottom = 137.39526
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect21" unique_id=910846697]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Holy Strike [2]"
+
+[node name="ColorRect22" type="ColorRect" parent="PalDeckPanel" unique_id=63983870]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 140.12384
+offset_right = 240.85522
+offset_bottom = 172.12384
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect22" unique_id=89107445]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Fatigue Aura [2]"
+
+[node name="ColorRect23" type="ColorRect" parent="PalDeckPanel" unique_id=2093431510]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 174.85239
+offset_right = 240.85522
+offset_bottom = 206.85239
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect23" unique_id=2018839805]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(3) Banner Bearer [1]"
+
+[node name="ColorRect24" type="ColorRect" parent="PalDeckPanel" unique_id=446372521]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 209.58096
+offset_right = 240.85522
+offset_bottom = 241.58096
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect24" unique_id=726454348]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(3) Crusader's Might [1]"
+
+[node name="ColorRect25" type="ColorRect" parent="PalDeckPanel" unique_id=773268215]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 244.30951
+offset_right = 240.85522
+offset_bottom = 276.3095
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect25" unique_id=111639169]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(3) Staff of Light [2]"
+
+[node name="ColorRect26" type="ColorRect" parent="PalDeckPanel" unique_id=1053517925]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 279.0381
+offset_right = 240.85522
+offset_bottom = 311.0381
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect26" unique_id=596557098]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(3) Blessed Crusade... [1]"
+
+[node name="ColorRect27" type="ColorRect" parent="PalDeckPanel" unique_id=240763398]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 314.81903
+offset_right = 240.85522
+offset_bottom = 346.81903
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect27" unique_id=1177900466]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(4) Holy Aura [2]"
+
+[node name="ColorRect28" type="ColorRect" parent="PalDeckPanel" unique_id=1984722926]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 349.5476
+offset_right = 240.85522
+offset_bottom = 381.5476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect28" unique_id=1043478366]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(4) Consecration [2]"
+
+[node name="ColorRect29" type="ColorRect" parent="PalDeckPanel" unique_id=506304121]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 384.27618
+offset_right = 240.85522
+offset_bottom = 416.27618
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect29" unique_id=857426273]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(4) Auther Pureheart [Leg...]"
+
+[node name="ColorRect30" type="ColorRect" parent="PalDeckPanel" unique_id=560300110]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 419.00476
+offset_right = 240.85522
+offset_bottom = 451.00476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect30" unique_id=1396454960]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(4) Holy Crusader [2]"
+
+[node name="ColorRect31" type="ColorRect" parent="PalDeckPanel" unique_id=441663229]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 453.73334
+offset_right = 240.85522
+offset_bottom = 485.73334
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect31" unique_id=808740999]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(4) Hammer of... [2]"
+
+[node name="ColorRect32" type="ColorRect" parent="PalDeckPanel" unique_id=48047236]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 488.4619
+offset_right = 240.85522
+offset_bottom = 520.4619
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect32" unique_id=325581447]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.85522
+offset_bottom = 32.0
+text = "(4) Rejuvenation Aura [1]"
+
+[node name="ColorRect33" type="ColorRect" parent="PalDeckPanel" unique_id=1636670459]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 523.1904
+offset_right = 240.85522
+offset_bottom = 555.1904
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect33" unique_id=32900362]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(5) Defender Aura [2]"
+
+[node name="ColorRect34" type="ColorRect" parent="PalDeckPanel" unique_id=1096766932]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 557.919
+offset_right = 240.85522
+offset_bottom = 589.919
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect34" unique_id=150161240]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 225.905
+offset_bottom = 32.0
+text = "(5) Knights of... [1]"
+
+[node name="ColorRect35" type="ColorRect" parent="PalDeckPanel" unique_id=906762185]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 592.6476
+offset_right = 240.85522
+offset_bottom = 624.6476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect35" unique_id=120356254]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.80545
+offset_bottom = 32.0
+text = "(5) Artimose [Legendary]"
+
+[node name="ColorRect36" type="ColorRect" parent="PalDeckPanel" unique_id=671849744]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 626.6476
+offset_right = 240.85522
+offset_bottom = 658.6476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect36" unique_id=491144107]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 227.80545
+offset_bottom = 33.0
+text = "(6) Summon the Infantry [1]"
+
+[node name="ColorRect37" type="ColorRect" parent="PalDeckPanel" unique_id=1082696778]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 661.6476
+offset_right = 240.85522
+offset_bottom = 693.6476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect37" unique_id=1752602080]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 227.80545
+offset_bottom = 33.0
+text = "(7) Bring in the Holy Cru...[1]"
+
+[node name="ColorRect38" type="ColorRect" parent="PalDeckPanel" unique_id=993261031]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 696.6476
+offset_right = 240.85522
+offset_bottom = 728.6476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PalDeckPanel/ColorRect38" unique_id=233511078]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 227.80545
+offset_bottom = 33.0
+text = "(8) Thaloran L... [Legendary]"
+
+[node name="PalBack" type="Button" parent="PalDeckPanel" unique_id=373619956]
+layout_mode = 0
+offset_left = 200.7381
+offset_right = 250.7381
+offset_bottom = 31.000002
+text = "HIDE"
+
+[node name="NecDeckPanel" type="Panel" parent="." unique_id=1329291268]
+visible = false
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 264.0
+offset_right = 1356.0
+offset_bottom = 896.0
+
+[node name="ColorRect19" type="ColorRect" parent="NecDeckPanel" unique_id=1621187647]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 35.93811
+offset_right = 240.85522
+offset_bottom = 67.93811
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect19" unique_id=1657526327]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(1) Undead Soldier [2]"
+
+[node name="ColorRect20" type="ColorRect" parent="NecDeckPanel" unique_id=484214916]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 70.66669
+offset_right = 240.85522
+offset_bottom = 102.66669
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect20" unique_id=737373185]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(1) Mutilated corpse [2]"
+
+[node name="ColorRect21" type="ColorRect" parent="NecDeckPanel" unique_id=1400425076]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 105.39526
+offset_right = 240.85522
+offset_bottom = 137.39526
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect21" unique_id=1402391815]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(1) Distention [2]"
+
+[node name="ColorRect22" type="ColorRect" parent="NecDeckPanel" unique_id=1930303292]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 140.12384
+offset_right = 240.85522
+offset_bottom = 172.12384
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect22" unique_id=17691782]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Enrage [2]"
+
+[node name="ColorRect23" type="ColorRect" parent="NecDeckPanel" unique_id=1018781439]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 174.85239
+offset_right = 240.85522
+offset_bottom = 206.85239
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect23" unique_id=74886484]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(2) Zombie [2]"
+
+[node name="ColorRect24" type="ColorRect" parent="NecDeckPanel" unique_id=1217548176]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 209.58096
+offset_right = 240.85522
+offset_bottom = 241.58096
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect24" unique_id=869442843]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(3) Cultist Following [2]"
+
+[node name="ColorRect25" type="ColorRect" parent="NecDeckPanel" unique_id=1352071249]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 244.30951
+offset_right = 240.85522
+offset_bottom = 276.3095
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect25" unique_id=1837849177]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(3) Soul Eater [2]"
+
+[node name="ColorRect26" type="ColorRect" parent="NecDeckPanel" unique_id=273856263]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 279.0381
+offset_right = 240.85522
+offset_bottom = 311.0381
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect26" unique_id=1356825216]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(4) Crawlers [2]"
+
+[node name="ColorRect27" type="ColorRect" parent="NecDeckPanel" unique_id=249719663]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 314.81903
+offset_right = 240.85522
+offset_bottom = 346.81903
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect27" unique_id=310402837]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(5) Giant Skeleton [2]"
+
+[node name="ColorRect28" type="ColorRect" parent="NecDeckPanel" unique_id=1367997925]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 349.5476
+offset_right = 240.85522
+offset_bottom = 381.5476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect28" unique_id=2100750156]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 32.0
+text = "(6) All Shall Perish [Legend...]"
+
+[node name="ColorRect29" type="ColorRect" parent="NecDeckPanel" unique_id=1106865931]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 384.27618
+offset_right = 240.85522
+offset_bottom = 416.27618
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect29" unique_id=24777567]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(7) Reanimated Knights  [2]"
+
+[node name="ColorRect30" type="ColorRect" parent="NecDeckPanel" unique_id=1194622696]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 419.00476
+offset_right = 240.85522
+offset_bottom = 451.00476
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NecDeckPanel/ColorRect30" unique_id=1213981918]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(8) Ganathos, Vengeful Shell"
+
+[node name="NecBack" type="Button" parent="NecDeckPanel" unique_id=857904297]
+layout_mode = 0
+offset_left = 200.7381
+offset_right = 250.7381
+offset_bottom = 31.000002
+text = "HIDE"
+
+[node name="ArchDeckPanel" type="Panel" parent="." unique_id=445309298]
+visible = false
+layout_mode = 0
+offset_left = 1389.0
+offset_top = 265.0
+offset_right = 1642.0
+offset_bottom = 902.0
+
+[node name="ColorRect" type="ColorRect" parent="ArchDeckPanel" unique_id=805388879]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.149353
+offset_right = 240.85522
+offset_bottom = 69.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect" unique_id=1056128553]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 225.0
+offset_bottom = 32.0
+text = "(0) Gilded Honeydew [2]"
+
+[node name="ColorRect2" type="ColorRect" parent="ArchDeckPanel" unique_id=865273071]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 70.14935
+offset_right = 240.85522
+offset_bottom = 102.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect2" unique_id=238367916]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(1) Leafy Scout [2]"
+
+[node name="ColorRect3" type="ColorRect" parent="ArchDeckPanel" unique_id=305064149]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 103.14935
+offset_right = 240.85522
+offset_bottom = 135.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect3" unique_id=1268467272]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(1) Tracking Shot [2]"
+
+[node name="ColorRect4" type="ColorRect" parent="ArchDeckPanel" unique_id=1612607407]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 136.14935
+offset_right = 240.85522
+offset_bottom = 168.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect4" unique_id=1021471581]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(2) Bird’s Eye [2]"
+
+[node name="ColorRect5" type="ColorRect" parent="ArchDeckPanel" unique_id=1742840104]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 169.14935
+offset_right = 240.85522
+offset_bottom = 201.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect5" unique_id=1951960626]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(2) Vine Snare [2]"
+
+[node name="ColorRect6" type="ColorRect" parent="ArchDeckPanel" unique_id=214121436]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 202.14935
+offset_right = 240.85522
+offset_bottom = 234.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect6" unique_id=2016785211]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(3) Bloom Ranger [2]"
+
+[node name="ColorRect7" type="ColorRect" parent="ArchDeckPanel" unique_id=399464508]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 235.14935
+offset_right = 240.85522
+offset_bottom = 267.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect7" unique_id=1406836346]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(3) Sunlit Veil [2]"
+
+[node name="ColorRect8" type="ColorRect" parent="ArchDeckPanel" unique_id=1778420236]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 268.14935
+offset_right = 240.85522
+offset_bottom = 300.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect8" unique_id=377029105]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(4) Thorn Guardian [2]"
+
+[node name="ColorRect9" type="ColorRect" parent="ArchDeckPanel" unique_id=1520565382]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 302.14935
+offset_right = 240.85522
+offset_bottom = 334.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect9" unique_id=226604932]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(4) Arrow Hail [2]"
+
+[node name="ColorRect10" type="ColorRect" parent="ArchDeckPanel" unique_id=1317120075]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 335.14935
+offset_right = 240.85522
+offset_bottom = 367.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect10" unique_id=263781669]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(5) Sharpshooter Adept [2]"
+
+[node name="ColorRect11" type="ColorRect" parent="ArchDeckPanel" unique_id=1293093363]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 368.14935
+offset_right = 240.85522
+offset_bottom = 400.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect11" unique_id=954458831]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(5) Return to Nature [2]"
+
+[node name="ColorRect12" type="ColorRect" parent="ArchDeckPanel" unique_id=66144117]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 401.14935
+offset_right = 240.85522
+offset_bottom = 433.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect12" unique_id=816754583]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 32.0
+text = "(6) Emerald Stag Rider [2]"
+
+[node name="ColorRect13" type="ColorRect" parent="ArchDeckPanel" unique_id=1946715431]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 434.14935
+offset_right = 240.85522
+offset_bottom = 466.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect13" unique_id=1288566410]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 32.0
+text = "(7) Abloom [2]"
+
+[node name="ColorRect14" type="ColorRect" parent="ArchDeckPanel" unique_id=2070039735]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 467.14935
+offset_right = 240.85522
+offset_bottom = 499.14935
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ArchDeckPanel/ColorRect14" unique_id=1554250364]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 226.85522
+offset_bottom = 32.0
+text = "(8) Marigold Sunwarden [2]"
+
+[node name="ArchBack" type="Button" parent="ArchDeckPanel" unique_id=1651348600]
+layout_mode = 0
+offset_left = 191.44345
+offset_top = 3.0000103
+offset_right = 241.44345
+offset_bottom = 34.00001
+text = "HIDE"
+
+[node name="Player" type="Node" parent="." unique_id=1789713336]
+script = ExtResource("4_bpx5y")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MageSelect" to="." method="_on_mage_select_pressed"]
+[connection signal="pressed" from="MonkSelect" to="." method="_on_monk_select_pressed"]
+[connection signal="pressed" from="PaladinSelect" to="." method="_on_paladin_select_pressed"]
+[connection signal="pressed" from="UndeadSelect" to="." method="_on_undead_select_pressed"]
+[connection signal="pressed" from="ArcherSelect" to="." method="_on_archer_select_pressed"]
+[connection signal="pressed" from="MageView" to="." method="_on_mage_view_pressed"]
+[connection signal="pressed" from="MonkView" to="." method="_on_monk_view_pressed"]
+[connection signal="pressed" from="PalView" to="." method="_on_pal_view_pressed"]
+[connection signal="pressed" from="NecView" to="." method="_on_nec_view_pressed"]
+[connection signal="pressed" from="ArchView" to="." method="_on_arch_view_pressed"]
+[connection signal="pressed" from="MageDeckPanel/MageBack" to="." method="_on_mage_hide_button_pressed"]
+[connection signal="pressed" from="MonkDeckPanel/MonkBack" to="." method="_on_monk_hide_button_pressed"]
+[connection signal="pressed" from="PalDeckPanel/PalBack" to="." method="_on_pal_hide_button_pressed"]
+[connection signal="pressed" from="NecDeckPanel/NecBack" to="." method="_on_nec_hide_button_pressed"]
+[connection signal="pressed" from="ArchDeckPanel/ArchBack" to="." method="_on_arch_hide_button_pressed"]
