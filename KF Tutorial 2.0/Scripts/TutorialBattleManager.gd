@@ -86,6 +86,7 @@ func enemyTurn():
 		# Play card in hand with highest attack
 		#await playStrongestUnit()
 		await playUnit()
+		
 	
 	#if enemyUnitsOnBF.size() != 0:
 		#var attackingUnits = enemyUnitsOnBF.duplicate()
@@ -104,6 +105,7 @@ func playUnit():
 	for card in enemyHand:
 		if card.cost == 1:
 			unitToPlay = card
+			unitToPlay.get_node("AnimationPlayer").play("cardFlip")
 			enemyUnitsOnBF.append(unitToPlay)
 			enemyBF.unitsInPlay.append(unitToPlay)
 			updateCardsOnBF(enemyBF)
