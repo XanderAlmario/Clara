@@ -557,30 +557,6 @@ func enemyPlayCard(cost):
 	enemyDev -= cost
 	$"../EnemyDiv/EnemyDev".text = str(enemyDev)
 
-func resolve_spell_targeting(target):
-	if target and spell_card_waiting:
-		var spell_cost = spell_card_waiting.cost
-		if spell_card_waiting.cardType != "Unit" and player_is_taxed_turns > 0:
-			spell_cost += 1
-		
-		if spell_card_waiting.spellScript and spell_card_waiting.spellScript.has_method("trigger_targeted_ability"):
-			spell_card_waiting.spellScript.trigger_targeted_ability(target, self, true)
-		
-		var player_id = multiplayer.get_unique_id()
-		rpc("sync_targeted_spell", player_id, target.name)
-		playerPlayCard(spell_cost)
-		spell_card_waiting.queue_free()
-		
-	is_targeting_with_spell = false
-	spell_card_waiting = null
-
-func cancel_spell_targeting():
-	if spell_card_waiting:
-		spell_card_waiting.visible = true
-		$"../PlayerHand".addCardToHand(spell_card_waiting, CARD_MOVE_SPEED)
-	
-	is_targeting_with_spell = false
-	spell_card_waiting = null
 
 @rpc("any_peer")
 func sync_targeted_spell(caster_id, target_name):
@@ -602,7 +578,6 @@ func sync_targeted_spell(caster_id, target_name):
 @rpc("any_peer")
 func receive_fatigue_aura():
 	player_is_taxed_turns = 2 
-	print("I am now taxed.")
 
 func get_card_purchase_cost(card):
 	var base_cost = card.cost
