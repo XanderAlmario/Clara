@@ -649,10 +649,15 @@ func spawn_token(token_name):
 	if new_card.has_node("Attack"): new_card.get_node("Attack").text = str(new_card.attack)
 	if new_card.has_node("Health"): new_card.get_node("Health").text = str(new_card.health)
 	
-	var token_texture = load("res://Assets/Paladin Defender.png")
-	if new_card.has_node("CardImage"): 
-		new_card.get_node("CardImage").texture = token_texture
+	var image_path = "res://Assets/" + token_name + ".png"
+	var token_texture = load(image_path) 
 	
+	if token_texture == null:
+		print("ERROR: Godot could not find the image at: " + image_path)
+		
+	if new_card.has_node("CardImage"):
+		new_card.get_node("CardImage").texture = token_texture
+		
 	if new_card.has_node("AnimationPlayer"):
 		new_card.get_node("AnimationPlayer").play("cardFlip")
 	
@@ -695,10 +700,15 @@ func sync_spawn_token(player_id, unique_card_name, token_name):
 	if new_card.has_node("Attack"): new_card.get_node("Attack").text = str(new_card.attack)
 	if new_card.has_node("Health"): new_card.get_node("Health").text = str(new_card.health)
 	
-	var token_texture = load("res://Assets/Paladin Defender.png") 
-	if new_card.has_node("Sprite2D"): 
-		new_card.get_node("Sprite2D").texture = token_texture
+	var image_path = "res://Assets/" + token_name + ".png"
+	var token_texture = load(image_path) 
 	
+	if token_texture == null:
+		print("ERROR: Godot could not find the image at: " + image_path)
+		
+	if new_card.has_node("CardImage"):
+		new_card.get_node("CardImage").texture = token_texture
+		
 	if new_card.has_node("AnimationPlayer"):
 		new_card.get_node("AnimationPlayer").play("cardFlip")
 	
