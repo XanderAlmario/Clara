@@ -11,7 +11,7 @@ var cost
 var attack
 var health
 var dead = false
-var canAttack = true
+var canAttack = false
 var firstAttack = false
 
 var lunge
