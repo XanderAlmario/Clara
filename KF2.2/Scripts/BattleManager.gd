@@ -71,8 +71,11 @@ func _on_end_turn_button_pressed():
 @rpc("any_peer")
 func change_turn():
 	$"../Deck".resetDraw()
-	var cardToDraw = $"../Deck".player_deck[0]
-	$"../Deck".drawCard(cardToDraw)
+	if $"../Deck".player_deck.size() > 0:
+		var cardToDraw = $"../Deck".player_deck[0]
+		$"../Deck".drawCard(cardToDraw)
+	#var cardToDraw = $"../Deck".player_deck[0]
+	#$"../Deck".drawCard(cardToDraw)
 	$"../EndTurnButton".disabled = false
 	$"../InputManager".inputs_disabled = false
 
