@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cxisdofno8fhl"]
+
+[ext_resource type="Script" uid="uid://cr06jwqetm7oy" path="res://Scripts/EnemyHand.gd" id="1_bryer"]
+[ext_resource type="Script" uid="uid://cyap0xiyvqjp7" path="res://Scripts/EnemyDeck.gd" id="2_8yc2j"]
+[ext_resource type="Texture2D" uid="uid://hadcp8nosu6h" path="res://Assets/Back.png" id="3_beedq"]
+[ext_resource type="Texture2D" uid="uid://ceodru1kbqfgo" path="res://Assets/CardSlot.png" id="4_ejvbt"]
+[ext_resource type="PackedScene" uid="uid://bg228phchkpnm" path="res://Scenes/EnemyBattlefield.tscn" id="5_l5ek7"]
+
+[node name="EnemyField" type="Node2D" unique_id=1379619374]
+
+[node name="CardManager" type="Node2D" parent="." unique_id=563256329]
+
+[node name="EnemyHand" type="Node2D" parent="." unique_id=528603516]
+script = ExtResource("1_bryer")
+
+[node name="EnemyDeck" type="Node2D" parent="." unique_id=469676554]
+position = Vector2(1760, 160)
+script = ExtResource("2_8yc2j")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyDeck" unique_id=1218276996]
+z_index = -2
+scale = Vector2(0.184, 0.177604)
+texture = ExtResource("3_beedq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EnemyDeck" unique_id=316548423]
+offset_left = -10.0
+offset_top = -23.0
+offset_right = 30.0
+offset_bottom = 17.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyHP" type="RichTextLabel" parent="." unique_id=1092451679]
+offset_left = 1700.0
+offset_top = 387.0
+offset_right = 1767.0
+offset_bottom = 445.9992
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyGrave" type="Node2D" parent="." unique_id=1783764873]
+z_index = -5
+position = Vector2(246, 292)
+scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyGrave" unique_id=1657819019]
+texture = ExtResource("4_ejvbt")
+
+[node name="EnemyBattlefield" parent="." unique_id=2037174653 instance=ExtResource("5_l5ek7")]
+z_index = -5
+position = Vector2(1005, 301)
+
+[node name="EnemyDiv" type="Node" parent="." unique_id=1849959283]
+
+[node name="EnemyDev" type="RichTextLabel" parent="EnemyDiv" unique_id=1791086170]
+offset_left = 1682.0
+offset_top = 276.0
+offset_right = 1742.0
+offset_bottom = 335.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyMaxDev" type="RichTextLabel" parent="EnemyDiv" unique_id=251242463]
+offset_left = 1730.0
+offset_top = 276.0
+offset_right = 1790.0
+offset_bottom = 335.0
+scale = Vector2(2, 2)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Div2" type="RichTextLabel" parent="EnemyDiv" unique_id=20613669]
+offset_left = 1709.0
+offset_top = 276.0
+offset_right = 1769.0
+offset_bottom = 335.0
+scale = Vector2(2, 2)
+text = "/"
+metadata/_edit_use_anchors_ = true
+
+[node name="Username" type="RichTextLabel" parent="." unique_id=1629423501]
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 251.0
+offset_bottom = 49.0
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 16
+text = "Enemy name"
