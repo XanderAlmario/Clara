@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bfgqe5r3i0kb"]
+
+[ext_resource type="Script" uid="uid://c8u4d8et1kiri" path="res://Scripts/main.gd" id="1_v1gob"]
+[ext_resource type="PackedScene" uid="uid://ban8huclwtn2n" path="res://Scenes/PlayerField.tscn" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://cxisdofno8fhl" path="res://Scenes/EnemyField.tscn" id="3_rgh2o"]
+[ext_resource type="Script" uid="uid://cm0aa7ttkxri6" path="res://Scripts/player.gd" id="4_rgh2o"]
+[ext_resource type="Script" uid="uid://h0o87gxh1276" path="res://Scripts/opponent.gd" id="5_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://hkf7cq7v6cxi" path="res://Scenes/Menu.tscn" id="6_jw32o"]
+
+[node name="Main" type="Node2D" unique_id=1617732049]
+script = ExtResource("1_v1gob")
+player_field_scene = ExtResource("2_kln2b")
+enemy_field_scene = ExtResource("3_rgh2o")
+
+[node name="Player" type="Node" parent="." unique_id=224644622]
+script = ExtResource("4_rgh2o")
+
+[node name="Opponent" type="Node" parent="." unique_id=512490020]
+script = ExtResource("5_pbw6q")
+
+[node name="Menu" parent="." unique_id=352516166 instance=ExtResource("6_jw32o")]

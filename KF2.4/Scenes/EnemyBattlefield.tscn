@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bg228phchkpnm"]
+
+[ext_resource type="Script" uid="uid://dsmxsfx1cjsee" path="res://Scripts/Battlefield.gd" id="1_kp2j4"]
+[ext_resource type="Texture2D" uid="uid://dbcxt7jskqy5n" path="res://Assets/BF.jpg" id="2_uolyn"]
+
+[node name="Battlefield" type="Node2D" unique_id=2037174653]
+script = ExtResource("1_kp2j4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1808672439]
+position = Vector2(-0.5, -1.00001)
+scale = Vector2(4.00342, 1.96512)
+texture = ExtResource("2_uolyn")
