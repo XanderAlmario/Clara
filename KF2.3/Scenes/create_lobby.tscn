@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cln54b8nlayqb"]
+
+[ext_resource type="Script" uid="uid://b3sg4gs81igy7" path="res://Scripts/create_lobby.gd" id="1_dl63l"]
+[ext_resource type="PackedScene" uid="uid://ban8huclwtn2n" path="res://Scenes/PlayerField.tscn" id="2_4nqyd"]
+[ext_resource type="Texture2D" uid="uid://htosa14x02qg" path="res://Assets/Lobby Room.png" id="2_e6i4d"]
+[ext_resource type="Script" uid="uid://cm0aa7ttkxri6" path="res://Scripts/player.gd" id="3_e6i4d"]
+[ext_resource type="PackedScene" uid="uid://cxisdofno8fhl" path="res://Scenes/EnemyField.tscn" id="3_rax88"]
+[ext_resource type="Script" uid="uid://b7665yuxmc7ne" path="res://Scripts/create_label.gd" id="4_stnsc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stnsc"]
+texture = ExtResource("2_e6i4d")
+
+[node name="CreateLobby" type="Control" unique_id=315732774]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dl63l")
+player_field_scene = ExtResource("2_4nqyd")
+enemy_field_scene = ExtResource("3_rax88")
+
+[node name="Panel" type="Panel" parent="." unique_id=63286050]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_stnsc")
+
+[node name="StartButton" type="Button" parent="." unique_id=1690320131]
+layout_mode = 0
+offset_left = 1345.0
+offset_top = 755.0
+offset_right = 1604.0
+offset_bottom = 891.0
+theme_override_font_sizes/font_size = 32
+
+[node name="BackButton" type="Button" parent="." unique_id=508448424]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 168.0
+offset_right = 427.0
+offset_bottom = 276.0
+theme_override_font_sizes/font_size = 32
+
+[node name="Player" type="Node" parent="." unique_id=2053118702]
+script = ExtResource("3_e6i4d")
+
+[node name="Label" type="Label" parent="." unique_id=1558009220]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 184.0
+offset_right = 1534.0
+offset_bottom = 387.0
+script = ExtResource("4_stnsc")
+
+[node name="StatusLabel" type="RichTextLabel" parent="." unique_id=1985906707]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 488.0
+offset_right = 1545.0
+offset_bottom = 603.0
+theme_override_font_sizes/normal_font_size = 60
+text = "Waiting..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
