@@ -30,6 +30,9 @@ var fatigue_aura_turns_left = 0
 var player_is_taxed_turns = 0  
 var enemy_is_taxed_turns = 0   
 var defender_aura_turns_left = 0
+var addTurnsToAuras = 0
+var addPlayerFatigue = 0
+var tut = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -49,13 +52,28 @@ func _ready():
 	#enemyBF = get_parent().get_parent().get_node("EnemyField/EnemyBattlefield")
 
 func _on_end_turn_button_pressed():
+	if not enemyBF:
+		enemyBF = get_node_or_null("../../EnemyField/EnemyBattlefield")
+		if not enemyBF:
+			enemyBF = get_node_or_null("../EnemyBattlefield")
+	
 	if defender_aura_turns_left > 0:
 		spawn_token("Paladin Defender")
 		defender_aura_turns_left -= 1
 		if defender_aura_turns_left == 0:
 			print("Defender Aura has ended.")
 	if player_is_taxed_turns > 0:
+		if addPlayerFatigue > 0:
+			player_is_taxed_turns += addPlayerFatigue
+			addPlayerFatigue = 0
 		player_is_taxed_turns -= 1
+	for unit in playerBF.unitsInPlay:
+		if unit.cardName == "Way of Drinking Master" and enemyBF.unitsInPlay.size() > 0:
+			var target = enemyBF.unitsInPlay.pick_random()
+			unitAttack(unit, target)
+	for enemy in enemyBF.unitsInPlay:
+		enemy.rotation = deg_to_rad(0)
+	
 	rpc("enemy_finished_tax_turn")
 	$"../CardManager".unselect()
 	updatePlayerDev()
@@ -72,6 +90,22 @@ func _on_end_turn_button_pressed():
 
 @rpc("any_peer")
 func change_turn():
+	for unit in playerBF.unitsInPlay:
+		unit.rotation = deg_to_rad(0)
+		if unit.cardName == "Way of Mercy Master":
+			$"../CardManager".createChai()
+			
+	if $"../CardManager".unitsToFuture.size() > 0 and $"../CardManager".timeWaiting != 2:
+		$"../CardManager".timeWaiting += 1
+	if $"../CardManager".unitsToFuture.size() > 0 and $"../CardManager".timeWaiting == 2:
+		for card in $"../CardManager".unitsToFuture:
+			card.attack += 3
+			card.health += 3
+			card.get_node("Attack").text = str(card.attack)
+			card.get_node("Health").text = str(card.health)
+			$"../PlayerHand".addCardToHand(card, CARD_MOVE_SPEED)
+		$"../CardManager".unitsToFuture = []
+		
 	$"../Deck".resetDraw()
 	var cardToDraw = $"../Deck".player_deck[0]
 	$"../Deck".drawCard(cardToDraw)
@@ -151,6 +185,7 @@ func directAttack(attacker): #, playerAttacking)
 	$"../EndTurnButton".disabled = true
 	playerIsAttacking = true
 	playerUnitsAttacked.append(attacker)
+	#attacker.rotation = deg_to_rad(90)
 	
 	var player_id = multiplayer.get_unique_id
 	rpc("direct_attack_here_and_replicate_client_opponent", player_id, attacker.name)
@@ -170,11 +205,14 @@ func direct_attack_here_and_replicate_client_opponent(player_id, attacking_name)
 	if multiplayer.get_unique_id == player_id:
 		attacker = $"../CardManager".get_node(attacking_name)
 		pos_y = 0
+		attacker.rotation = deg_to_rad(90)
 		if attacker.fury and !attacker.firstAttack:
+			attacker.rotation = deg_to_rad(0)
 			playerUnitsAttacked.erase(attacker)
 	else:
 		attacker = get_parent().get_parent().get_node("EnemyField/CardManager/"+attacking_name)
 		pos_y = 1080
+		attacker.rotation = deg_to_rad(90)
 	
 	if attacker:
 		var newPos = Vector2(attacker.position.x, pos_y)
@@ -324,6 +362,7 @@ func attack_here_and_replicate_client_opponent(player_id, attacking_name, defend
 		attacker = get_parent().get_parent().get_node("EnemyField/CardManager/"+attacking_name)
 		target = $"../CardManager".get_node(defender_name)
 		y_offset = -ATTACK_OFFSET
+	attacker.rotation = deg_to_rad(90)
 	
 	if attacker:
 		attacker.z_index = 5
@@ -433,6 +472,13 @@ func attack_here_and_replicate_client_opponent(player_id, attacking_name, defend
 	
 	checkForGameEnd()
 
+func increaseAuras():
+	addTurnsToAuras += 1
+	addPlayerFatigue += 1
+	if defender_aura_turns_left > 0:
+		defender_aura_turns_left += 1
+	print("Defender aura turns: " + str(defender_aura_turns_left))
+
 func updateCardsOnBF(BF):
 	for i in range(BF.unitsInPlay.size()):
 		var newPos = Vector2(calculateCardPos(BF, i), BF.position.y)
@@ -469,10 +515,16 @@ func reviveCard(card):
 
 func destroyCard(card, cardOwner):
 	var newPos
+	var spawnBoulder = false
+	
+	if card.cardName == "Bulwark Brother":
+		spawnBoulder = true
 	
 	if cardOwner == "Player":
 		card.get_node("Area2D/CollisionShape2D").disabled = true
 		newPos = $"../PlayerGrave".position
+		if spawnBoulder:
+			spawn_token("Boulder")
 		if card in playerUnitsOnBF:
 			playerUnitsOnBF.erase(card)
 		card.cardSlot.get_node("Area2D/CollisionShape2D").disabled = false
@@ -484,6 +536,7 @@ func destroyCard(card, cardOwner):
 	card.dead = true
 	card.cardSlot = null
 	
+	card.rotation = deg_to_rad(0)
 	var tween = get_tree().create_tween()
 	tween.tween_property(card, "position", newPos, CARD_MOVE_SPEED)
 
@@ -617,7 +670,9 @@ func sync_targeted_spell(caster_id, target_name):
 
 @rpc("any_peer")
 func receive_fatigue_aura():
-	player_is_taxed_turns = 2 
+	player_is_taxed_turns = 2 + addTurnsToAuras
+	#print("Fatigue aura turns: " + str(player_is_taxed_turns))
+	print("Defender aura turns: " + str(defender_aura_turns_left))
 	print("I am now taxed.")
 
 func get_card_purchase_cost(card):
@@ -628,7 +683,9 @@ func get_card_purchase_cost(card):
 	return base_cost
 
 func activate_defender_aura():
-	defender_aura_turns_left = 3
+	defender_aura_turns_left = 3 + addTurnsToAuras
+	#print("Fatigue aura turns: " + str(player_is_taxed_turns))
+	print("Defender aura turns: " + str(defender_aura_turns_left))
 
 func spawn_token(token_name):
 	if playerBF.unitsInPlay.size() >= playerBF.BFSize:
@@ -646,6 +703,7 @@ func spawn_token(token_name):
 	var cardDB = preload("res://Scripts/CardDatabase.gd")
 	var card_data = cardDB.CARDS[token_name]
 	
+	new_card.cardName = token_name
 	new_card.cost = card_data[0]
 	new_card.attack = card_data[1]
 	new_card.health = card_data[2]
