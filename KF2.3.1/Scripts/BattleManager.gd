@@ -580,6 +580,8 @@ func enemyPlayCard(cost):
 
 func resolve_spell_targeting(target):
 	if target and spell_card_waiting:
+		var spell_name = spell_card_waiting.name
+
 		var spell_cost = spell_card_waiting.cost
 		if spell_card_waiting.cardType != "Unit" and player_is_taxed_turns > 0:
 			spell_cost += 1
@@ -588,7 +590,7 @@ func resolve_spell_targeting(target):
 			spell_card_waiting.spellScript.trigger_targeted_ability(target, self, true)
 		
 		var player_id = multiplayer.get_unique_id()
-		rpc("sync_targeted_spell", player_id, target.name)
+		rpc("sync_targeted_spell", player_id, target.name, spell_name)
 		playerPlayCard(spell_cost)
 		spell_card_waiting.queue_free()
 		
@@ -604,7 +606,7 @@ func cancel_spell_targeting():
 	spell_card_waiting = null
 
 @rpc("any_peer")
-func sync_targeted_spell(caster_id, target_name):
+func sync_targeted_spell(caster_id, target_name, spell_name):
 	if multiplayer.get_unique_id() != caster_id:
 		var target = $"../CardManager".get_node_or_null(str(target_name))
 		if target:
