@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://busy6h03xf7ob"]
+
+[ext_resource type="Texture2D" uid="uid://dyno100qcusmn" path="res://Assets/Aggressive Youngin.png" id="1_ylnsi"]
+
+[node name="Inspect" type="Node2D" unique_id=1871943868]
+z_index = 10
+
+[node name="Image" type="Sprite2D" parent="." unique_id=1478068788]
+position = Vector2(1568, 493)
+scale = Vector2(0.75333333, 0.75333333)
+texture = ExtResource("1_ylnsi")
+
+[node name="Attack" type="RichTextLabel" parent="." unique_id=396025281]
+z_index = 15
+offset_left = 1303.0
+offset_top = 768.0
+offset_right = 1665.0
+offset_bottom = 1030.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 90
+text = "0"
+
+[node name="Cost" type="RichTextLabel" parent="." unique_id=2079390979]
+z_index = 15
+offset_left = 1323.0
+offset_top = 100.0
+offset_right = 1685.0
+offset_bottom = 362.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 90
+text = "0"
+
+[node name="Health" type="RichTextLabel" parent="." unique_id=1280812441]
+z_index = 15
+offset_left = 1765.0
+offset_top = 768.0
+offset_right = 2127.0
+offset_bottom = 1030.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 90
+text = "0"

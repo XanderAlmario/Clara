@@ -1,0 +1,329 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1776713579
+DissolveCard.tres::VisualShader::114093395637594532::1776688071::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::8843588493703573292::1776436202::1776562113::1::::<><><>0<>0<>18b93e5d0873f430698330364785fa35<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+test_tutorial_instruction.gd::GDScript::5051238814674746922::1776702825::0::1::::<>GutTest<><>0<>0<><>::
+::res://addons/::1776581308
+Tutorial.tscn::PackedScene::-1::1776581308::0::1::::<><><>0<>0<><>::
+tutorial_instruction.gd::GDScript::858688827424161465::1776581308::0::1::::<>Panel<><>0<>0<><>::
+::res://addons/gut/::1776562112
+autofree.gd::GDScript::4019677876572174179::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+awaiter.gd::GDScript::4956307890136372434::1776436205::0::1::::<>Node<><>0<>0<><>::
+collected_script.gd::GDScript::3036845259248397267::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+collected_test.gd::GDScript::5614916714458957886::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+comparator.gd::GDScript::3384591875648156424::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+compare_result.gd::GDScript::5802522063640156090::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+diff_formatter.gd::GDScript::5320531431786241999::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+diff_tool.gd::GDScript::2697499396959579425::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+doubler.gd::GDScript::5876784932327403702::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+double_tools.gd::GDScript::1370461491072230425::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+dynamic_gdscript.gd::GDScript::5687940215403644525::1776436205::0::1::::<>RefCounted<><>0<>1<><>::
+editor_caret_context_notifier.gd::GDScript::6652976874746463700::1776436205::0::1::::<>Node<><>0<>1<><>::
+error_tracker.gd::GDScript::2027867538193003122::1776436205::0::1::::GutErrorTracker<>Logger<><>0<>0<><>::
+get_editor_interface.gd::GDScript::364169252983002638::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+godot_singletons.gd::GDScript::5426246751979609272::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+gut.gd::GDScript::8607708104902235873::1776436205::0::1::::GutMain<>Node<><>0<>0<><>::
+GutScene.gd::GDScript::3997825208140179766::1776436205::0::1::::<>Node2D<><>0<>0<><>::
+GutScene.tscn::PackedScene::900020720033095020::1776436205::0::1::::<><><>0<>0<><>::uid://bw7tukh738kw1::::res://addons/gut/GutScene.gd<>uid://duxblir3vu8x7::::res://addons/gut/gui/NormalGui.tscn<>uid://cnqqdfsn80ise::::res://addons/gut/gui/MinGui.tscn
+gut_cmdln.gd::GDScript::4047925467803397278::1776436205::0::1::::<>SceneTree<><>0<>0<><>::
+gut_config.gd::GDScript::3371669960108148944::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+gut_fonts.gd::GDScript::8633813759787917034::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+gut_loader.gd::GDScript::1913873733200380730::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+gut_loader_the_scene.tscn::PackedScene::672845236156175277::1776436205::0::1::::<><><>0<>0<><>::
+gut_menu.gd::GDScript::5980728462851148173::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+gut_plugin.gd::GDScript::2252028915002876168::1776436205::0::1::::<>EditorPlugin<><>0<>1<><>::
+gut_to_move.gd::GDScript::8976430651487152475::1776436205::0::1::::<>Node<><>0<>0<><>::
+gut_tracked_error.gd::GDScript::6624168619849963155::1776436205::0::1::::GutTrackedError<>RefCounted<><>0<>0<><>::
+gut_vscode_debugger.gd::GDScript::502318972537382410::1776436205::0::1::::<>SceneTree<><>0<>0<><>::
+hook_script.gd::GDScript::1843450981988831675::1776436205::0::1::::GutHookScript<>RefCounted<><>0<>0<><>::
+icon.png::CompressedTexture2D::3890841352431263106::1776436205::1776562110::1::::<><><>0<>0<>7b826c9b66b3400348f7391a50aad648<>res://.godot/imported/icon.png-91b084043b8aaf2f1c906e7b9fa92969.ctex::
+inner_class_registry.gd::GDScript::832383131140251483::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+input_factory.gd::GDScript::4461111126349010343::1776436205::0::1::::GutInputFactory<>RefCounted<><>0<>0<><>::
+input_sender.gd::GDScript::7217230587005662320::1776436205::0::1::::GutInputSender<>RefCounted<><>0<>0<><>::
+junit_xml_export.gd::GDScript::1953688189983439511::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+lazy_loader.gd::GDScript::1197340804927484233::1776436205::0::1::::<>RefCounted<><>0<>1<><>::
+LICENSE.md::TextFile::-1::1776436205::0::1::::<><><>0<>0<><>::
+logger.gd::GDScript::5903787095271961658::1776436205::0::1::::<>RefCounted<><>0<>0<><>::
+method_maker.gd::GDScript::6960414211889174570::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+one_to_many.gd::GDScript::6516193492009710282::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+orphan_counter.gd::GDScript::5224365818451289190::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+parameter_factory.gd::GDScript::6537397574460706821::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+parameter_handler.gd::GDScript::2456518498388963760::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+plugin.cfg::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+printers.gd::GDScript::929554807989031532::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+result_exporter.gd::GDScript::2496736649491941143::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+script_parser.gd::GDScript::6831014189157799146::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+signal_watcher.gd::GDScript::1705092872124227670::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+singleton_parser.gd::GDScript::8231300357878444616::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+source_code_pro.fnt::FontFile::5125156706837925311::1776436206::1776562112::1::::<><><>0<>0<>95c50a46f6e4f3400dfd9ee98d37aafc<>res://.godot/imported/source_code_pro.fnt-042fb383b3c7b4c19e67c852f7fbefca.fontdata::
+spy.gd::GDScript::3179036638025875450::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+strutils.gd::GDScript::8111521024871038660::1776436206::0::1::::GutStringUtils<>RefCounted<><>0<>0<><>::
+stubber.gd::GDScript::5440589489184230737::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+stubs.gd::GDScript::9020410443364652417::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+stub_params.gd::GDScript::7252801415138117211::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+summary.gd::GDScript::4119817767187925937::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+test.gd::GDScript::5727543545885976400::1776436206::0::1::::GutTest<>Node<><>0<>0<><>::
+test_collector.gd::GDScript::5596507651356524134::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+thing_counter.gd::GDScript::2325783845676789946::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+UserFileViewer.gd::GDScript::1677893103445735667::1776436205::0::1::::<>Window<><>0<>0<><>::
+UserFileViewer.tscn::PackedScene::3676575661945431583::1776436205::0::1::::<><><>0<>0<><>::uid://x51wilphva3d::::res://addons/gut/UserFileViewer.gd
+utils.gd::GDScript::7239857841186407517::1776436206::0::1::::GutUtils<>Object<><>0<>1<><>::
+version_conversion.gd::GDScript::7129638422643491177::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+version_numbers.gd::GDScript::4424078184743682914::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+warnings_manager.gd::GDScript::3189389603798311548::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+::res://addons/gut/cli/::1776436206
+change_project_warnings.gd::GDScript::1855912585657956398::1776436206::0::1::::<>SceneTree<><>0<>0<><>::
+gut_cli.gd::GDScript::2920250694821452041::1776436206::0::1::::<>Node<><>0<>0<><>::
+optparse.gd::GDScript::7115616212494707654::1776436206::0::1::::<>RefCounted<><>0<>0<><>::
+::res://addons/gut/double_templates/::1776436206
+double_data_template.txt::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+function_template.txt::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+init_template.txt::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+script_template.txt::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+singleton_template.txt::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+::res://addons/gut/fonts/::1776562112
+AnonymousPro-Bold.ttf::FontFile::7090493737101227053::1776436206::1776562112::1::::<><><>0<>0<>4e7aaa5617823f318a012f2bf38fb679<>res://.godot/imported/AnonymousPro-Bold.ttf-9d8fef4d357af5b52cd60afbe608aa49.fontdata::
+AnonymousPro-BoldItalic.ttf::FontFile::761724172175864::1776436206::1776562112::1::::<><><>0<>0<>248f16385f880903c002a284d638b4de<>res://.godot/imported/AnonymousPro-BoldItalic.ttf-4274bf704d3d6b9cd32c4f0754d8c83d.fontdata::
+AnonymousPro-Italic.ttf::FontFile::503495830806397342::1776436206::1776562112::1::::<><><>0<>0<>6cf67e8fc8fe7ecd915cd07d15a1b383<>res://.godot/imported/AnonymousPro-Italic.ttf-9989590b02137b799e13d570de2a42c1.fontdata::
+AnonymousPro-Regular.ttf::FontFile::6954778653853521719::1776436206::1776562110::1::::<><><>0<>0<>ab74ee9167cda6a5d688fcefb6283cae<>res://.godot/imported/AnonymousPro-Regular.ttf-856c843fd6f89964d2ca8d8ff1724f13.fontdata::
+CourierPrime-Bold.ttf::FontFile::2896714378692211288::1776436206::1776562112::1::::<><><>0<>0<>ab5302a5d6b003e55dae81d2920b5c81<>res://.godot/imported/CourierPrime-Bold.ttf-1f003c66d63ebed70964e7756f4fa235.fontdata::
+CourierPrime-BoldItalic.ttf::FontFile::977220797652290018::1776436206::1776562112::1::::<><><>0<>0<>85e5138f391a6544f94fc3c996432e53<>res://.godot/imported/CourierPrime-BoldItalic.ttf-65ebcc61dd5e1dfa8f96313da4ad7019.fontdata::
+CourierPrime-Italic.ttf::FontFile::846855295635301556::1776436206::1776562112::1::::<><><>0<>0<>bf8584d3a54b9c9ef9765f7d66e9d889<>res://.godot/imported/CourierPrime-Italic.ttf-baa9156a73770735a0f72fb20b907112.fontdata::
+CourierPrime-Regular.ttf::FontFile::3314864826498090510::1776436206::1776562110::1::::<><><>0<>0<>268b3d77e72ad3d82b8e0229ec5dc648<>res://.godot/imported/CourierPrime-Regular.ttf-3babe7e4a7a588dfc9a84c14b4f1fe23.fontdata::
+LobsterTwo-Bold.ttf::FontFile::5632861098580159618::1776436206::1776562112::1::::<><><>0<>0<>f31e3a7998fa1e59efd98e3b8ba98900<>res://.godot/imported/LobsterTwo-Bold.ttf-7c7f734103b58a32491a4788186f3dcb.fontdata::
+LobsterTwo-BoldItalic.ttf::FontFile::3182965850633207044::1776436206::1776562112::1::::<><><>0<>0<>00ae9b137d534d5fbf896b047390ee74<>res://.godot/imported/LobsterTwo-BoldItalic.ttf-227406a33e84448e6aa974176016de19.fontdata::
+LobsterTwo-Italic.ttf::FontFile::7759867820021968437::1776436206::1776562112::1::::<><><>0<>0<>996d6c75f556b60eb6da0fffa0a54d4e<>res://.godot/imported/LobsterTwo-Italic.ttf-f93abf6c25390c85ad5fb6c4ee75159e.fontdata::
+LobsterTwo-Regular.ttf::FontFile::2115948870915788183::1776436206::1776562112::1::::<><><>0<>0<>8d1ca8c94ef93d21f94ba83f40f0d62a<>res://.godot/imported/LobsterTwo-Regular.ttf-f3fcfa01cd671c8da433dd875d0fe04b.fontdata::
+OFL.txt::TextFile::-1::1776436206::0::1::::<><><>0<>0<><>::
+::res://addons/gut/gui/::1776688071
+about.gd::GDScript::488202083672295193::1776436207::0::1::::<>AcceptDialog<><>0<>1<><>::
+about.tscn::PackedScene::8284998557770768332::1776436207::0::1::::<><><>0<>0<><>::uid://g7qu8ihdt3pd::::res://addons/gut/gui/about.gd<>uid://bjkn8mhx2fmt1::::res://addons/gut/gui/GutLogo.tscn
+arrow.png::CompressedTexture2D::2222304255268796957::1776436207::1776562110::1::::<><><>0<>0<>c6670127146b5956636ca7e2cf440791<>res://.godot/imported/arrow.png-2b5b2d838b5b3467cf300ac2da1630d9.ctex::
+EditorRadioButton.tres::Theme::8460222933348692164::1776688071::0::1::::<><><>0<>0<><>::
+editor_globals.gd::GDScript::4861108855360548659::1776688071::0::1::::<>RefCounted<><>0<>1<><>::
+GutBottomPanel.gd::GDScript::8536994468377110612::1776436207::0::1::::<>Control<><>0<>1<><>::
+GutBottomPanel.tscn::PackedScene::4354655867367614688::1776436207::0::1::::<><><>0<>0<><>::uid://dtvnb0xatk0my::::res://addons/gut/gui/GutBottomPanel.gd<>uid://0yunjxtaa8iw::::res://addons/gut/gui/RunAtCursor.tscn<>uid://cr6tvdv0ve6cv::::res://addons/gut/gui/play.png<>uid://bvo0uao7deu0q::::res://addons/gut/icon.png<>uid://4gyyn12um08h::::res://addons/gut/gui/RunResults.tscn<>uid://ljc2viafngwd::::res://addons/gut/images/HSplitContainer.svg<>uid://bqmo4dj64c7yl::::res://addons/gut/gui/OutputText.tscn<>uid://bhew20crsywxr::::res://addons/gut/images/VSplitContainer.svg<>uid://dj5ve0bq7xa5j::::res://addons/gut/gui/ShortcutDialog.tscn<>uid://ckv5eh8xyrwbk::::res://addons/gut/gui/ShellOutOptions.tscn
+GutControl.gd::GDScript::5919874032655369281::1776436207::0::1::::<>Control<><>0<>1<><>::
+GutControl.tscn::PackedScene::2054171664569605320::1776436207::0::1::::<><><>0<>0<><>::uid://cqlvpwidawld6::::res://addons/gut/gui/GutControl.gd
+GutLogo.tscn::PackedScene::3039612948255955400::1776436207::0::1::::<><><>0<>0<><>::uid://b8lvgepb64m8t::::res://addons/gut/gui/gut_logo.gd<>uid://dyxbmyvpkkcvs::::res://addons/gut/images/GutIconV2_base.png<>uid://dx0yxxn5q7doc::::res://addons/gut/images/eyey.png
+GutRunner.gd::GDScript::295164731120714145::1776436207::0::1::::<>Node2D<><>0<>0<><>::
+GutRunner.tscn::PackedScene::3560702166169920196::1776436207::0::1::::<><><>0<>0<><>::uid://eg8k46gd42a4::::res://addons/gut/gui/GutRunner.gd<>uid://m28heqtswbuq::::res://addons/gut/GutScene.tscn
+GutSceneTheme.tres::Theme::6076084572326576944::1776436207::0::1::::<><><>0<>0<><>::uid://c6c7gnx36opr0::::res://addons/gut/fonts/AnonymousPro-Regular.ttf
+gut_config_gui.gd::GDScript::5294162434786089204::1776436207::0::1::::<>RefCounted<><>0<>0<><>::
+gut_dock.gd::GDScript::5635553622924029889::1776436207::0::1::::<>EditorDock<><>0<>0<><>::
+gut_gui.gd::GDScript::3202307133238298954::1776436207::0::1::::<>Control<><>0<>0<><>::
+gut_logo.gd::GDScript::4726646684007835869::1776436207::0::1::::<>Node2D<><>0<>1<><>::
+gut_user_preferences.gd::GDScript::8449698887986387009::1776436207::0::1::::<>RefCounted<><>0<>0<><>::
+MinGui.tscn::PackedScene::5719303499070539904::1776436207::0::1::::<><><>0<>0<><>::uid://cstkhwkpajvqu::::res://addons/gut/gui/GutSceneTheme.tres<>uid://bnh0lslf4yh87::::res://addons/gut/fonts/CourierPrime-Regular.ttf<>uid://blvhsbnsvfyow::::res://addons/gut/gui/gut_gui.gd<>uid://bvrqqgjpyouse::::res://addons/gut/gui/ResizeHandle.tscn
+NormalGui.tscn::PackedScene::8610600420658602210::1776436207::0::1::::<><><>0<>0<><>::uid://cstkhwkpajvqu::::res://addons/gut/gui/GutSceneTheme.tres<>uid://blvhsbnsvfyow::::res://addons/gut/gui/gut_gui.gd<>uid://bnh0lslf4yh87::::res://addons/gut/fonts/CourierPrime-Regular.ttf<>uid://bvrqqgjpyouse::::res://addons/gut/gui/ResizeHandle.tscn
+option_maker.gd::GDScript::3018574838903106809::1776436207::0::1::::<>RefCounted<><>0<>0<><>::
+OutputText.gd::GDScript::4822170745663405444::1776436207::0::1::::<>VBoxContainer<><>0<>1<><>::
+OutputText.tscn::PackedScene::3535116713792967483::1776436207::0::1::::<><><>0<>0<><>::uid://cax5phqs8acmu::::res://addons/gut/gui/OutputText.gd<>uid://bvo0uao7deu0q::::res://addons/gut/icon.png
+panel_controls.gd::GDScript::7293160392777974079::1776436207::0::1::::<>RefCounted<><>0<>0<><>::
+play.png::CompressedTexture2D::6031238735318256293::1776436207::1776562110::1::::<><><>0<>0<>b4600c109b319f9b11fd3ca32a3bd81a<>res://.godot/imported/play.png-5c90e88e8136487a183a099d67a7de24.ctex::
+ResizeHandle.gd::GDScript::8575273665884488454::1776436207::0::1::::<>ColorRect<><>0<>1<><>::
+ResizeHandle.tscn::PackedScene::3896481196255057096::1776436207::0::1::::<><><>0<>0<><>::uid://duf6rfdqr6yoc::::res://addons/gut/gui/ResizeHandle.gd
+ResultsTree.gd::GDScript::7454663455204389079::1776436207::0::1::::<>Tree<><>0<>1<><>::
+ResultsTree.tscn::PackedScene::7970351583819098362::1776436207::0::1::::<><><>0<>0<><>::uid://dehdhn78qv5tr::::res://addons/gut/gui/ResultsTree.gd
+RunAtCursor.gd::GDScript::6821443593865953472::1776436207::0::1::::<>Control<><>0<>1<><>::
+RunAtCursor.tscn::PackedScene::1805504221328301514::1776436207::0::1::::<><><>0<>0<><>::uid://c4gmgdl1xwflw::::res://addons/gut/gui/RunAtCursor.gd<>uid://6wra5rxmfsrl::::res://addons/gut/gui/arrow.png
+RunExternally.gd::GDScript::3016978886588223716::1776436207::0::1::::<>Control<><>0<>1<><>::
+RunExternally.tscn::PackedScene::5163133303363705422::1776436207::0::1::::<><><>0<>0<><>::uid://bi8pg352un4om::::res://addons/gut/gui/RunExternally.gd
+RunResults.gd::GDScript::5291633865463562905::1776436207::0::1::::<>Control<><>0<>1<><>::
+RunResults.tscn::PackedScene::2049363523129861965::1776436207::0::1::::<><><>0<>0<><>::uid://chnko3073tkcv::::res://addons/gut/gui/RunResults.gd<>uid://bvo0uao7deu0q::::res://addons/gut/icon.png<>uid://dls5r5f6157nq::::res://addons/gut/gui/ResultsTree.tscn
+run_from_editor.gd::GDScript::3942551840639380537::1776436207::0::1::::<>Node2D<><>0<>0<><>::
+run_from_editor.tscn::PackedScene::2827842826880526284::1776436207::0::1::::<><><>0<>0<><>::uid://bwf2iuidqfkpl::::res://addons/gut/gui/run_from_editor.gd
+Settings.tscn::PackedScene::6291468949329504810::1776436207::0::1::::<><><>0<>0<><>::
+ShellOutOptions.gd::GDScript::7009826465994314068::1776436207::0::1::::<>ConfirmationDialog<><>0<>1<><>::
+ShellOutOptions.tscn::PackedScene::5519910809280171948::1776436207::0::1::::<><><>0<>0<><>::uid://c64u22kybimgi::::res://addons/gut/gui/ShellOutOptions.gd
+ShortcutButton.gd::GDScript::766347793735688544::1776436207::0::1::::<>Control<><>0<>1<><>::
+ShortcutButton.tscn::PackedScene::1273828520004261174::1776436207::0::1::::<><><>0<>0<><>::uid://k6hvvpekp0xw::::res://addons/gut/gui/ShortcutButton.gd
+ShortcutDialog.gd::GDScript::7362128468376051141::1776436207::0::1::::<>ConfirmationDialog<><>0<>1<><>::
+ShortcutDialog.tscn::PackedScene::7854176491866295805::1776436207::0::1::::<><><>0<>0<><>::uid://dc5jgemxslgvl::::res://addons/gut/gui/ShortcutDialog.gd<>uid://sfb1fw8j6ufu::::res://addons/gut/gui/ShortcutButton.tscn
+::res://addons/gut/images/::1776562113
+eyey.png::CompressedTexture2D::8826714409196966634::1776436207::1776562111::1::::<><><>0<>0<>e7eeaa68987b035cbe7b23b0ad391dc7<>res://.godot/imported/eyey.png-e0a721ab6b749f5d493d61e9f27f0654.ctex::
+Folder.svg::CompressedTexture2D::7694651741458501535::1776436207::1776562113::1::::<><><>0<>0<>ac3d6b3cde496c9708b59e4c65b8ac10<>res://.godot/imported/Folder.svg-caa50e6a0be9d456fd81991dfb537916.ctex::
+green.png::CompressedTexture2D::3896279560051998512::1776436207::1776562111::1::::<><><>0<>0<>bf65c76ed3830a12568472f2e83caa53<>res://.godot/imported/green.png-e3a17091688e10a7013279b38edc7f8a.ctex::
+GutIconV2_base.png::CompressedTexture2D::8891358426951667444::1776436207::1776562111::1::::<><><>0<>0<>cc6ef250f5c55c2a71578f5f24b628a5<>res://.godot/imported/GutIconV2_base.png-7038b445a6dfa6ba4cec1a42fa81abae.ctex::
+GutIconV2_no_shine.png::CompressedTexture2D::7511620063330010235::1776436207::1776562113::1::::<><><>0<>0<>7fa7c2154448d11a962474eba1735b4f<>res://.godot/imported/GutIconV2_no_shine.png-340880100fb7bae1a2e0530330841e58.ctex::
+HSplitContainer.svg::CompressedTexture2D::790827445581847999::1776436207::1776562110::1::::<><><>0<>0<>90fab22f30d8e888640f68692d01bf9a<>res://.godot/imported/HSplitContainer.svg-81e594d94ee80e4176e099672ef6025b.ctex::
+red.png::CompressedTexture2D::2443263267725858415::1776436207::1776562111::1::::<><><>0<>0<>faccbe34e47ae6b3c1f23338a6fe73ee<>res://.godot/imported/red.png-47a557c3922e800f76686bc1a4ad0c3c.ctex::
+Script.svg::CompressedTexture2D::4817060143842260657::1776436207::1776562113::1::::<><><>0<>0<>3bf5139f8dfabcb7b156346c8559c7dc<>res://.godot/imported/Script.svg-34c66aae9c985e3e0470426acbbcda04.ctex::
+VSplitContainer.svg::CompressedTexture2D::2887385407422649463::1776436207::1776562110::1::::<><><>0<>0<>e0beaacb3020560e40771dab52414040<>res://.godot/imported/VSplitContainer.svg-6cec29fefa7e65d6ff7c2fdb9a1bb9ab.ctex::
+yellow.png::CompressedTexture2D::1043265824178416429::1776436207::1776562111::1::::<><><>0<>0<>e1c5049147dc1aeb62405fc086032860<>res://.godot/imported/yellow.png-b3cf3d463958a169d909273d3d742052.ctex::
+::res://Assets/::1776712502
+Aggressive Youngin.png::CompressedTexture2D::8871529030169426029::1776712501::1776712501::1::::<><><>0<>0<>0471eb17461230cc06a2e7a438a3f94c<>res://.godot/imported/Aggressive Youngin.png-99dbe1bac832a4a490b6e76d07bc79a0.ctex::
+Archer.png::CompressedTexture2D::1208406902679419365::1776712501::1776712501::1::::<><><>0<>0<>578334e11032a8056cbf44081a1475cb<>res://.godot/imported/Archer.png-392e12f4aa9d950c6eff53920bd52421.ctex::
+Artimose Aetheron.png::CompressedTexture2D::4182663982022385555::1776712501::1776712501::1::::<><><>0<>0<>46e48b51a54d7ce85c4423619b06c341<>res://.godot/imported/Artimose Aetheron.png-33ef12510587ce8cb341eb12d312e595.ctex::
+Aspirant Squire.png::CompressedTexture2D::2026774657216223914::1776712501::1776712501::1::::<><><>0<>0<>d4b6be507f6d8109ed0db77cd57c74b8<>res://.godot/imported/Aspirant Squire.png-55c9e8306781ad5ae0e21725e0fea8df.ctex::
+Astral Projection.png::CompressedTexture2D::5410249102707262642::1776712501::1776712501::1::::<><><>0<>0<>4c89a22b4f40c2aa726fd88da6173ec4<>res://.godot/imported/Astral Projection.png-5854723355681f2634e6213cb307aeee.ctex::
+Back.png::CompressedTexture2D::491508467471234629::1776712501::1776712501::1::::<><><>0<>0<>1299c3910ae05a76a04aaa3c9ee39ca0<>res://.godot/imported/Back.png-003873f212769b19c5e04973e4aaf959.ctex::
+Background.png::CompressedTexture2D::8261025864518985146::1776712501::1776712501::1::::<><><>0<>0<>0c8e5d4f5d0c77c59849da8984750bb0<>res://.godot/imported/Background.png-e8880a50f4091751eaed728281d3c21e.ctex::
+back_button.png::CompressedTexture2D::9110871787509019915::1776712501::1776712501::1::::<><><>0<>0<>420b48533f832728295a11e85a3e2940<>res://.godot/imported/back_button.png-0855dd8ea9758ce51b94bf4c7342afaf.ctex::
+Banner Bearer.png::CompressedTexture2D::8670818398973013370::1776712501::1776712501::1::::<><><>0<>0<>6e58db863f36b44d5ff74ebeb32c3c64<>res://.godot/imported/Banner Bearer.png-a611847d7213a50a7ee347fed7fed306.ctex::
+BF.jpg::CompressedTexture2D::7235011766625579785::1776712501::1776712501::1::::<><><>0<>0<>54eb7aaee7d7e6d7f8cd9ba94ed87324<>res://.godot/imported/BF.jpg-e4125565a80f3562a22d1749e0045705.ctex::
+Blessed Crusader Hound.png::CompressedTexture2D::8420839743669253860::1776712501::1776712501::1::::<><><>0<>0<>7ddaf24f1218e008c6e2b6f0b6818436<>res://.godot/imported/Blessed Crusader Hound.png-1bd253707763697848caab79607f1b70.ctex::
+Blessed Parishioner.png::CompressedTexture2D::7681022371911658177::1776712501::1776712501::1::::<><><>0<>0<>37a4ee98b4242d9512740d43edbaecc1<>res://.godot/imported/Blessed Parishioner.png-bc6cd1f483963af94a40e468b7ca670c.ctex::
+Bottle of Devotion.png::CompressedTexture2D::1716875652197448496::1776712501::1776712501::1::::<><><>0<>0<>f2c214cee899a52263dd1aca6e954ab2<>res://.godot/imported/Bottle of Devotion.png-cc92d7ae0df7e1dfb10b61bab8574c28.ctex::
+Boulder.png::CompressedTexture2D::721434942532395232::1776712501::1776712502::1::::<><><>0<>0<>eefc8f689b7792b92e7259f6e24a149d<>res://.godot/imported/Boulder.png-e9c0ceebeb8a50560622c6cbb28364ab.ctex::
+Bring in the Holy Crusade!.png::CompressedTexture2D::858480028636233980::1776712501::1776712501::1::::<><><>0<>0<>6c0197911fa400bb189a7d8672bfeb07<>res://.godot/imported/Bring in the Holy Crusade!.png-a235861ead7c20bcc18634b0e732fcb2.ctex::
+Bulwark Brother.png::CompressedTexture2D::5104944104695345757::1776712501::1776712501::1::::<><><>0<>0<>10417df2c185dcd20b41f1d9ef20a505<>res://.godot/imported/Bulwark Brother.png-1803c78a3f5a2598c367cf0e19d7dd3e.ctex::
+CardSlot.png::CompressedTexture2D::5082711631058094270::1776712501::1776712501::1::::<><><>0<>0<>80fdea934372b9b225deb1b93feb218d<>res://.godot/imported/CardSlot.png-e9d43e4f8ba55be79b6db829726e4a98.ctex::
+Consecration.png::CompressedTexture2D::1035341920160306895::1776712501::1776712501::1::::<><><>0<>0<>dd9bc548cfc1f62f981404f4a87387a5<>res://.godot/imported/Consecration.png-ca03480251c9745750f763a27ad7ad79.ctex::
+Crusader's Might.png::CompressedTexture2D::635011381733827518::1776712501::1776712501::1::::<><><>0<>0<>5ed3b5c5d57ab72d1c185f78cf517f8f<>res://.godot/imported/Crusader's Might.png-ced7c98974ae9430eb7a584d68a1e726.ctex::
+Cup of Chai.png::CompressedTexture2D::5939336001452440721::1776712501::1776712501::1::::<><><>0<>0<>f4f33a72723dc9bb5ad6e49b164e80a9<>res://.godot/imported/Cup of Chai.png-1e8d5d2a415c7b9ebb0b3524a6a37aa0.ctex::
+Defender Aura.png::CompressedTexture2D::3027815438261728366::1776712501::1776712501::1::::<><><>0<>0<>e2a46e0e1bbf79befbbad9e9b1396740<>res://.godot/imported/Defender Aura.png-960e566c147f596d3f758a6da7d3c846.ctex::
+Demon.png::CompressedTexture2D::6312643214415833047::1776712501::1776712501::1::::<><><>0<>0<>fd65d6323948e9a4412df4996a6bff3d<>res://.godot/imported/Demon.png-db9347b91f7206c6346b4ea3a4e7f338.ctex::
+Discovery.png::CompressedTexture2D::7348796077577575537::1776712501::1776712501::1::::<><><>0<>0<>b4ee295a2d77de12db80398ccfbc19bf<>res://.godot/imported/Discovery.png-69f12d003cefc59f3bb17d3b05da1e2b.ctex::
+Double Trouble.png::CompressedTexture2D::8552171805894117935::1776712501::1776712501::1::::<><><>0<>0<>dfaa1ba894fb5b0070b435e839160974<>res://.godot/imported/Double Trouble.png-154a3258933b1356ca41a6a3e416dd2d.ctex::
+Dragon's Kick.png::CompressedTexture2D::4597270158966342108::1776712501::1776712501::1::::<><><>0<>0<>2fc706210cefb10e9d8d2026ae461907<>res://.godot/imported/Dragon's Kick.png-b9a117722de9dc054f63725c6f34ebf1.ctex::
+Fatigue Aura.png::CompressedTexture2D::1379494891908052967::1776712501::1776712501::1::::<><><>0<>0<>773a40fc0a0847b99e598ce280e0b50b<>res://.godot/imported/Fatigue Aura.png-696711d5b80a6f22658da548b20d3381.ctex::
+Frozen Spike.png::CompressedTexture2D::6330340052373184905::1776712501::1776712501::1::::<><><>0<>0<>63e8958f0af9bf3d19a8e5280d0ca7d6<>res://.godot/imported/Frozen Spike.png-d93d81e1db3304d7968dd7806fcca1ba.ctex::
+Group 44.png::CompressedTexture2D::7469334132397561424::1776712501::1776712501::1::::<><><>0<>0<>b11c0377b899382726a76f65d54fdc53<>res://.godot/imported/Group 44.png-a0b4ee931189fdd714bb295965ad6a37.ctex::
+Group 46.png::CompressedTexture2D::8083723314973939865::1776712501::1776712501::1::::<><><>0<>0<>7f5edbdf0cea26fd54d33b9aa37ed2aa<>res://.godot/imported/Group 46.png-556454fc1a045bfadcb9cc123d6028fd.ctex::
+Group 47.png::CompressedTexture2D::4434406051700951932::1776712501::1776712501::1::::<><><>0<>0<>55f6050e2c5c7ed0eec39a62ac7d8106<>res://.godot/imported/Group 47.png-29842ce29ce427817b316199249174e4.ctex::
+Group 48.png::CompressedTexture2D::8639920543419418713::1776712501::1776712501::1::::<><><>0<>0<>f40e5d3f1f04709ac3fb1022d487945e<>res://.godot/imported/Group 48.png-b32ab05891af8a8b03b1674ae7f62880.ctex::
+Guard.png::CompressedTexture2D::2838944430373446351::1776712501::1776712501::1::::<><><>0<>0<>4c54aba0d2c3f6bc9c20c45202b8bbba<>res://.godot/imported/Guard.png-6d65c96b13440b878eba90aaeea172ce.ctex::
+Hammer of Righteousness.png::CompressedTexture2D::7316982644585954255::1776712501::1776712501::1::::<><><>0<>0<>8dd2cd8f05e324abfcd51ac1de04a384<>res://.godot/imported/Hammer of Righteousness.png-3c53722508043efd6d19ac56d0bbf640.ctex::
+hero select.png::CompressedTexture2D::5000517964855852826::1776712501::1776712501::1::::<><><>0<>0<>2f03ec7ef54e14fbe365a8e0670f006f<>res://.godot/imported/hero select.png-e8b8fc6204591c4264390a78855b7ac1.ctex::
+Holy Aura.png::CompressedTexture2D::5647295394179791323::1776712501::1776712501::1::::<><><>0<>0<>c00a304ff713194b9d332bb51dc39cc0<>res://.godot/imported/Holy Aura.png-f0eed640be1007a2d0018ccc718046b2.ctex::
+Holy Crusader.png::CompressedTexture2D::2736007754341600692::1776712501::1776712501::1::::<><><>0<>0<>d80090d2c53232d3d0149784cd2a0f13<>res://.godot/imported/Holy Crusader.png-ae9e5db9d693d0acb95ba1e18bceac6e.ctex::
+Holy Strike.png::CompressedTexture2D::1101253901542257116::1776712501::1776712501::1::::<><><>0<>0<>7c5e58d039e27fd65012c55c0f74a559<>res://.godot/imported/Holy Strike.png-b3fb93bd7ff077415060cd30fd3c3829.ctex::
+Kensei Monk.png::CompressedTexture2D::7468101969789684423::1776712501::1776712501::1::::<><><>0<>0<>8fb10c185bcfdc56444ad4471c642d75<>res://.godot/imported/Kensei Monk.png-bf053726e2b7b083db342fc2114cada6.ctex::
+Knight 1.png::CompressedTexture2D::6283478467995710764::1776712501::1776712501::1::::<><><>0<>0<>19d85e49a8d815ff8cf8e0642b62185f<>res://.godot/imported/Knight 1.png-48bfe4f1965129408b168848f934dca1.ctex::
+Knight 2.png::CompressedTexture2D::4502560359223468623::1776712501::1776712501::1::::<><><>0<>0<>80eb8fea73ffafaf8b09f90fe51a07f2<>res://.godot/imported/Knight 2.png-dd2bcc5eb5aa919b793f75d67bd9df99.ctex::
+Knight 4.png::CompressedTexture2D::5649604491838065202::1776712501::1776712501::1::::<><><>0<>0<>c8db340d62be6fc39211f4f773c48abe<>res://.godot/imported/Knight 4.png-29f1a104b12517661b939b8b7b718f6a.ctex::
+Knight.png::CompressedTexture2D::1243077847529719191::1776712501::1776712501::1::::<><><>0<>0<>5495ef582a02e3f961bfc8420ed23bca<>res://.godot/imported/Knight.png-2b45a527254c8a9f0312a5cf52a36055.ctex::
+Knights of the Holy Crusade Aura.png::CompressedTexture2D::8930396528316921176::1776712501::1776712501::1::::<><><>0<>0<>ac061dc3d4b6a38a7c6597754d480586<>res://.godot/imported/Knights of the Holy Crusade Aura.png-998f0ab3d448d35cfe52a912bdc0bf87.ctex::
+Leech.png::CompressedTexture2D::3506809298584489605::1776712501::1776712501::1::::<><><>0<>0<>c1abae0275e01354b106ef6421517ae2<>res://.godot/imported/Leech.png-b8fc748ab744e2be0780a4aa810e5ae1.ctex::
+Lobby Room.png::CompressedTexture2D::531427306496673258::1776712501::1776712501::1::::<><><>0<>0<>2fb9b6505737a7c58e07c52f50dc6dfd<>res://.godot/imported/Lobby Room.png-d3428fae6518c4765a133de825cee3b8.ctex::
+Magic_the_gathering-card_back.jpg::CompressedTexture2D::3758685527614223715::1776712501::1776712501::1::::<><><>0<>0<>b8063e7e3b1950c7efdb61a7d79bafb8<>res://.godot/imported/Magic_the_gathering-card_back.jpg-50236fdf32eca9da023f42b53160e53e.ctex::
+Match Summary.png::CompressedTexture2D::6564594787106531821::1776712501::1776712501::1::::<><><>0<>0<>ba3b6663933b11c5e4542ce76585da34<>res://.godot/imported/Match Summary.png-4ac82e608fde80a06a20fa49a95822a8.ctex::
+Meditative Stance.png::CompressedTexture2D::2705935352575338637::1776712501::1776712501::1::::<><><>0<>0<>0173ac6ae1f2a879ba2780a06958c41a<>res://.godot/imported/Meditative Stance.png-ff6973d8e298b68fc25f5ff2f8ac7c9e.ctex::
+monk.jpg::CompressedTexture2D::2339745478724752364::1776694501::1776694511::1::::<><><>0<>0<>24ad8706d38bfaa51f9b35e83f44aca2<>res://.godot/imported/monk.jpg-f72c9f0c7f6eebb18ba302db0f211c0e.ctex::
+Monk.png::CompressedTexture2D::2656822245029897882::1776712501::1776712501::1::::<><><>0<>0<>c8168daebb4a171e4bbd15b0ff75a695<>res://.godot/imported/Monk.png-acef841acffc13f5ca41489e0ae47b00.ctex::
+Paladin Defender.png::CompressedTexture2D::727371703772871803::1776712501::1776712501::1::::<><><>0<>0<>2fe65c9c092f28e502eb6278603394be<>res://.godot/imported/Paladin Defender.png-2e256e2fbca096679c11dc942da4da12.ctex::
+paladin.jpg::CompressedTexture2D::4264364902204231662::1776694490::1776694511::1::::<><><>0<>0<>6221cf6271c12679812a76231973003f<>res://.godot/imported/paladin.jpg-e8f68f55ce4e9fbd78794319fd0eb67e.ctex::
+PFP.png::CompressedTexture2D::6387775074678586336::1776712501::1776712501::1::::<><><>0<>0<>8ef63a221388417bc42dbfa95fab01aa<>res://.godot/imported/PFP.png-23aee6f9c2cad247f1ad2980f46bd8cb.ctex::
+Priest.png::CompressedTexture2D::2555225086625996109::1776712501::1776712501::1::::<><><>0<>0<>4b403347fc1b15e03f8c3f5ac601922d<>res://.godot/imported/Priest.png-adb9c3ba5b6f738b9fc80c05168df373.ctex::
+Ravager.png::CompressedTexture2D::5396067213773542100::1776712501::1776712501::1::::<><><>0<>0<>48ae1f74efb1d17494dd93af18c9e7f3<>res://.godot/imported/Ravager.png-d3bc13ce6778f971321fe61b6afaa049.ctex::
+Rejuvenation Aura.png::CompressedTexture2D::2507492368043302256::1776712501::1776712501::1::::<><><>0<>0<>94be72b4b2e175d067306a93bee712f8<>res://.godot/imported/Rejuvenation Aura.png-d7650932ef7f12ee85ec0397a8aad9ae.ctex::
+Sample Card.png::CompressedTexture2D::706172625160278159::1776712501::1776712501::1::::<><><>0<>0<>eb106a7ab65d186efe318d7635c7398e<>res://.godot/imported/Sample Card.png-b8bf0cd0cf3aaa6168e461af5cdf2390.ctex::
+Scout.png::CompressedTexture2D::1588456668477912503::1776712501::1776712501::1::::<><><>0<>0<>a074f8697f6d3b38518861c0dc867197<>res://.godot/imported/Scout.png-4a98b55638e71fde14cc8ef08a4020a9.ctex::
+SETTINGSKF.png::CompressedTexture2D::8783818192648840533::1776712501::1776712501::1::::<><><>0<>0<>312900294eb15a795d40fb617018ce0c<>res://.godot/imported/SETTINGSKF.png-af7f3777f016fb1ad629391b6c44f9db.ctex::
+Shadow Arts.png::CompressedTexture2D::2021970371935407414::1776712501::1776712501::1::::<><><>0<>0<>f67ed2257b7ffcc1dabc8b86e3ef3d4e<>res://.godot/imported/Shadow Arts.png-04a4c7af8f3d681283e6c1694f678ce7.ctex::
+Skely.png::CompressedTexture2D::9149479012030092456::1776712501::1776712501::1::::<><><>0<>0<>0c015b1e0f5b13bd21f811196483fb95<>res://.godot/imported/Skely.png-f44c3133a065d22ab79c3b61a3a7a0c0.ctex::
+Spell.png::CompressedTexture2D::7139255895648948510::1776712501::1776712501::1::::<><><>0<>0<>6f65a6c7f65c8a5c34c7cceb69d5b9b1<>res://.godot/imported/Spell.png-4749210ad4d574ff57ba9938d4c9fa39.ctex::
+Staff of Light.png::CompressedTexture2D::1681950002778133783::1776712501::1776712501::1::::<><><>0<>0<>97df0c7aed5656b256376970c36849ed<>res://.godot/imported/Staff of Light.png-3cc7ad4c127138956df944b5aa1a1d71.ctex::
+Summon the Infantry.png::CompressedTexture2D::2679158735964498791::1776712501::1776712501::1::::<><><>0<>0<>d353756afd96eb6a9cf8ce972142bc0a<>res://.godot/imported/Summon the Infantry.png-a9d533553d004c37bbc48b4658fc1742.ctex::
+Swiftist Monk.png::CompressedTexture2D::4258696456789674621::1776712501::1776712501::1::::<><><>0<>0<>4ce3ddcb0911be1ef1fa613419a6a018<>res://.godot/imported/Swiftist Monk.png-7e7c33a07e4fc48b1c90694ed94c8bd3.ctex::
+template.png::CompressedTexture2D::914012804123922669::1776712501::1776712501::1::::<><><>0<>0<>d2b3a8a2c8a1354230ac86336a67c277<>res://.godot/imported/template.png-4687d12157f7d4e790151b465bf7d45a.ctex::
+Thaloran Lightguard.png::CompressedTexture2D::8203702603311143521::1776712501::1776712501::1::::<><><>0<>0<>3684d0c8635e9e02d0266f124cff9f96<>res://.godot/imported/Thaloran Lightguard.png-0b5d06a6b76b396a7bb5623ae0086ce3.ctex::
+Trainer.png::CompressedTexture2D::2105084920283326150::1776712501::1776712501::1::::<><><>0<>0<>1e1ccdb0668b89f732e6f77c326fe600<>res://.godot/imported/Trainer.png-370ebd7bdb1390cc07bf659b10469ff7.ctex::
+Training Mentor.png::CompressedTexture2D::4829430912413141053::1776712501::1776712501::1::::<><><>0<>0<>44f0e616bb334657511c559d3bb575e6<>res://.godot/imported/Training Mentor.png-f3ba4f9e65c238bb10bb33d29d0231e3.ctex::
+Training Regime.png::CompressedTexture2D::8539036776768538970::1776712501::1776712501::1::::<><><>0<>0<>dadda69064d683250b79eef74e471df8<>res://.godot/imported/Training Regime.png-203d2ff13c8584a59ba4aa7ef06e7c83.ctex::
+Training Student.png::CompressedTexture2D::5675518732066910254::1776712501::1776712501::1::::<><><>0<>0<>bae159bce59c65d65ddef1c1992bd382<>res://.godot/imported/Training Student.png-221b0595f40925712b197b5e399e61ad.ctex::
+USERNAME.png::CompressedTexture2D::8011635063570681093::1776712501::1776712501::1::::<><><>0<>0<>2a15ed75d276946bea7fde0fb7ba5d92<>res://.godot/imported/USERNAME.png-05391c998a3eeb44736f342480de77e1.ctex::
+Uther Pureheart.png::CompressedTexture2D::800271705604942043::1776712502::1776712502::1::::<><><>0<>0<>f460b070e346a15925175e92486fb6be<>res://.godot/imported/Uther Pureheart.png-f151e2f02ed081d77a9d88b45760ac01.ctex::
+Way of Astral Master.png::CompressedTexture2D::206917125463255895::1776712502::1776712502::1::::<><><>0<>0<>4e12dbe611062dd212fbbae89cb01d50<>res://.godot/imported/Way of Astral Master.png-c6ad8d075e2f4a751f48fb31163ea966.ctex::
+Way of Drinking Master.png::CompressedTexture2D::2822326972420378537::1776712502::1776712502::1::::<><><>0<>0<>23acab87a2ee7e2d37067e2df739b9f8<>res://.godot/imported/Way of Drinking Master.png-98e5f1e0615c5ef0e0b7f0293ff89f4e.ctex::
+Way of Mercy Master.png::CompressedTexture2D::2802233367095877860::1776712502::1776712502::1::::<><><>0<>0<>909efc62fd93f164aee3c42307fdb30b<>res://.godot/imported/Way of Mercy Master.png-09aaf45a2411c29a27beded4ad779181.ctex::
+Way of Open Hand Master.png::CompressedTexture2D::8608861975174491702::1776712502::1776712502::1::::<><><>0<>0<>60388451963bf129b08e861bf2d34a6b<>res://.godot/imported/Way of Open Hand Master.png-faeee37a22133c8e0a44de46fd521f8e.ctex::
+{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png::CompressedTexture2D::2967086451569842002::1776712501::1776712501::1::::<><><>0<>0<>fa84a7e5ec45a21e9e747ea099a2c90f<>res://.godot/imported/{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png-f24e35819fa74b2806912aeace29e263.ctex::
+::res://Assets/Fonts/::1776598076
+GowunBatang-Bold.ttf::FontFile::8653348064411593363::1776598075::1776598076::1::::<><><>0<>0<>ce6340d4e8f21c3f728747e50a6cc150<>res://.godot/imported/GowunBatang-Bold.ttf-7c875e7e06dfd991fa2e05c5e1e0ad1e.fontdata::
+GowunBatang-Regular.ttf::FontFile::7772357122734526103::1776598075::1776598076::1::::<><><>0<>0<>12ccbdb9644616543b6ba80ef3990ac1<>res://.godot/imported/GowunBatang-Regular.ttf-f9ef2293b594daf418e8d6b63d7e246e.fontdata::
+JacquesFrancois-Regular.ttf::FontFile::393953692788439945::1776598075::1776598076::1::::<><><>0<>0<>c1acf39168374117c1aa9523adf90faf<>res://.godot/imported/JacquesFrancois-Regular.ttf-2dc7679b9dc4f6155e43dd065ebde8dd.fontdata::
+JacquesFrancoisShadow-Regular.ttf::FontFile::5836294045931116846::1776598075::1776598076::1::::<><><>0<>0<>4348f762fe802b1d6e5932f2ab4a7717<>res://.godot/imported/JacquesFrancoisShadow-Regular.ttf-15c0ee9dc1dd7927ab3896ec42adaff7.fontdata::
+Jaini-Regular.ttf::FontFile::6693742326872960106::1776598075::1776598076::1::::<><><>0<>0<>c20bd8e33b5d906c92bb660dc17c1082<>res://.godot/imported/Jaini-Regular.ttf-39c7828dbc0a4bdc64f0fedb4fb0e4bb.fontdata::
+::res://Scenes/::1776713546
+Battlefield.tscn::PackedScene::3456264209077984139::1776436203::0::1::::<><><>0<>0<><>::uid://dbcxt7jskqy5n::::res://Assets/BF.jpg<>uid://dsmxsfx1cjsee::::res://Scripts/Battlefield.gd
+Card.tscn::PackedScene::7908932293595907992::1776688071::0::1::::<><><>0<>0<><>::uid://ccjt3oowhjogc::::res://Scripts/Card.gd<>uid://ryfks8gir3t0::::res://Assets/Knight.png<>uid://hadcp8nosu6h::::res://Assets/Back.png<>res://DissolveCard.tres
+CardSlot.tscn::PackedScene::8961199385227325836::1776436203::0::1::::<><><>0<>0<><>::uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>res://Scripts/CardSlot.gd
+create_lobby.tscn::PackedScene::5573628960120855697::1776436204::0::1::::<><><>0<>0<><>::uid://b3sg4gs81igy7::::res://Scripts/create_lobby.gd<>uid://ban8huclwtn2n::::res://Scenes/PlayerField.tscn<>uid://htosa14x02qg::::res://Assets/Lobby Room.png<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd<>uid://cxisdofno8fhl::::res://Scenes/EnemyField.tscn<>uid://b7665yuxmc7ne::::res://Scripts/create_label.gd
+EnemyBattlefield.tscn::PackedScene::2864991033648984514::1776436203::0::1::::<><><>0<>0<><>::uid://dsmxsfx1cjsee::::res://Scripts/Battlefield.gd<>uid://dbcxt7jskqy5n::::res://Assets/BF.jpg
+EnemyCard.tscn::PackedScene::296676363508893334::1776436203::0::1::::<><><>0<>0<><>::uid://cinn8csds8vf3::::res://Scripts/EnemyCard.gd<>uid://hadcp8nosu6h::::res://Assets/Back.png<>uid://ryfks8gir3t0::::res://Assets/Knight.png
+EnemyCardSlot.tscn::PackedScene::2766755597056125429::1776436203::0::1::::<><><>0<>0<><>::res://Scripts/CardSlot.gd<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png
+EnemyField.tscn::PackedScene::6404798800006532565::1776436203::0::1::::<><><>0<>0<><>::uid://cr06jwqetm7oy::::res://Scripts/EnemyHand.gd<>uid://cyap0xiyvqjp7::::res://Scripts/EnemyDeck.gd<>uid://hadcp8nosu6h::::res://Assets/Back.png<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>uid://bg228phchkpnm::::res://Scenes/EnemyBattlefield.tscn
+hero_select.tscn::PackedScene::3371998634491785620::1776436204::0::1::::<><><>0<>0<><>::uid://bkgtd1ctc2wdj::::res://Scripts/hero_select.gd<>uid://cdij2he33l5ak::::res://Assets/hero select.png<>uid://bijjqlkdfrnok::::res://Assets/{F04A94D9-2EFF-4B52-8061-DBBEA1A91D61} 1.png<>uid://b1rx5087hun6s::::res://scripts/player.gd
+inspect.tscn::PackedScene::-1::1776712231::0::1::::<><><>0<>0<><>::
+join_lobby.tscn::PackedScene::6762821107587966282::1776436204::0::1::::<><><>0<>0<><>::uid://c0xf6eui3tdgv::::res://Scripts/join_lobby.gd<>uid://b4gcaw5dawlyq::::res://Assets/Group 47.png<>uid://b1rx5087hun6s::::res://Scripts/player.gd
+lobby_create_join.tscn::PackedScene::5547859226117692724::1776436204::0::1::::<><><>0<>0<><>::uid://bern8okpk6dyq::::res://Scripts/lobby_create_join.gd<>uid://dnf20hxvwcv8t::::res://Assets/Group 46.png<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd
+Magic_the_gathering-card_back.jpg::CompressedTexture2D::5634707292623469457::1776436203::1776562113::1::::<><><>0<>0<>560be0674ab88418071d96e8222d92f8<>res://.godot/imported/Magic_the_gathering-card_back.jpg-c7b62b703f8d1cfea72bc928a4cf5036.ctex::
+Main.tscn::PackedScene::80903864315104729::1776713546::0::1::::<><><>0<>0<><>::uid://c8u4d8et1kiri::::res://Scripts/main.gd<>uid://ban8huclwtn2n::::res://Scenes/PlayerField.tscn<>uid://cxisdofno8fhl::::res://Scenes/EnemyField.tscn<>uid://cm0aa7ttkxri6::::res://Scripts/player.gd<>uid://h0o87gxh1276::::res://Scripts/opponent.gd<>uid://hkf7cq7v6cxi::::res://Scenes/Menu.tscn
+main_menu.tscn::PackedScene::8461554592523206578::1776436204::0::1::::<><><>0<>0<><>::uid://deog3vhe3fohc::::res://Assets/Group 44.png<>uid://ylenhfsg8r33::::res://Scripts/main_menu.gd
+match.tscn::PackedScene::266664652915571278::1776436204::0::1::::<><><>0<>0<><>::
+match_summary.tscn::PackedScene::2221482199941163714::1776436204::0::1::::<><><>0<>0<><>::uid://cqw2bksd3n6f0::::res://Scripts/match_summary.gd<>uid://c0r66gdrms2vh::::res://Assets/Match Summary.png
+Menu.tscn::PackedScene::512326544622402534::1776708212::0::1::::<><><>0<>0<><>::uid://clkcv8l6bcfgb::::res://Scripts/menu.gd<>uid://dpxx5hy0aki2u::::res://Assets/Background.png<>uid://dvj0m4mx5388n::::res://Assets/Fonts/GowunBatang-Bold.ttf<>uid://cpfe57ig3gkcs::::res://Assets/Fonts/JacquesFrancoisShadow-Regular.ttf<>uid://cxajys46aw1e7::::res://Assets/PFP.png<>uid://crf8vqyhowr2d::::res://Scripts/ProfileEdit.gd<>uid://diy8t6yg2e2md::::res://Assets/Fonts/GowunBatang-Regular.ttf<>uid://b10xp40lxun5o::::res://Assets/paladin.jpg<>uid://b86wa3degl2h6::::res://Scripts/Lobby.gd
+PlayerField.tscn::PackedScene::2415274809901069231::1776712321::0::1::::<><><>0<>0<><>::uid://cjsnw71qxgvmm::::res://Scripts/CardManager.gd<>uid://dqw58fs7q00kb::::res://Scripts/GameSetup.gd<>uid://bgcu3bphibumx::::res://Scripts/PlayerHand.gd<>uid://sdmvfc53fvoc::::res://Scripts/Deck.gd<>uid://hadcp8nosu6h::::res://Assets/Back.png<>uid://bnkojpwn7o1gl::::res://Scripts/InputManager.gd<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>uid://bpiifwsmdvr8n::::res://Scenes/Battlefield.tscn<>uid://d1r6gsc5ikgmd::::res://Scripts/BattleManager.gd<>uid://bq87ux3guu5mw::::res://Scripts/match_summary_button.gd<>res://Scenes/inspect.tscn
+settings.tscn::PackedScene::3604366644630635143::1776436204::0::1::::<><><>0<>0<><>::uid://ddj5qw37hyk1x::::res://Scripts/settings.gd<>uid://dxe7g44ie7ywj::::res://Assets/SETTINGSKF.png
+Tutorial.tscn::PackedScene::4452145862166334231::1776703567::0::1::::<><><>0<>0<><>::uid://cjsnw71qxgvmm::::res://Scripts/CardManager.gd<>uid://bgcu3bphibumx::::res://Scripts/PlayerHand.gd<>uid://cr06jwqetm7oy::::res://Scripts/EnemyHand.gd<>uid://c2a0sjovawb53::::res://Scripts/TutorialDeck.gd<>uid://hadcp8nosu6h::::res://Assets/Back.png<>uid://c4s1bxlutoily::::res://Scripts/TutorialEnemyDeck.gd<>uid://bnkojpwn7o1gl::::res://Scripts/InputManager.gd<>uid://ceodru1kbqfgo::::res://Assets/CardSlot.png<>uid://bpiifwsmdvr8n::::res://Scenes/Battlefield.tscn<>uid://bg228phchkpnm::::res://Scenes/EnemyBattlefield.tscn<>uid://bq6arb4nkwm24::::res://Scripts/TutorialBattleManager.gd<>uid://djhsv1bsiyreq::::res://Scripts/tutorial_instruction.gd
+username_menu.tscn::PackedScene::791220397835504618::1776436204::0::1::::<><><>0<>0<><>::uid://dme5put32p4bh::::res://Assets/USERNAME.png<>uid://cbxj280dub7fv::::res://Scripts/username_menu.gd<>uid://bqm0tb2c0jl4y::::res://Scripts/new_player.gd<>uid://dwedvcs7e0072::::res://Scripts/line_edit.gd
+::res://Scripts/::1776712825
+Battlefield.gd::GDScript::8448862704068140860::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+BattleManager.gd::GDScript::9021160298910416323::1776712825::0::1::::<>Node<><>0<>0<><>::
+Card.gd::GDScript::4933002837504172414::1776710541::0::1::::<>Node2D<><>0<>0<><>::
+CardDatabase.gd::GDScript::8579863334330713887::1776712360::0::1::::<>RefCounted<><>0<>0<><>::
+CardManager.gd::GDScript::5442530089743523736::1776710665::0::1::::<>Node2D<><>0<>0<><>::
+CardSlot.gd::GDScript::6944277396771358578::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+create_label.gd::GDScript::4698396483596556270::1776436204::0::1::::<>Label<><>0<>0<><>::
+create_lobby.gd::GDScript::4389283539591940840::1776436204::0::1::::<>Control<><>0<>0<><>::
+Deck.gd::GDScript::1270358691439023578::1776711074::0::1::::<>Node2D<><>0<>0<><>::
+EnemyCard.gd::GDScript::5362037412412925474::1776710541::0::1::::<>Node2D<><>0<>0<><>::
+EnemyDeck.gd::GDScript::6458330235952740370::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+EnemyHand.gd::GDScript::6019560632443366532::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+GameSetup.gd::GDScript::8329580592758548865::1776709210::0::1::::<>Node2D<><>0<>0<><>::
+hero_select.gd::GDScript::3101855736405806111::1776436204::0::1::::<>Control<><>0<>0<><>::
+InputManager.gd::GDScript::3320386361041947471::1776703567::0::1::::<>Node2D<><>0<>0<><>::
+join_lobby.gd::GDScript::6575402332646410821::1776436204::0::1::::<>Control<><>0<>0<><>::
+line_edit.gd::GDScript::8711893909096028231::1776436204::0::1::::<>LineEdit<><>0<>0<><>::
+Lobby.gd::GDScript::4767985483443325809::1776708512::0::1::::<>Control<><>0<>0<><>::
+lobby_create_join.gd::GDScript::2703119483640136004::1776436204::0::1::::<>Control<><>0<>0<><>::
+main.gd::GDScript::7132128653042601530::1776709243::0::1::::<>Node2D<><>0<>0<><>::
+main_menu.gd::GDScript::1707506862113910656::1776436204::0::1::::<>Control<><>0<>0<><>::
+match_summary.gd::GDScript::5942920873996886343::1776436204::0::1::::<>Control<><>0<>0<><>::
+match_summary_button.gd::GDScript::3579546559023953990::1776436204::0::1::::<>Button<><>0<>0<><>::
+menu.gd::GDScript::5565723112276014241::1776699289::0::1::::<>Control<><>0<>0<><>::
+Multiplayer.gd::GDScript::8154475306214380211::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+Multiplayer_edited.gd::GDScript::8263757627669444256::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+new_player.gd::GDScript::3535766664211407222::1776436204::0::1::::<>Node<><>0<>0<><>::
+opponent.gd::GDScript::543842009486767595::1776705640::0::1::::<>Node<><>0<>0<><>::
+player.gd::GDScript::5666718645870133995::1776705633::0::1::::<>Node<><>0<>0<><>::
+PlayerHand.gd::GDScript::2812946919138299175::1776436204::0::1::::<>Node2D<><>0<>0<><>::
+ProfileEdit.gd::GDScript::5978415638222897869::1776598194::0::1::::<>Control<><>0<>0<><>::
+settings.gd::GDScript::7390259264497881059::1776436204::0::1::::<>Control<><>0<>0<><>::
+test_CardManager.gd::GDScript::1917746628441334825::1776695319::0::1::::<>GutTest<><>0<>0<><>::
+TutorialBattleManager.gd::GDScript::3573468348701437075::1776691997::0::1::::<>Node<><>0<>0<><>::
+TutorialDeck.gd::GDScript::6669490710014950124::1776692060::0::1::::<>Node2D<><>0<>0<><>::
+TutorialEnemyDeck.gd::GDScript::6847058286032610830::1776691584::0::1::::<>Node2D<><>0<>0<><>::
+tutorial_instruction.gd::GDScript::7806544063623211804::1776581338::0::1::::<>Panel<><>0<>0<><>::
+username_menu.gd::GDScript::4891107340791714343::1776436204::0::1::::<>Control<><>0<>0<><>::
+::res://Scripts/Abilities/::1776436204
+BottleOfDevotion.gd::GDScript::1714105053408061457::1776436204::0::1::::<>Node<><>0<>0<><>::
+CrusadersMight.gd::GDScript::2646818675346316406::1776436204::0::1::::<>Node<><>0<>0<><>::
+Defender.gd::GDScript::646313301595976426::1776436204::0::1::::<>Node<><>0<>0<><>::
+Discovery.gd::GDScript::5484760367404177512::1776436204::0::1::::<>Node<><>0<>0<><>::
+FatigueAura.gd::GDScript::38202677168443334::1776436204::0::1::::<>Node<><>0<>0<><>::
+HolyAura.gd::GDScript::5005439282754020861::1776436204::0::1::::<>Node<><>0<>0<><>::
+HolyCrusade.gd::GDScript::1778204962323621730::1776436204::0::1::::<>Node<><>0<>0<><>::
+HolyStrike.gd::GDScript::9003594163965213244::1776436204::0::1::::<>Node<><>0<>0<><>::
+Infantry.gd::GDScript::3303585195652878019::1776436204::0::1::::<>Node<><>0<>0<><>::
+KnightsAura.gd::GDScript::7401083767397121030::1776436204::0::1::::<>Node<><>0<>0<><>::
+Rejuvenation.gd::GDScript::12874789346301788::1776436204::0::1::::<>Node<><>0<>0<><>::
+::res://Tests/::1776713416
+test_create_lobby.gd::GDScript::4862991391250933825::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_Deck.gd::GDScript::6111696847396665715::1776436204::0::1::::<>GutTest<><>0<>0<><>::
+test_hero_select.gd::GDScript::1481999862591221412::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_join_lobby.gd::GDScript::743576504766292559::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_lobby_createjoin.gd::GDScript::8169971607053145275::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_mainmenu.gd::GDScript::1256968087588842050::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_network.gd::GDScript::2024895763975394176::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_PlayerHand.gd::GDScript::5386907244939215076::1776436204::0::1::::<>GutTest<><>0<>0<><>::
+test_settings.gd::GDScript::4755581948475371808::1776436205::0::1::::<>Node<><>0<>0<><>::
+test_username_menu.gd::GDScript::6495697256626788009::1776436205::0::1::::<>Node<><>0<>0<><>::
+::res://Tests/failed/::1776713416
+test_match_to_summary.gd::GDScript::4836688432135841882::1776436205::0::1::::<>Node<><>0<>0<><>::
+::res://Tests/isolated/::1776713278
+test_bm.gd::GDScript::7596912026974445923::1776713278::0::1::::<>Node<><>0<>0<><>::
+::res://Tests/success/::1776713070
+test_match_summary.gd::GDScript::5781070727129991800::1776713002::0::1::::<>GutTest<><>0<>0<><>::

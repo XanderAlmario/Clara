@@ -1,0 +1,5 @@
+res://Scenes/Main.tscn
+res://addons/gut/gui/editor_globals.gd
+res://addons/gut/gui/EditorRadioButton.tres
+res://DissolveCard.tres
+res://Scripts/Deck.gd
